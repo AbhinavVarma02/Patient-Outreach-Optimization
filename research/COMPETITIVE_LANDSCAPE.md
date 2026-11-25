@@ -1,0 +1,7 @@
+# Competitive landscape
+
+The read-only portfolio review covered Healthcare Payment Integrity's design note and the public Clinical-Trace AI, AgentOps EvalBench and Hospital Performance Prediction repository landing material. Payment Integrity demonstrates resource selection and selectively observed labels. Clinical-Trace AI demonstrates readmission prediction and evidence-grounded agents. EvalBench demonstrates evaluation and observability. Hospital Performance demonstrates predictive analysis. This workspace focuses on randomized effects of outreach and prospective policy comparison. Its application uses a distinct decision workflow and visual identity.
+
+EconML and causalml offer reusable estimators. evalITR and grf are useful independent R references for future validation. Commercial engagement products provide targeting and campaign workflows. Public product descriptions are insufficient to infer identification methods or benchmark them against the research toolkit.
+
+[Payment Integrity design](https://github.com/AbhinavVarma02/Healthcare-Payment-Integrity/blob/main/docs/UI_DESIGN.md) · [Clinical-Trace AI](https://github.com/AbhinavVarma02/Clinical-Trace-AI) · [AgentOps EvalBench](https://github.com/AbhinavVarma02/Agentops-Evalbench-MCP) · [Hospital Performance](https://github.com/AbhinavVarma02/Hospital_Performance_Prediction_ML) · [EconML](https://github.com/py-why/EconML) · [causalml](https://github.com/uber/causalml)

@@ -1,0 +1,4 @@
+* text=auto eol=lf
+MASTER_PROMPT.md -text
+research/manifests/osf_mqbux_manifest.json -text
+*.png -text
