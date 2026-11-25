@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "as_of": "2026-11-25",
-  "phase": "sierra_leone_demo_release_candidate",
+  "phase": "sierra_leone_demo_published",
   "completed": [
     "M0",
     "M7",
@@ -65,13 +65,24 @@
     "local_browser_tests_passed": 12,
     "production_browser_tests_passed": 12,
     "production_reference_screenshots_matched": 11,
-    "production_integrity": "verified",
-    "github_actions": "https://github.com/AbhinavVarma02/Patient-Outreach-Optimization/actions/runs/45544473794",
+    "production_integrity": "stable and immutable v0.3.0 authenticated HTTPS asset integrity and headers verified",
+    "github_actions": "https://github.com/AbhinavVarma02/Patient-Outreach-Optimization/actions/runs/45631462871",
     "npm_reported_vulnerabilities": 0,
     "python_osv_reported_vulnerabilities": 0,
-    "alternative_data": "CC0 1.0 Sierra Leone original payload and author methods verified; structure lottery denominators unresolved in released roster"
+    "alternative_data": "CC0 1.0 Sierra Leone original payload and author methods verified; structure lottery denominators unresolved in released roster",
+    "rollback": "v0.1.0-demo and v0.2.0-demo retained as production targets; original asset hashes verified without switching traffic"
   },
   "release": {
+    "status": "published_limited",
+    "version": "0.3.0-demo",
+    "release_commit": "c0601bf4df295ee42367eacd92aaad0b7908f182",
+    "github": "https://github.com/AbhinavVarma02/Patient-Outreach-Optimization",
+    "cloudflare": "https://patient-outreach-optimization.pages.dev/",
+    "deployment_id": "466a90b7-74ae-4aad-ba13-2a7782cb559f",
+    "deployment": "https://466a90b7.patient-outreach-optimization.pages.dev/",
+    "additional_external_dollars": 0
+  },
+  "previous_release": {
     "status": "published_limited",
     "version": "0.2.0-demo",
     "release_commit": "dad257536b358a5035f8f51f6da1719b4050fdd5",
@@ -79,24 +90,19 @@
     "cloudflare": "https://patient-outreach-optimization.pages.dev/",
     "deployment_id": "75a71ff8-c3c6-414b-b01c-12780f6dca7e",
     "deployment": "https://75a71ff8.patient-outreach-optimization.pages.dev/",
-    "additional_external_dollars": 0
-  },
-  "previous_release": {
-    "version": "0.1.0-demo",
-    "release_commit": "d988063bb75e2870ad8e26e2edf316919d81c6d6",
-    "deployment_id": "9112bbb3-551f-4d76-b7a4-df4e99b1b976",
-    "deployment": "https://9112bbb3.patient-outreach-optimization.pages.dev/",
-    "integrity": "verified after v0.2.0-demo deployment"
+    "additional_external_dollars": 0,
+    "integrity": "verified after v0.3.0-demo deployment"
   },
   "next_actions": [
-    "Verify the intended free Pages deployment target, publish the checked release to GitHub, and verify build hashes, workflows and rollback targets over HTTPS.",
     "Obtain documented author permission or a verified applicable license for Geisinger analysis, linkage and reporting. The correspondence draft remains unsent.",
     "Reconcile the structure lottery roster and observation rules before evaluating incremental visit targeting. Seek an independent comparable rollout before temporal claims.",
     "Improve retrieval, vocabulary and evidence verification on development cases. Use a new independent holdout for future deployment claims."
   ],
-  "release_candidate": {
-    "version": "0.3.0-demo",
-    "status": "locally_verified",
-    "additional_external_dollars": 0
+  "older_release": {
+    "version": "0.1.0-demo",
+    "release_commit": "d988063bb75e2870ad8e26e2edf316919d81c6d6",
+    "deployment_id": "9112bbb3-551f-4d76-b7a4-df4e99b1b976",
+    "deployment": "https://9112bbb3.patient-outreach-optimization.pages.dev/",
+    "integrity": "verified after v0.3.0-demo deployment"
   }
 }

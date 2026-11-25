@@ -41,6 +41,6 @@ The auditable release scope is a community research demonstration. Patient polic
 | G4–G5 Inference and freeze | Reference regression and exact enumeration passed. Two causal models trained with triplet-disjoint evaluation, private frozen fits and equal-capacity policies. Bounded intervals are wide. Haryana sensitivity changes the outcome to a capped count. |
 | G6 Claims | No identified policy superiority. No patient inference or temporal transfer. The experimental extractor failed the accuracy gate and reviewed sources serve trial summaries. |
 | G7–G8 App and safety | The approved view patterns present full-domain contrasts and aggregate results. The audited static build contains five allowlisted files. No raw trial payloads, participant records, protocols or weights are bundled. |
-| G9–G10 Cost and release | Use the existing free static Pages deployment target and verify the release ledger after upload. Refer to the deployment and test ledgers for the live checkpoint. |
+| G9–G10 Cost and release | v0.3.0-demo passed the production browser and hash checks on the existing free Pages project. Both verified rollback targets remain available. Additional external service cost was $0. |
 
 This release scope keeps the original patient scenarios fictional and documents incomplete scientific gates. [Sierra Leone analysis](SIERRA_LEONE_RESEARCH.md) · [Extractor evaluation](AI_EVALUATION.md) · [Publication scope](PUBLICATION_POLICY.md)
