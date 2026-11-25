@@ -362,12 +362,12 @@ function USEvidence() {
     <p className="small">CMS uses distinct reporting periods and denominators. Getting appointments and care quickly is a survey score on a 0–100 scale.</p>
     <h3>Randomized US outreach evidence</h3>
     <p><a href={uclaResults}>UCLA influenza trial · ClinicalTrials.gov</a> compared pooled text and portal reminder bundles with no added reminder.
-      Vaccination was measured over {flu.window}. Both adjusted intervals include a risk ratio of 1. Registry update posted {flu.registryPosted}.</p>
+      The registry lists the primary outcome window as {flu.window}. Both adjusted intervals include a risk ratio of 1. Registry update posted {flu.registryPosted}.</p>
     <Table caption="UCLA influenza vaccination by assigned reminder" headings={['Group', 'Vaccination', 'Adjusted risk ratio (95% CI)']}
       rows={Object.entries(flu.arms).map(([name, arm]) => [name, shown(arm.rate, '%'),
         'adjustedRR' in arm ? rr(arm.adjustedRR) + ' (' + arm.ci.map(rr).join(' to ') + ')' : 'Reference'])}/>
     <p><a href={scoreArticle}>SCORE randomized screening trial</a> evaluated mailed fecal immunochemical test kits,
-      reminders and navigation in two North Carolina health centers. At {crc.window} the published increase in colorectal screening
+      reminders and navigation in two North Carolina health center systems. At {crc.window} the published increase in colorectal screening
       was {crc.total.pp} pp overall (95% CI {crc.total.ci.join(' to ')} pp). In the Medicare subgroup, it was {crc.medicare.pp} pp
       (95% CI {crc.medicare.ci.join(' to ')} pp). The subgroup covers Medicare insurance and its Medicare Advantage effect is unknown.</p>
     <p>Trial estimates apply to the studied outreach bundles, populations and endpoints. <a href="#planner">Use separate hypothetical plan inputs</a> to size a benchmark gap.</p>
