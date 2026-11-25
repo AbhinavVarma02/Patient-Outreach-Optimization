@@ -1,0 +1,35 @@
+{
+  "study": "Banerjee et al. (2025), Haryana immunization, Figure 4",
+  "specification_commit": "285addd4a5cc91001ceba34ba070316b34d4799b",
+  "source": "https://zenodo.org/records/11392582",
+  "data_license": "CC-BY-4.0",
+  "archive_sha256": "052d7705d50d87ffa22992532e76776ea2c48fa4988635b08a4abece5fc2fe7e",
+  "prepared_member_sha256": "6a09609b0a4cfd3c6ba8c4141a08c154d27f6b02d0c2252b1fa37274d85968d6",
+  "runtime": {
+    "python": "3.13.2",
+    "numpy": "2.4.2"
+  },
+  "eligible_village_months": 7370,
+  "analyzed_village_months": 7370,
+  "pure_control_village_months": 566,
+  "sub_center_clusters": 617,
+  "published": {
+    "information_hub_shots_per_village_month": 1.89,
+    "pure_control_shots_per_village_month": 7.32
+  },
+  "reproduced": {
+    "information_hub_shots_per_village_month": 1.8923315372920602,
+    "pure_control_shots_per_village_month": 7.3197685795541885
+  },
+  "matches_published_rounding": {
+    "information_hub_shots_per_village_month": true,
+    "pure_control_shots_per_village_month": true
+  },
+  "information_hub_cr0_se_diagnostic": 0.8996508048284502,
+  "statsmodels_reference": {
+    "version": "0.14.6",
+    "absolute_tolerance": 1e-10,
+    "coefficient": 1.8923315372920417,
+    "cr0_standard_error": 0.8996508048284508
+  }
+}

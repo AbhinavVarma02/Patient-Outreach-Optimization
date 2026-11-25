@@ -4,6 +4,7 @@
 
 - Documented the approved production UI and added a nine-image, reproducible visual reference set.
 - Verified data reuse evidence and recorded a separately licensed village-level outreach fallback and replication check.
+- Independently reproduced two published Haryana Figure 4 point values using the pinned CC BY 4.0 archive.
 
 ## 0.1.0-demo · 2026-11-24
 
