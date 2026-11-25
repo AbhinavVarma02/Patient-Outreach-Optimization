@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.0-demo · 2026-11-25
+
+- Reproduced Sierra Leone village and nested structure assignment effects. Added a frozen village policy comparison with two fitted causal learners and matched-capacity baselines.
+- Validated bounded inference for triplet and PHC lotteries and ran a capped-count Haryana sensitivity. The learned policies remain exploratory.
+- Improved trial extraction and evaluated stronger local models. The new 30-trial holdout missed the accuracy gate, so the app continues to use reviewed summaries.
+- Added independently verified research and extraction results to the approved Evidence & Methods view.
+
 ## 0.2.0-demo · 2026-11-24
 
 - Documented the approved production UI and added a nine-image, reproducible visual reference set.

@@ -1,0 +1,35 @@
+# Sierra Leone mobile vaccination research
+
+Meriggi et al. conducted a randomized COVID-19 vaccination study in remote villages in March–April 2022. Fifty matched triplets each contained one control village, one village assigned mobile vaccination and door-to-door mobilization, and one village assigned mobile vaccination and small-group mobilization. Each village had a 1/3 chance of each arm. The pooled contrast compares an equal mixture of the two mobile packages with control. Temporary clinics ran 48–72 hours. Two implementation failures remained in their assigned arms. [Published article and methods](https://www.nature.com/articles/s41586-024-07158-w) · [CC0 deposit](https://doi.org/10.7910/DVN/PRXF5Z)
+
+## Data and estimands
+
+The version 1 deposit provides 150 village records and 31,913 records in the combined census and clinic-attendee file. We matched the original Stata bytes, the individual codebook and the authors' script to archived Dataverse metadata and independent SHA-256 pins. The live metadata API returned HTTP 403 during this recheck. We read the author script as text and independently implemented the models. Person keys are complete and unique. Village and triplet assignments agree across files. The 12,096 census-enumerated adults have a coded binary endpoint. They include age 18 under the deposit's `above18` flag. Clinic attendees from outside that census have no comparable rate denominator. The control arm did not receive the treatment-arm endline survey. Endpoint ascertainment and survey flags therefore have different meanings. A coded outcome in the release does not independently establish equivalent ascertainment.
+
+| Assignment contrast | Unit and weighting | Difference (pp) | Conventional 95% interval (pp) |
+| --- | --- | ---: | ---: |
+| Mobile package vs control | Village assignment, adult analysis | +26.07 | 22.50 to 29.64 |
+| Mobile package vs control | Equal village weight | +28.30 | 23.39 to 33.20 |
+| Door-to-door mobile package vs control | Village assignment, adult analysis | +29.35 | 24.86 to 33.83 |
+| Small-group mobile package vs control | Village assignment, adult analysis | +23.07 | 18.85 to 27.30 |
+| Door-to-door vs small-group mobile package | Village assignment, adult analysis | +6.27 | 1.27 to 11.27 |
+| Extra visit within door-to-door villages | Residential structure assignment, adult analysis | −1.14 | −4.78 to 2.51 |
+
+Five coefficient and standard-error pairs matched Extended Data Tables 1 and 3 at the published three decimals. The difference between the mobile packages also reproduced the reported t-test p-value of 0.014. Statsmodels reproduced the regression coefficients and uncorrected covariance to `1e-10`. We used triplet fixed effects for the village lotteries and village fixed effects for the structure lottery. The adult-level mobile models cluster by village. The extra visit model clusters by structure and includes 3,760 adult rows across 1,120 structures. The equal-village specification uses the author's OLS variance. The displayed t intervals are pointwise. The author bootstrapped p-values and additional adjusted columns were outside the replication check. [Replication artifact](../research/reports/sierra_leone_replication.json) · [Published Extended Data Tables 1 and 3](https://www.nature.com/articles/s41586-024-07158-w.pdf)
+
+The randomized visit belonged to a residential structure, which could contain several households. There are 452 multi-household structures in the 1,198 eligible census structures in door-to-door villages. The audit found some household keys crossing structures and some census rows with an unknown periphery flag. The published sample uses census adults with `periphery == 0`. Structure assignment was uniform within each retained structure, although released structure counts match the stated up-to-20 rule in only 45 of 50 villages. Both visit arms appear in 28 villages, with observed assignment shares from 0.36 to 0.95. The raw shares do not resolve the preassignment roster discrepancy for all villages. We estimated the authors' within-village regression and held structure targeting until the lottery denominators and interference assumptions can be established. The reported structure contrast concerns an extra visit in an existing mobile program. Possible sharing of visit information and attendance by other households complicate extrapolation to different saturation levels.
+
+## Held-out village models
+
+The protocol was committed at `545f465` before scoring new policies. Arm-specific ridge models and a cross-fitted ridge DR-learner used 30 triplets for training. Fixed policy rules and nuisance fits were frozen before scoring 20 other triplets. Five pretreatment locality features came from the 2015 census and trial baseline. The fitted parameters, split membership and allocations remain local. Uniform and all rules offered 50% expected village capacity. This capacity is a hypothetical village quota. The results neither measure operating costs nor justify prospective deployment.
+
+| Rule vs uniform | AIPW gain (pp) | Nominal 95% interval (pp) | Simultaneous bounded 95% interval (pp) | Unaugmented gain (pp) |
+| --- | ---: | ---: | ---: | ---: |
+| Low baseline uptake | −0.27 | −3.96 to 3.42 | −50.66 to 50.12 | −6.16 |
+| Low predicted control uptake | −0.27 | −3.96 to 3.42 | −50.66 to 50.12 | −6.16 |
+| Ridge T-learner | +1.32 | −3.48 to 6.12 | −44.44 to 47.08 | −2.00 |
+| Ridge DR-learner | +1.90 | −3.36 to 7.16 | −42.70 to 46.51 | −0.93 |
+
+The two uptake-based policies selected the same villages or tied fractions. Neither model showed reliable improvement, and the unaugmented estimates reverse both model point estimates. The estimated pooled assignment effect was 23.53 pp in the lower-baseline half and 24.61 pp in the higher half. Their difference was −1.07 pp, with nominal 95% interval −15.82 to 13.68 pp. This internal holdout cannot establish temporal transfer, individual effects or subgroup fairness. The three-arm assignment and fixed-coverage lotteries constrain claims to the stated package mix and roster. The trial reported attendance from other villages. Cross-village interference would compromise policy value under different rollout patterns. [Frozen protocol](../research/SIERRA_LEONE_PROTOCOL.md) · [Run manifest and aggregate results](../research/reports/sierra_leone_policy.json)
+
+For bounded outcomes and independent triplets, the finite-sample interval uses assignment-specific score range bounds and a Bonferroni family over four policy gains plus one interaction. Known-answer enumeration reproduced the weighted target and score range. Across 10,000 draws in each simulated scenario, nominal coverage ranged from 95.26% to 100% under the no-interference Sierra Leone fixtures. Bounded coverage was 100% in the tested scenarios, with wide bounds. Under simulated spillover, the gain estimator was biased by −3.69 pp relative to the no-spillover target. A wide interval covering that target in a simulation does not restore identification. [Calibration report](../research/reports/community_inference.json)

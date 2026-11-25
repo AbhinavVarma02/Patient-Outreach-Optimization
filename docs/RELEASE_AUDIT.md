@@ -31,3 +31,16 @@ The limited public release does not close the open empirical gates. Review the [
 | G10 Deployment | See the [deployment ledger](DEPLOYMENT.md) for the independently verified live status. |
 
 The auditable release scope is a community research demonstration. Patient policy performance, temporal transfer, Geisinger reuse and automated extraction remain open.
+
+## v0.3.0-demo release review
+
+| Gate | Verified scope |
+| --- | --- |
+| G0–G1 Integrity and rights | Four Sierra Leone files match the archived CC0 deposit pins. Geisinger still requires documented reuse rights. |
+| G2–G3 Design and replication | Five Sierra Leone coefficient and standard-error pairs match at three decimals. The adult weighted and equal-village estimands, package contrasts and structure visit use separate analysis designs. The released structure roster leaves lottery denominators unresolved. |
+| G4–G5 Inference and freeze | Reference regression and exact enumeration passed. Two causal models trained with triplet-disjoint evaluation, private frozen fits and equal-capacity policies. Bounded intervals are wide. Haryana sensitivity changes the outcome to a capped count. |
+| G6 Claims | No identified policy superiority. No patient inference or temporal transfer. The experimental extractor failed the accuracy gate and reviewed sources serve trial summaries. |
+| G7–G8 App and safety | The approved view patterns present full-domain contrasts and aggregate results. The audited static build contains five allowlisted files. No raw trial payloads, participant records, protocols or weights are bundled. |
+| G9–G10 Cost and release | Use the existing free static Pages deployment target and verify the release ledger after upload. Refer to the deployment and test ledgers for the live checkpoint. |
+
+This release scope keeps the original patient scenarios fictional and documents incomplete scientific gates. [Sierra Leone analysis](SIERRA_LEONE_RESEARCH.md) · [Extractor evaluation](AI_EVALUATION.md) · [Publication scope](PUBLICATION_POLICY.md)

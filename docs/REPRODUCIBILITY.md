@@ -43,3 +43,30 @@ python -m patient_outreach.benchmark --model
 ```
 
 The second command requires a running local Ollama installation with the pinned existing Qwen2.5 1.5B digest. It evaluates the frozen cases without uploading trial materials. See [AI evaluation](AI_EVALUATION.md).
+
+## Sierra Leone replication and frozen policies
+
+Use the original bytes for the four files in the [versioned manifest](../research/manifests/sierra_leone_v1.json). In Dataverse request `https://dataverse.harvard.edu/api/access/datafile/{file_id}?format=original` and use the manifest's local names. The legacy `.tab` names identify Stata binaries when downloaded in original format. Keep the files in `.cache/benchmark`, or pass a separate ignored `--cache` directory. The project independently checks the pinned size and SHA-256 of every input before accessing rows. The author script is documentation. Use Python 3.13 and the pinned numerical dependencies.
+
+```powershell
+python -m pip install -r research/sierra-leone-requirements.txt
+$env:OPENBLAS_NUM_THREADS = '1'
+python scripts/replicate_sierra_leone.py --check-reference
+python scripts/evaluate_sierra_leone.py --report research/reports/sierra_leone_policy.json
+python scripts/validate_community_inference.py --haryana-archive data/private/zenodo-11392582/replication-package.zip --report research/reports/community_inference.json
+python scripts/export_sierra_leone.py --check
+```
+
+The policy command writes hashed models and policies to ignored `artifacts/private/sierra-leone-v1`. Repeat runs verify the stored freeze and reproduce the aggregate output on the same toolchain. Use an explicit new ignored `--private` run directory if the same freeze cannot be reused. CI runs the synthetic inference gates without trial records. Inspect the public projection and repeat the disclosure audit after intentional aggregate updates.
+
+## Extraction repair reproduction
+
+Cache the 30 pinned registry snapshots and protocol PDFs under `.cache/document-holdout-v2`, named by their NCT IDs with `.json` and `.pdf` extensions. The original development cache remains `.cache/benchmark`. The new manifest identifies official PDF file names and source dates. Use `pypdf==7.1.1` and the matching installed local Ollama models. Omit `--model` for the deterministic-only paths.
+
+```powershell
+python -m patient_outreach.document_evaluation --model qwen2.5:latest
+python -m patient_outreach.document_evaluation --model llama3.2:latest
+python -m patient_outreach.document_evaluation --manifest research/manifests/document_holdout_v2.json --cache .cache/document-holdout-v2 --holdout --model qwen2.5:latest
+```
+
+The evaluator emits exact, evidence and timing metrics plus model and manifest digests. Local inference can vary across runs and hardware. The committed report is the evaluated snapshot. [Benchmark protocol and evidence](AI_EVALUATION.md)

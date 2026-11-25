@@ -1,0 +1,126 @@
+{
+  "digests": {
+    "private_models": "4b64cf0110405863f3b500bc250bd4351342ef2dccb34a00c9576e73f2240643",
+    "private_policies": "388c8d02d82eaebf62644ad90ca77d5e176f54334089c140853cf0c589d22b11",
+    "protocol": "4ce3e944373b3e3a93ebe07e94ccdb93117a785d2bd85392ab8f744ee059fa12",
+    "source_manifest": "5730b8814cb2c55ecbad05454af9941e40a9343bedfc25f2355c0e3736381ec9",
+    "training_code": "ff1cf7b3d786ac01ac94edd9d55de350ec5e11ce9f3097af54b811a63d078fc6"
+  },
+  "family_size": 5,
+  "feature_contract": {
+    "features": [
+      "perc_immun",
+      "perc_literacy",
+      "avg_age",
+      "health_fivemiles_above",
+      "vaccinated_baseline_18"
+    ],
+    "ranges": {
+      "avg_age": [
+        0,
+        120
+      ],
+      "health_fivemiles_above": [
+        0,
+        1
+      ],
+      "perc_immun": [
+        0,
+        1
+      ],
+      "perc_literacy": [
+        0,
+        1
+      ],
+      "vaccinated_baseline_18": [
+        0,
+        1
+      ]
+    },
+    "version": 1
+  },
+  "holdout_triplets": 20,
+  "low_vs_high_baseline_uptake": {
+    "estimate": -0.010715482817894351,
+    "higher_baseline_half_itt": 0.24605282392039501,
+    "lower_baseline_half_itt": 0.23533734110250065,
+    "nominal_t_95": [
+      -0.15822023096672588,
+      0.13678926533093716
+    ],
+    "simultaneous_bounded_95": [
+      -2.0262675962979335,
+      2.004836630662145
+    ]
+  },
+  "matched_capacity": 0.5,
+  "policies_vs_uniform": {
+    "low_baseline_uptake": {
+      "estimate": -0.002678870704473588,
+      "nominal_t_95": [
+        -0.03955505774168147,
+        0.03419731633273429
+      ],
+      "simultaneous_bounded_95": [
+        -0.5065668990744834,
+        0.5012091576655362
+      ],
+      "unaugmented_estimate": -0.06164708978514685
+    },
+    "low_predicted_control": {
+      "estimate": -0.002678870704473588,
+      "nominal_t_95": [
+        -0.03955505774168147,
+        0.03419731633273429
+      ],
+      "simultaneous_bounded_95": [
+        -0.5065668990744834,
+        0.5012091576655362
+      ],
+      "unaugmented_estimate": -0.06164708978514685
+    },
+    "ridge_dr_learner": {
+      "estimate": 0.01901310386561162,
+      "nominal_t_95": [
+        -0.033572857029234314,
+        0.07159906476045755
+      ],
+      "simultaneous_bounded_95": [
+        -0.4270247608239034,
+        0.4650509685551266
+      ],
+      "unaugmented_estimate": -0.009299624998350362
+    },
+    "ridge_t_learner": {
+      "estimate": 0.013228998491341681,
+      "nominal_t_95": [
+        -0.03478683536234872,
+        0.061244832345032085
+      ],
+      "simultaneous_bounded_95": [
+        -0.44435898931571643,
+        0.4708169862983998
+      ],
+      "unaugmented_estimate": -0.020022405125200256
+    }
+  },
+  "propensity": 0.6666666666666666,
+  "protocol_commit": "545f4658f07a493e269fa40c75cd4576b188833a",
+  "ridge_penalty": 10,
+  "runtime": {
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "python": "3.13.2",
+    "scipy": "1.18.1"
+  },
+  "schema_version": 1,
+  "scope": "internal geographic village holdout; exploratory",
+  "seed": 20261124,
+  "training_triplets": 30,
+  "workflow_gates": {
+    "frozen_artifacts": true,
+    "matched_quota": true,
+    "replication": true,
+    "whole_triplets": true
+  }
+}

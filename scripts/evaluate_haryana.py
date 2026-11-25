@@ -1,6 +1,7 @@
 """Audit the Haryana design, replicate Figure 4 uncertainty, and evaluate frozen policies."""
 
 import argparse
+from itertools import combinations
 from collections import Counter, defaultdict
 import csv
 from hashlib import file_digest, sha256
@@ -14,6 +15,8 @@ from zipfile import ZipFile
 
 import numpy as np
 from scipy.stats import t
+
+from bounded_inference import hoeffding_radius
 
 from replicate_haryana import (
     ARCHIVE_SHA256, CONTROL, FILTER, MEMBER, MEMBER_SHA256, MISSING, OUTCOME, TIME_EFFECT, VARIANTS, WEIGHT,
@@ -212,8 +215,33 @@ def sharp_null_scores(y: np.ndarray, a: np.ndarray, p: np.ndarray, m: np.ndarray
     return score_difference(y, assignments, p, m)
 
 
+def bounded_policy(weight: np.ndarray, y: np.ndarray, a: np.ndarray, p: np.ndarray, m: np.ndarray,
+                   phcs: list[str], blocks: list[str], cap: float, alpha: float) -> dict:
+    m = np.clip(m, 0, cap)
+    point = float(np.mean(weight * score_difference(np.minimum(y, cap), a, p, m)))
+    positions: dict[str, list[int]] = defaultdict(list)
+    for i, block in enumerate(blocks):
+        positions[block].append(i)
+    ranges: dict[str, float] = defaultdict(float)
+    for idx in positions.values():
+        if len({phcs[i] for i in idx}) != 1:
+            raise ValueError("Sub-center lottery crosses PHCs")
+        lower, upper = [], []
+        for chosen in combinations(range(len(idx)), int(a[idx].sum())):
+            assignment = np.zeros(len(idx))
+            assignment[list(chosen)] = 1
+            zero = weight[idx] * score_difference(np.zeros(len(idx)), assignment, p[idx], m[idx])
+            maximum = weight[idx] * score_difference(np.full(len(idx), cap), assignment, p[idx], m[idx])
+            lower.append(float(np.minimum(zero, maximum).sum()))
+            upper.append(float(np.maximum(zero, maximum).sum()))
+        ranges[phcs[idx[0]]] += max(upper) - min(lower)
+    widths = np.array(list(ranges.values())) * (len(ranges) / len(y))
+    radius = hoeffding_radius(widths, alpha)
+    return {"estimate": point, "simultaneous_bounded_95": [point - radius, point + radius]}
+
+
 def policy_experiment(villages: dict[str, list[dict[str, str]]],
-                      features: dict[str, tuple[float, ...]]) -> tuple[dict, dict]:
+                      features: dict[str, tuple[float, ...]], bounded: bool = False) -> tuple[dict, dict]:
     blocks: dict[str, list[str]] = defaultdict(list)
     for village, rows in villages.items():
         if assignment(rows[0], ARMS[2]) in {"gossip", CONTROL[2]}:
@@ -249,7 +277,8 @@ def policy_experiment(villages: dict[str, list[dict[str, str]]],
     scores = score_difference(y, a, p, m)
     unaugmented = score_difference(y, a, p, np.zeros_like(m))
     common = score_difference(common_y, a, p, m)
-    null_scores = sharp_null_scores(y, a, p, m, [villages[v][0][GEO[2]] for v in test])
+    test_blocks = [villages[v][0][GEO[2]] for v in test]
+    null_scores = sharp_null_scores(y, a, p, m, test_blocks)
     results = {}
     for name, rule in rules.items():
         contrast = rule - CAPACITY
@@ -265,6 +294,10 @@ def policy_experiment(villages: dict[str, list[dict[str, str]]],
             "sharp_null_p": fisher_p,
             "sharp_null_bonferroni_p": min(1.0, fisher_p * len(rules)),
         }
+        if bounded:
+            results[name]["capped_at_25_sensitivity"] = bounded_policy(
+                contrast, y, a, p, m, groups, test_blocks, 25, 0.05 / len(rules),
+            )
     report = {
         "unit": "recorded measles-1 vaccinations per eligible village per observed month",
         "village_capacity": CAPACITY, "villages": len(eligible), "sub_centers": len({villages[v][0][GEO[2]]

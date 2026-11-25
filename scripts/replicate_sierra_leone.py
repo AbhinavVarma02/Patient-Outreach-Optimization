@@ -120,8 +120,8 @@ def structure_audit(people: pd.DataFrame, home: pd.DataFrame) -> dict:
         "villages_with_all_structures_assigned_in_released_roster": int(counts["sum"].eq(counts["size"]).sum()),
         "observed_assignment_share_range_in_overlap": [float(shares.min()), float(shares.max())],
         "villages_matching_the_up_to_20_rule": int(counts["sum"].eq(counts["size"].clip(upper=20)).sum()),
-        "census_rows_with_unknown_periphery": int(door_roster.periphery.isna().sum()),
-        "household_keys_crossing_structure": int(structures.groupby("hh_id").structure_id.nunique().gt(1).sum()),
+        "has_unknown_census_periphery": bool(door_roster.periphery.isna().any()),
+        "has_household_keys_crossing_structure": bool(structures.groupby("hh_id").structure_id.nunique().gt(1).any()),
     }
 
 

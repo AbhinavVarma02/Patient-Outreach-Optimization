@@ -1,0 +1,84 @@
+{
+  "draws_per_scenario": 10000,
+  "haryana_capped_empirical": {
+    "low_baseline_measles": {
+      "estimate": 0.5357376546905661,
+      "simultaneous_bounded_95": [
+        -12.576219169348017,
+        13.647694478729148
+      ]
+    },
+    "low_predicted_control_count": {
+      "estimate": 1.52687032694958,
+      "simultaneous_bounded_95": [
+        -12.104543176601297,
+        15.158283830500455
+      ]
+    },
+    "ridge_t_learner": {
+      "estimate": 1.050972947048441,
+      "simultaneous_bounded_95": [
+        -12.213784165442041,
+        14.315730059538923
+      ]
+    }
+  },
+  "known_answer": {
+    "enumerated_estimate": -0.033333333333333326,
+    "exact_range_width": 0.8374999999999999,
+    "true_contrast": -0.03333333333333333
+  },
+  "matched_phc_lottery": {
+    "heterogeneous": {
+      "bias": -0.0018179464911329268,
+      "bounded_coverage": 1.0,
+      "bounded_radius": 9.403144046828709,
+      "nominal_t_coverage": 0.9994,
+      "simulation_se_of_mean": 0.0016596629049913077,
+      "target": 0.4892706415384639
+    },
+    "null": {
+      "bias": 0.0005936842105263158,
+      "bounded_coverage": 1.0,
+      "bounded_radius": 9.403144046828709,
+      "nominal_t_coverage": 0.9346,
+      "simulation_se_of_mean": 0.0010347838657638686,
+      "target": 0.0
+    },
+    "spillover": {
+      "bias": -0.4935002187312561,
+      "bounded_coverage": 1.0,
+      "bounded_radius": 9.403144046828709,
+      "nominal_t_coverage": 0.8362,
+      "simulation_se_of_mean": 0.0043180966228908305,
+      "target": 0.4892706415384639
+    }
+  },
+  "seed": 20261124,
+  "triplet_lottery": {
+    "heterogeneous": {
+      "bias": 6.0489696613770516e-05,
+      "bounded_coverage": 1.0,
+      "bounded_radius": 0.36450684877474887,
+      "nominal_t_coverage": 1.0,
+      "simulation_se_of_mean": 7.401084318160557e-05,
+      "target": 0.037077184273921496
+    },
+    "null": {
+      "bias": -3.699999999999649e-05,
+      "bounded_coverage": 1.0,
+      "bounded_radius": 0.36450684877474887,
+      "nominal_t_coverage": 0.9526,
+      "simulation_se_of_mean": 4.679964872423802e-05,
+      "target": 0.0
+    },
+    "spillover": {
+      "bias": -0.03689571518408019,
+      "bounded_coverage": 1.0,
+      "bounded_radius": 0.36450684877474887,
+      "nominal_t_coverage": 0.6899,
+      "simulation_se_of_mean": 0.0002220325295448168,
+      "target": 0.037077184273921496
+    }
+  }
+}

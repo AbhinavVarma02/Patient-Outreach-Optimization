@@ -91,11 +91,18 @@ test('empirical evidence keeps village outcomes and equal-capacity results disti
   await expect(sensitivity.getByRole('row', {name:/Primary health center clustering/})).toContainText('-0.07 to 3.86');
   const policy = page.getByRole('table', {name:'Held-out village policy comparisons against uniform'});
   await expect(policy.getByRole('row', {name:/Learned village benefit score/})).toContainText('-1.33 to 3.59');
-  for (const table of [sensitivity, policy]) {
+  const sierra = page.getByRole('table', {name:'Reproduced randomized effects on adult vaccination'});
+  await expect(sierra.getByRole('row', {name:/Mobile package vs control, adult-weighted/})).toContainText('26.1');
+  await expect(sierra.getByRole('row', {name:/Extra visit within door-to-door/})).toContainText('-4.8 to 2.5');
+  const sierraPolicy = page.getByRole('table', {name:'Exploratory village policy comparisons against uniform'});
+  await expect(sierraPolicy.getByRole('row', {name:/Ridge DR-learner/})).toContainText('-42.7 to 46.5');
+  for (const table of [sensitivity, policy, sierra, sierraPolicy]) {
     const fits = await table.evaluate(element => element.parentElement!.scrollWidth <= element.parentElement!.clientWidth);
     expect(fits).toBe(true);
   }
   await expect(page.getByRole('link', {name:/Banerjee et al. data/})).toHaveAttribute('href', 'https://zenodo.org/records/11392582');
+  await page.getByText('Trial document extraction evaluation', {exact:true}).click();
+  await expect(page.getByText(/The verified local model matched 3 of 30/)).toBeVisible();
   await page.getByRole('navigation').getByRole('link', {name:'Patient Targeting'}).click();
   await expect(page.getByText('Fictional inputs', {exact:true})).toBeVisible();
 });

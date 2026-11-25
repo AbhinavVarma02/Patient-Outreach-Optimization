@@ -13,6 +13,9 @@ const knownRemote = new Set([
 const reviewedLinks = new Set([
   'https://zenodo.org/records/11392582',
   'https://github.com/AbhinavVarma02/Patient-Outreach-Optimization/blob/main/docs/HARYANA_RESEARCH.md',
+  'https://doi.org/10.7910/DVN/PRXF5Z',
+  'https://github.com/AbhinavVarma02/Patient-Outreach-Optimization/blob/main/docs/SIERRA_LEONE_RESEARCH.md',
+  'https://github.com/AbhinavVarma02/Patient-Outreach-Optimization/blob/main/docs/AI_EVALUATION.md',
 ]);
 const denied = /(?:patient_id|patientid|study_\d_(?:analysis_data|fulldata)|(?:ghp_|github_pat_|sk-proj-)[\w-]{15,}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----)/i;
 const hashes = {};

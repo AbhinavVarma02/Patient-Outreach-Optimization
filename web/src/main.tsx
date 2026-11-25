@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { bands, comparePolicies, pilotDesign, plan } from './math';
 import { osf, paper, studies, supplement } from './evidence';
 import haryana from './haryana.json';
+import sierra from './sierra-leone.json';
 import './style.css';
 
 const views = {overview: 'Overview', targeting: 'Patient Targeting', planner: 'Outreach Planner',
@@ -89,7 +90,7 @@ function Overview() {
         <p>Assumed vaccination effect by clinical risk band (pp)</p>
       </figure>
     </section>
-    <aside className="evidence-strip"><span className="dot"/><p><strong>Limited research demonstration.</strong> Review an independent village-level analysis from Haryana and published Geisinger trial evidence. Interactive outputs use fictional assumptions.</p><a href="#evidence">Evidence status <span aria-hidden="true">↗</span></a></aside>
+    <aside className="evidence-strip"><span className="dot"/><p><strong>Limited research demonstration.</strong> Review independent community research from Haryana and Sierra Leone and published Geisinger findings. Interactive outputs use fictional assumptions.</p><a href="#evidence">Evidence status <span aria-hidden="true">↗</span></a></aside>
     <section className="section"><div className="section-title"><h2>From evidence to a pilot</h2><p>Work through a fictional outreach decision.</p></div>
       <div className="workflow">
         <Workflow view="targeting" verb="Compare allocation rules" detail="See how risk and estimated benefit change who receives the same number of contacts."/>
@@ -272,7 +273,8 @@ function Pilot() {
 
 function Evidence() {
   return <Page title="Evidence & Methods" copy="Trace the trial design behind each workflow and see which analyses remain pending.">
-    <div className="evidence-strip"><span className="dot"/><p><strong>Current status.</strong> Haryana contributes independent community-level analysis. The Geisinger summaries report authors’ published findings while reuse permission remains open.</p></div>
+    <div className="evidence-strip"><span className="dot"/><p><strong>Current status.</strong> Sierra Leone and Haryana contribute independent randomized analyses. The Geisinger summaries report authors’ published findings while reuse permission remains open.</p></div>
+    <SierraLeoneEvidence/>
     <HaryanaEvidence/>
     <section className="section"><div className="section-title"><h2>Trial explorer</h2><a href={paper}>Published article <span aria-hidden="true">↗</span></a></div>
       <div className="study-grid">{studies.map(study => <article className="study" key={study.id}><p className="eyebrow">Study {study.number} · {study.season}</p>
@@ -286,9 +288,46 @@ function Evidence() {
     <section className="section methods"><h2>Methods and limits</h2>
       <details open><summary>Assignment and outcomes</summary><p>Intent-to-treat contrasts compare assigned outreach. Delivery, receipt and engagement are separate. Different enrollment rules, flu seasons and outcome windows constrain comparisons across trials.</p></details>
       <details><summary>Scenario and power assumptions</summary><p>Targeting uses fictional, fixed group effects. The planner evaluates alternative single-channel strategies with user-entered assumptions. The pilot uses a normal approximation and a mean-cluster-size design effect. It assumes a frozen policy, stable outcome rates, and noninformative attrition.</p></details>
+      <details><summary>Trial document extraction evaluation</summary><p>On 30 new public trial protocols, the deterministic parser matched 14 of 30 scorable fields. The verified local model matched 3 of 30. Both abstained on all nine designated cases. The release gate requires at least 90% exact match and correct abstention. Trial summaries use reviewed sources. <a href="https://github.com/AbhinavVarma02/Patient-Outreach-Optimization/blob/main/docs/AI_EVALUATION.md">Benchmark methods and results</a></p></details>
       <details><summary>Data provenance and rights</summary><p>The <a href={osf}>OSF catalog</a> is public and records no dataset license. The application does not load trial records, accept patient identifiers or store scenario inputs. Only theme preference is saved locally.</p></details>
     </section>
   </Page>;
+}
+
+function SierraLeoneEvidence() {
+  const effects = sierra.effects;
+  const labels = {
+    low_baseline_uptake: 'Low baseline vaccination',
+    low_predicted_control: 'Low predicted vaccination under control',
+    ridge_t_learner: 'Ridge T-learner benefit score',
+    ridge_dr_learner: 'Ridge DR-learner benefit score',
+  };
+  const interval = (ci: number[]) => ci.map(value => number(value, 1)).join(' to ');
+  const row = (label: string, result: {pp: number, ci: number[]}) =>
+    [label, number(result.pp, 1), interval(result.ci)];
+  return <section className="section snapshot">
+    <div className="section-title"><h2>Sierra Leone mobile vaccination trial</h2>
+      <a href="https://doi.org/10.7910/DVN/PRXF5Z">Meriggi et al. data · CC0 <span aria-hidden="true">↗</span></a></div>
+    <p>We reproduced assignment effects for {number(sierra.adults)} census-enumerated adults in {sierra.villages} villages.
+      The mobile vaccination package combined temporary clinics with community mobilization.
+      The extra visit was randomized among eligible residential structures within door-to-door villages.</p>
+    <Table caption="Reproduced randomized effects on adult vaccination"
+      headings={['Assignment contrast', 'Effect (pp)', '95% interval (pp)']}
+      rows={[
+        row('Mobile package vs control, adult-weighted', effects.mobile_package_adult_weighted),
+        row('Mobile package vs control, equal village weights', effects.mobile_package_equal_village),
+        row('Door-to-door mobile package vs small-group mobile package', effects.mobile_door_to_door_vs_small_group),
+        row('Extra visit within door-to-door villages', effects.extra_visit_within_door_to_door_villages),
+      ]}/>
+    <p>The extra visit comparison covered {number(sierra.structureTrialAdults)} adults in {number(sierra.structureTrialUnits)} structures.
+      Its interval includes zero. The village comparison covers two bundles with shared mobile access.</p>
+    <p>In {sierra.holdoutTriplets} held-out village triplets, none of the targeted rules showed a reliable gain over uniform mobile
+      package allocation at {sierra.capacityPct}% expected village capacity. Inference assumes limited spillover across villages.</p>
+    <Table caption="Exploratory village policy comparisons against uniform"
+      headings={['Village allocation rule', 'Difference (pp)', 'Conservative simultaneous 95% interval (pp)']}
+      rows={Object.entries(sierra.policiesVsUniform).map(([key, result]) => row(labels[key as keyof typeof labels], result))}/>
+    <a href="https://github.com/AbhinavVarma02/Patient-Outreach-Optimization/blob/main/docs/SIERRA_LEONE_RESEARCH.md">Design, results and reproduction <span aria-hidden="true">↗</span></a>
+  </section>;
 }
 
 function HaryanaEvidence() {

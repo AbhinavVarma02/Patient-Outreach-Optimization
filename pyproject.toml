@@ -9,5 +9,5 @@ line-length = 110
 target-version = "py312"
 
 [[tool.mypy.overrides]]
-module = ["pypdf", "scipy.*", "statsmodels", "statsmodels.*"]
+module = ["pandas", "pypdf", "scipy.*", "statsmodels", "statsmodels.*"]
 ignore_missing_imports = true

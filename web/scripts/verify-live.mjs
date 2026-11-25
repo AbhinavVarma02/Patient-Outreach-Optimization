@@ -4,7 +4,8 @@ import { readFile } from 'node:fs/promises';
 
 const base = new URL(process.env.OUTREACH_LIVE_URL || 'https://patient-outreach-optimization.pages.dev');
 if (base.protocol !== 'https:') throw new Error('Use an HTTPS production URL.');
-const ledger = JSON.parse(await readFile(new URL('../../research/reports/public_build_sha256.json', import.meta.url), 'utf8'));
+const ledgerPath = process.env.OUTREACH_BUILD_LEDGER || new URL('../../research/reports/public_build_sha256.json', import.meta.url);
+const ledger = JSON.parse(await readFile(ledgerPath, 'utf8'));
 delete ledger._headers;
 const expected = new Map(Object.entries(ledger).map(([name, hash]) => [name === 'index.html' ? '/' : '/' + name, hash]));
 const browser = await chromium.launch();

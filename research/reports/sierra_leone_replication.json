@@ -18,8 +18,8 @@
       0.9523809523809523
     ],
     "villages_matching_the_up_to_20_rule": 45,
-    "census_rows_with_unknown_periphery": 8,
-    "household_keys_crossing_structure": 2
+    "has_unknown_census_periphery": true,
+    "has_household_keys_crossing_structure": true
   },
   "effects": {
     "mobile_package_adult_weighted": {

@@ -22,13 +22,15 @@ jobs:
           node-version: '24'
           cache: npm
           cache-dependency-path: web/package-lock.json
-      - run: python -m pip install ruff==0.15.0 mypy==1.19.0 numpy==2.4.2 scipy==1.17.1
+      - run: python -m pip install ruff==0.15.0 mypy==1.19.0 -r research/sierra-leone-requirements.txt
       - run: ruff check patient_outreach tests scripts
       - run: mypy patient_outreach scripts
       - run: python -m unittest discover -s tests -v
       - run: python -m compileall -q patient_outreach tests
       - run: python scripts/verify_source.py
       - run: python scripts/export_haryana.py --check
+      - run: python scripts/export_sierra_leone.py --check
+      - run: python scripts/validate_community_inference.py
       - working-directory: web
         run: npm ci --ignore-scripts
       - working-directory: web

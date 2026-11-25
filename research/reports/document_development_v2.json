@@ -1,0 +1,209 @@
+{
+  "scope": "development on the original frozen trial cases",
+  "runs": {
+    "qwen": {
+      "manifest_sha256": "31727d68b937714d3d15058cebf3abdd4e7be7870c883bacac88e79e1c6d222a",
+      "extractor_sha256": "85a349d01320250460ff59f35e52ef39a1dfda3d9c696c9c9d63f3629d7e507a",
+      "pypdf": "7.1.1",
+      "trial_count": 30,
+      "models": {
+        "qwen2.5:latest": {
+          "digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+          "bytes": 4683087332,
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen2",
+            "families": [
+              "qwen2"
+            ],
+            "parameter_size": "7.6B",
+            "quantization_level": "Q4_K_M",
+            "context_length": 32768,
+            "embedding_length": 3584,
+            "runner": "ggml"
+          }
+        }
+      },
+      "scores": {
+        "registry": {
+          "checks": 35,
+          "scorable": 30,
+          "abstention_cases": 5,
+          "covered": 4,
+          "exact": 3,
+          "evidence_correct": 3,
+          "schema_valid": 35,
+          "incorrect_populated": 1,
+          "unsupported_populated": 1,
+          "correct_abstentions": 5,
+          "median_seconds": 0.0,
+          "max_seconds": 4e-05,
+          "passes_original_accuracy_abstention_gate": false
+        },
+        "deterministic_layout": {
+          "checks": 35,
+          "scorable": 30,
+          "abstention_cases": 5,
+          "covered": 24,
+          "exact": 23,
+          "evidence_correct": 23,
+          "schema_valid": 35,
+          "incorrect_populated": 1,
+          "unsupported_populated": 1,
+          "correct_abstentions": 5,
+          "median_seconds": 0.087,
+          "max_seconds": 0.19059,
+          "passes_original_accuracy_abstention_gate": false
+        },
+        "deterministic_plain": {
+          "checks": 35,
+          "scorable": 30,
+          "abstention_cases": 5,
+          "covered": 24,
+          "exact": 23,
+          "evidence_correct": 23,
+          "schema_valid": 35,
+          "incorrect_populated": 1,
+          "unsupported_populated": 1,
+          "correct_abstentions": 5,
+          "median_seconds": 0.03364,
+          "max_seconds": 0.1318,
+          "passes_original_accuracy_abstention_gate": false
+        },
+        "qwen2.5:latest": {
+          "checks": 35,
+          "scorable": 30,
+          "abstention_cases": 5,
+          "covered": 23,
+          "exact": 15,
+          "evidence_correct": 15,
+          "schema_valid": 35,
+          "incorrect_populated": 8,
+          "unsupported_populated": 8,
+          "correct_abstentions": 2,
+          "median_seconds": 0.54456,
+          "max_seconds": 0.8222,
+          "passes_original_accuracy_abstention_gate": false
+        },
+        "hybrid:qwen2.5:latest": {
+          "checks": 35,
+          "scorable": 30,
+          "abstention_cases": 5,
+          "covered": 10,
+          "exact": 10,
+          "evidence_correct": 10,
+          "schema_valid": 35,
+          "incorrect_populated": 0,
+          "unsupported_populated": 0,
+          "correct_abstentions": 5,
+          "median_seconds": 0.54457,
+          "max_seconds": 0.82243,
+          "passes_original_accuracy_abstention_gate": false
+        }
+      }
+    },
+    "llama": {
+      "manifest_sha256": "31727d68b937714d3d15058cebf3abdd4e7be7870c883bacac88e79e1c6d222a",
+      "extractor_sha256": "85a349d01320250460ff59f35e52ef39a1dfda3d9c696c9c9d63f3629d7e507a",
+      "pypdf": "7.1.1",
+      "trial_count": 30,
+      "models": {
+        "llama3.2:latest": {
+          "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+          "bytes": 2019393189,
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "llama",
+            "families": [
+              "llama"
+            ],
+            "parameter_size": "3.2B",
+            "quantization_level": "Q4_K_M",
+            "context_length": 131072,
+            "embedding_length": 3072,
+            "runner": "ggml"
+          }
+        }
+      },
+      "scores": {
+        "registry": {
+          "checks": 35,
+          "scorable": 30,
+          "abstention_cases": 5,
+          "covered": 4,
+          "exact": 3,
+          "evidence_correct": 3,
+          "schema_valid": 35,
+          "incorrect_populated": 1,
+          "unsupported_populated": 1,
+          "correct_abstentions": 5,
+          "median_seconds": 0.0,
+          "max_seconds": 4e-05,
+          "passes_original_accuracy_abstention_gate": false
+        },
+        "deterministic_layout": {
+          "checks": 35,
+          "scorable": 30,
+          "abstention_cases": 5,
+          "covered": 24,
+          "exact": 23,
+          "evidence_correct": 23,
+          "schema_valid": 35,
+          "incorrect_populated": 1,
+          "unsupported_populated": 1,
+          "correct_abstentions": 5,
+          "median_seconds": 0.08541,
+          "max_seconds": 0.36175,
+          "passes_original_accuracy_abstention_gate": false
+        },
+        "deterministic_plain": {
+          "checks": 35,
+          "scorable": 30,
+          "abstention_cases": 5,
+          "covered": 24,
+          "exact": 23,
+          "evidence_correct": 23,
+          "schema_valid": 35,
+          "incorrect_populated": 1,
+          "unsupported_populated": 1,
+          "correct_abstentions": 5,
+          "median_seconds": 0.04022,
+          "max_seconds": 0.2006,
+          "passes_original_accuracy_abstention_gate": false
+        },
+        "llama3.2:latest": {
+          "checks": 35,
+          "scorable": 30,
+          "abstention_cases": 5,
+          "covered": 20,
+          "exact": 11,
+          "evidence_correct": 11,
+          "schema_valid": 35,
+          "incorrect_populated": 9,
+          "unsupported_populated": 9,
+          "correct_abstentions": 4,
+          "median_seconds": 0.32958,
+          "max_seconds": 3.78164,
+          "passes_original_accuracy_abstention_gate": false
+        },
+        "hybrid:llama3.2:latest": {
+          "checks": 35,
+          "scorable": 30,
+          "abstention_cases": 5,
+          "covered": 8,
+          "exact": 8,
+          "evidence_correct": 8,
+          "schema_valid": 35,
+          "incorrect_populated": 0,
+          "unsupported_populated": 0,
+          "correct_abstentions": 5,
+          "median_seconds": 0.32958,
+          "max_seconds": 3.78176,
+          "passes_original_accuracy_abstention_gate": false
+        }
+      }
+    }
+  }
+}

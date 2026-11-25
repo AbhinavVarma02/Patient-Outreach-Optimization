@@ -33,6 +33,8 @@ Full-page captures use the pinned Playwright Chromium on Windows, default workfl
 
 The Overview copy now points readers to the Haryana evidence. Evidence & Methods presents the independent community study above the existing Geisinger trial explorer. The new tables wrap row labels on narrow screens to keep numeric columns visible. The five prior screenshots for Targeting, Planner and Pilot match exactly. Navigation, typography, surfaces and workflow structure follow the approved release. The original captures remain in Git history and the prior deployment is available for comparison. [Prior deployment](https://9112bbb3.patient-outreach-optimization.pages.dev/)
 
+For v0.3.0-demo, Overview updates its evidence-status strip to include Sierra Leone. Evidence & Methods adds the Sierra Leone replication, policy tables and a collapsible extraction evaluation using the same components. The five Targeting, Planner and Pilot screenshots matched the v0.2.0-demo references exactly. The six changed captures cover Overview and Evidence & Methods in desktop light and mobile light and dark. The v0.2.0-demo screenshots are preserved in checkpoint `88f323c`.
+
 | View | Desktop (1440 × 900), light | Mobile (390 × 844), light | Mobile (390 × 844), dark |
 | --- | --- | --- | --- |
 | Overview | [Reference](images/overview.png) | [Reference](images/overview-mobile-light.png) | [Reference](images/overview-mobile-dark.png) |

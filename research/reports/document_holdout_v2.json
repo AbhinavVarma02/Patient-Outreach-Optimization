@@ -1,0 +1,2186 @@
+{
+  "purpose": "held-out evaluation",
+  "pypdf": "7.1.1",
+  "trial_count": 30,
+  "models": {
+    "qwen2.5:latest": {
+      "digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "bytes": 4683087332,
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen2",
+        "families": [
+          "qwen2"
+        ],
+        "parameter_size": "7.6B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 32768,
+        "embedding_length": 3584,
+        "runner": "ggml"
+      }
+    }
+  },
+  "scores": {
+    "registry": {
+      "checks": 39,
+      "scorable": 30,
+      "abstention_cases": 9,
+      "covered": 4,
+      "exact": 2,
+      "evidence_correct": 2,
+      "schema_valid": 39,
+      "incorrect_populated": 2,
+      "unsupported_populated": 2,
+      "correct_abstentions": 7,
+      "median_seconds": 0.0,
+      "max_seconds": 4e-05,
+      "passes_original_accuracy_abstention_gate": false
+    },
+    "deterministic_layout": {
+      "checks": 39,
+      "scorable": 30,
+      "abstention_cases": 9,
+      "covered": 14,
+      "exact": 14,
+      "evidence_correct": 9,
+      "schema_valid": 39,
+      "incorrect_populated": 0,
+      "unsupported_populated": 5,
+      "correct_abstentions": 9,
+      "median_seconds": 0.08523,
+      "max_seconds": 1.21469,
+      "passes_original_accuracy_abstention_gate": false
+    },
+    "deterministic_plain": {
+      "checks": 39,
+      "scorable": 30,
+      "abstention_cases": 9,
+      "covered": 14,
+      "exact": 14,
+      "evidence_correct": 9,
+      "schema_valid": 39,
+      "incorrect_populated": 0,
+      "unsupported_populated": 5,
+      "correct_abstentions": 9,
+      "median_seconds": 0.04274,
+      "max_seconds": 0.10228,
+      "passes_original_accuracy_abstention_gate": false
+    },
+    "qwen2.5:latest": {
+      "checks": 39,
+      "scorable": 30,
+      "abstention_cases": 9,
+      "covered": 12,
+      "exact": 7,
+      "evidence_correct": 7,
+      "schema_valid": 37,
+      "incorrect_populated": 5,
+      "unsupported_populated": 5,
+      "correct_abstentions": 7,
+      "median_seconds": 0.48063,
+      "max_seconds": 5.31483,
+      "passes_original_accuracy_abstention_gate": false
+    },
+    "hybrid:qwen2.5:latest": {
+      "checks": 39,
+      "scorable": 30,
+      "abstention_cases": 9,
+      "covered": 3,
+      "exact": 3,
+      "evidence_correct": 3,
+      "schema_valid": 37,
+      "incorrect_populated": 0,
+      "unsupported_populated": 0,
+      "correct_abstentions": 9,
+      "median_seconds": 0.4808,
+      "max_seconds": 5.31484,
+      "passes_original_accuracy_abstention_gate": false
+    }
+  },
+  "results": [
+    {
+      "id": "NCT01035151",
+      "field": "randomization_unit",
+      "expected": "neighborhood",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.05947
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.03462
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 5.31483,
+          "total_duration": 5285180900,
+          "load_duration": 4506271100,
+          "prompt_eval_count": 162,
+          "eval_count": 19
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 5.31484,
+          "total_duration": 5285180900,
+          "load_duration": 4506271100,
+          "prompt_eval_count": 162,
+          "eval_count": 19
+        }
+      }
+    },
+    {
+      "id": "NCT01946282",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 12",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.20428
+        },
+        "deterministic_plain": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 12",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.07301
+        },
+        "qwen2.5:latest": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 12",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.47659,
+          "total_duration": 476851400,
+          "load_duration": 9065600,
+          "prompt_eval_count": 257,
+          "eval_count": 13
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 12",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.47681,
+          "total_duration": 476851400,
+          "load_duration": 9065600,
+          "prompt_eval_count": 257,
+          "eval_count": 13
+        }
+      }
+    },
+    {
+      "id": "NCT02078804",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 11",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.12831
+        },
+        "deterministic_plain": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 11",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.05458
+        },
+        "qwen2.5:latest": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 11",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.57828,
+          "total_duration": 577150200,
+          "load_duration": 8402900,
+          "prompt_eval_count": 561,
+          "eval_count": 13
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.57837,
+          "total_duration": 577150200,
+          "load_duration": 8402900,
+          "prompt_eval_count": 561,
+          "eval_count": 13
+        }
+      }
+    },
+    {
+      "id": "NCT02096029",
+      "field": "randomization_unit",
+      "expected": null,
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.12999
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.05386
+        },
+        "qwen2.5:latest": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 6",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.4139,
+          "total_duration": 410305600,
+          "load_duration": 4521200,
+          "prompt_eval_count": 203,
+          "eval_count": 13
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.41405,
+          "total_duration": 410305600,
+          "load_duration": 4521200,
+          "prompt_eval_count": 203,
+          "eval_count": 13
+        }
+      }
+    },
+    {
+      "id": "NCT02096029",
+      "field": "primary_window",
+      "expected": "6 months",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 3e-05
+        },
+        "deterministic_layout": {
+          "value": "6 months",
+          "schema": true,
+          "source_page": "page 6",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.09159
+        },
+        "deterministic_plain": {
+          "value": "6 months",
+          "schema": true,
+          "source_page": "page 6",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0212
+        },
+        "qwen2.5:latest": {
+          "value": "6 months",
+          "schema": true,
+          "source_page": "page 6",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.42811,
+          "total_duration": 413958100,
+          "load_duration": 5026900,
+          "prompt_eval_count": 182,
+          "eval_count": 14
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": "6 months",
+          "schema": true,
+          "source_page": "page 6",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.42814,
+          "total_duration": 413958100,
+          "load_duration": 5026900,
+          "prompt_eval_count": 182,
+          "eval_count": 14
+        }
+      }
+    },
+    {
+      "id": "NCT02485561",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.06254
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.03355
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.46293,
+          "total_duration": 459263800,
+          "load_duration": 5055100,
+          "prompt_eval_count": 190,
+          "eval_count": 15
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.46293,
+          "total_duration": 459263800,
+          "load_duration": 5055100,
+          "prompt_eval_count": 190,
+          "eval_count": 15
+        }
+      }
+    },
+    {
+      "id": "NCT03044691",
+      "field": "randomization_unit",
+      "expected": "practice",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.10253
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.04921
+        },
+        "qwen2.5:latest": {
+          "value": "practice",
+          "schema": true,
+          "source_page": "page 5",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.39871,
+          "total_duration": 396082300,
+          "load_duration": 4726600,
+          "prompt_eval_count": 174,
+          "eval_count": 13
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.39881,
+          "total_duration": 396082300,
+          "load_duration": 4726600,
+          "prompt_eval_count": 174,
+          "eval_count": 13
+        }
+      }
+    },
+    {
+      "id": "NCT03282097",
+      "field": "randomization_unit",
+      "expected": "dyad",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.03487
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.01348
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.51027,
+          "total_duration": 505745700,
+          "load_duration": 4278000,
+          "prompt_eval_count": 185,
+          "eval_count": 15
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.51028,
+          "total_duration": 505745700,
+          "load_duration": 4278000,
+          "prompt_eval_count": 185,
+          "eval_count": 15
+        }
+      }
+    },
+    {
+      "id": "NCT03282097",
+      "field": "primary_window",
+      "expected": null,
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 3e-05
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.05529
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.03698
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.00011
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.00011
+        }
+      }
+    },
+    {
+      "id": "NCT03291587",
+      "field": "randomization_unit",
+      "expected": "imaging facility",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.13774
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.06358
+        },
+        "qwen2.5:latest": {
+          "value": "community",
+          "schema": true,
+          "source_page": "page 13",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.50151,
+          "total_duration": 499032800,
+          "load_duration": 7525400,
+          "prompt_eval_count": 317,
+          "eval_count": 13
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.50168,
+          "total_duration": 499032800,
+          "load_duration": 7525400,
+          "prompt_eval_count": 317,
+          "eval_count": 13
+        }
+      }
+    },
+    {
+      "id": "NCT03481296",
+      "field": "randomization_unit",
+      "expected": "clinic",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": "clinic",
+          "schema": true,
+          "source_page": "page 5",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.12238
+        },
+        "deterministic_plain": {
+          "value": "clinic",
+          "schema": true,
+          "source_page": "page 5",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.05644
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.63077,
+          "total_duration": 624287900,
+          "load_duration": 5101400,
+          "prompt_eval_count": 565,
+          "eval_count": 15
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.63078,
+          "total_duration": 624287900,
+          "load_duration": 5101400,
+          "prompt_eval_count": 565,
+          "eval_count": 15
+        }
+      }
+    },
+    {
+      "id": "NCT03598166",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.10179
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.04867
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.49652,
+          "total_duration": 493275100,
+          "load_duration": 5014000,
+          "prompt_eval_count": 263,
+          "eval_count": 15
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.49653,
+          "total_duration": 493275100,
+          "load_duration": 5014000,
+          "prompt_eval_count": 263,
+          "eval_count": 15
+        }
+      }
+    },
+    {
+      "id": "NCT03598166",
+      "field": "primary_window",
+      "expected": "6 months",
+      "methods": {
+        "registry": {
+          "value": "6 months",
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": "/protocolSection/outcomesModule/primaryOutcomes/0/timeFrame",
+          "evidence_correct": true,
+          "seconds": 4e-05
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.09887
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.05173
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": false,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.51707,
+          "total_duration": 504494700,
+          "load_duration": 4280800,
+          "prompt_eval_count": 241,
+          "eval_count": 15
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": false,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.51708,
+          "total_duration": 504494700,
+          "load_duration": 4280800,
+          "prompt_eval_count": 241,
+          "eval_count": 15
+        }
+      }
+    },
+    {
+      "id": "NCT03600038",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 4",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.08093
+        },
+        "deterministic_plain": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 4",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.04436
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.60189,
+          "total_duration": 599125100,
+          "load_duration": 7872800,
+          "prompt_eval_count": 341,
+          "eval_count": 15
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.60189,
+          "total_duration": 599125100,
+          "load_duration": 7872800,
+          "prompt_eval_count": 341,
+          "eval_count": 15
+        }
+      }
+    },
+    {
+      "id": "NCT04160975",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 5",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.03152
+        },
+        "deterministic_plain": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 5",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.01685
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.51005,
+          "total_duration": 496775000,
+          "load_duration": 4306000,
+          "prompt_eval_count": 191,
+          "eval_count": 15
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.51005,
+          "total_duration": 496775000,
+          "load_duration": 4306000,
+          "prompt_eval_count": 191,
+          "eval_count": 15
+        }
+      }
+    },
+    {
+      "id": "NCT04427527",
+      "field": "randomization_unit",
+      "expected": "county",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.13866
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.08998
+        },
+        "qwen2.5:latest": {
+          "value": "clinic",
+          "schema": true,
+          "source_page": "page 14",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.45235,
+          "total_duration": 448172200,
+          "load_duration": 4352900,
+          "prompt_eval_count": 281,
+          "eval_count": 13
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.45246,
+          "total_duration": 448172200,
+          "load_duration": 4352900,
+          "prompt_eval_count": 281,
+          "eval_count": 13
+        }
+      }
+    },
+    {
+      "id": "NCT04445662",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 9",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.07272
+        },
+        "deterministic_plain": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 9",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.03484
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": false,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.66983,
+          "total_duration": 670220600,
+          "load_duration": 9523400,
+          "prompt_eval_count": 403,
+          "eval_count": 18
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": false,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.66984,
+          "total_duration": 670220600,
+          "load_duration": 9523400,
+          "prompt_eval_count": 403,
+          "eval_count": 18
+        }
+      }
+    },
+    {
+      "id": "NCT04471194",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 12",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.08459
+        },
+        "deterministic_plain": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 12",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.04113
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.47521,
+          "total_duration": 478010100,
+          "load_duration": 14042000,
+          "prompt_eval_count": 177,
+          "eval_count": 15
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.47522,
+          "total_duration": 478010100,
+          "load_duration": 14042000,
+          "prompt_eval_count": 177,
+          "eval_count": 15
+        }
+      }
+    },
+    {
+      "id": "NCT04672265",
+      "field": "randomization_unit",
+      "expected": null,
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.00102
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0005
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 1e-05
+        }
+      }
+    },
+    {
+      "id": "NCT04705363",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 4",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.11829
+        },
+        "deterministic_plain": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 4",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.05632
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.60434,
+          "total_duration": 604119800,
+          "load_duration": 9303500,
+          "prompt_eval_count": 351,
+          "eval_count": 15
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.60434,
+          "total_duration": 604119800,
+          "load_duration": 9303500,
+          "prompt_eval_count": 351,
+          "eval_count": 15
+        }
+      }
+    },
+    {
+      "id": "NCT05395871",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 6",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.1647
+        },
+        "deterministic_plain": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 6",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.06408
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.58502,
+          "total_duration": 581054200,
+          "load_duration": 5354300,
+          "prompt_eval_count": 254,
+          "eval_count": 15
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.58503,
+          "total_duration": 581054200,
+          "load_duration": 5354300,
+          "prompt_eval_count": 254,
+          "eval_count": 15
+        }
+      }
+    },
+    {
+      "id": "NCT05395871",
+      "field": "primary_window",
+      "expected": "3 months",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 3e-05
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.11642
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.06991
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.00011
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.00011
+        }
+      }
+    },
+    {
+      "id": "NCT05530603",
+      "field": "randomization_unit",
+      "expected": null,
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.00466
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.00068
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 1e-05
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 1e-05
+        }
+      }
+    },
+    {
+      "id": "NCT05645354",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.04286
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.02238
+        },
+        "qwen2.5:latest": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 5",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.48063,
+          "total_duration": 476601900,
+          "load_duration": 6603800,
+          "prompt_eval_count": 200,
+          "eval_count": 13
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.4808,
+          "total_duration": 476601900,
+          "load_duration": 6603800,
+          "prompt_eval_count": 200,
+          "eval_count": 13
+        }
+      }
+    },
+    {
+      "id": "NCT05810714",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 4",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.07399
+        },
+        "deterministic_plain": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 4",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.04127
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.59061,
+          "total_duration": 594251300,
+          "load_duration": 13261200,
+          "prompt_eval_count": 250,
+          "eval_count": 15
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.59062,
+          "total_duration": 594251300,
+          "load_duration": 13261200,
+          "prompt_eval_count": 250,
+          "eval_count": 15
+        }
+      }
+    },
+    {
+      "id": "NCT05810714",
+      "field": "primary_window",
+      "expected": "2 months",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 2e-05
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.08761
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.05653
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.60763,
+          "total_duration": 604093900,
+          "load_duration": 4657700,
+          "prompt_eval_count": 374,
+          "eval_count": 15
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.60763,
+          "total_duration": 604093900,
+          "load_duration": 4657700,
+          "prompt_eval_count": 374,
+          "eval_count": 15
+        }
+      }
+    },
+    {
+      "id": "NCT06048406",
+      "field": "randomization_unit",
+      "expected": "school",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.04647
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.01974
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.50667,
+          "total_duration": 512119000,
+          "load_duration": 15770500,
+          "prompt_eval_count": 174,
+          "eval_count": 15
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.50668,
+          "total_duration": 512119000,
+          "load_duration": 15770500,
+          "prompt_eval_count": 174,
+          "eval_count": 15
+        }
+      }
+    },
+    {
+      "id": "NCT06062264",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 2",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.07799
+        },
+        "deterministic_plain": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 2",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.03783
+        },
+        "qwen2.5:latest": {
+          "value": "clinic",
+          "schema": true,
+          "source_page": "page 2",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.58477,
+          "total_duration": 579965400,
+          "load_duration": 6645100,
+          "prompt_eval_count": 370,
+          "eval_count": 14
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.58503,
+          "total_duration": 579965400,
+          "load_duration": 6645100,
+          "prompt_eval_count": 370,
+          "eval_count": 14
+        }
+      }
+    },
+    {
+      "id": "NCT06062264",
+      "field": "primary_window",
+      "expected": null,
+      "methods": {
+        "registry": {
+          "value": "6 months",
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": "/protocolSection/outcomesModule/primaryOutcomes/0/timeFrame",
+          "evidence_correct": false,
+          "seconds": 3e-05
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.05683
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.03188
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.00012
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.00012
+        }
+      }
+    },
+    {
+      "id": "NCT06177795",
+      "field": "randomization_unit",
+      "expected": null,
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.12574
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.05435
+        },
+        "qwen2.5:latest": {
+          "value": "clinic",
+          "schema": true,
+          "source_page": "page 10",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.74417,
+          "total_duration": 736956100,
+          "load_duration": 5963100,
+          "prompt_eval_count": 692,
+          "eval_count": 14
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.74428,
+          "total_duration": 736956100,
+          "load_duration": 5963100,
+          "prompt_eval_count": 692,
+          "eval_count": 14
+        }
+      }
+    },
+    {
+      "id": "NCT06177795",
+      "field": "primary_window",
+      "expected": "3 months",
+      "methods": {
+        "registry": {
+          "value": "3 months",
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": "/protocolSection/outcomesModule/primaryOutcomes/0/timeFrame",
+          "evidence_correct": true,
+          "seconds": 2e-05
+        },
+        "deterministic_layout": {
+          "value": "3 months",
+          "schema": true,
+          "source_page": "page 4",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.04109
+        },
+        "deterministic_plain": {
+          "value": "3 months",
+          "schema": true,
+          "source_page": "page 4",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.04194
+        },
+        "qwen2.5:latest": {
+          "value": "3 months",
+          "schema": true,
+          "source_page": "page 4",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.41446,
+          "total_duration": 411575200,
+          "load_duration": 10037600,
+          "prompt_eval_count": 172,
+          "eval_count": 14
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": "3 months",
+          "schema": true,
+          "source_page": "page 4",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.4145,
+          "total_duration": 411575200,
+          "load_duration": 10037600,
+          "prompt_eval_count": 172,
+          "eval_count": 14
+        }
+      }
+    },
+    {
+      "id": "NCT06185374",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 9",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.02522
+        },
+        "deterministic_plain": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 9",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.01148
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.47464,
+          "total_duration": 459042000,
+          "load_duration": 3816000,
+          "prompt_eval_count": 183,
+          "eval_count": 15
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.47465,
+          "total_duration": 459042000,
+          "load_duration": 3816000,
+          "prompt_eval_count": 183,
+          "eval_count": 15
+        }
+      }
+    },
+    {
+      "id": "NCT06241768",
+      "field": "randomization_unit",
+      "expected": null,
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.08523
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.03952
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 3e-05
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 3e-05
+        }
+      }
+    },
+    {
+      "id": "NCT06274359",
+      "field": "randomization_unit",
+      "expected": "dyad",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.10583
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.04498
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.46865,
+          "total_duration": 465511000,
+          "load_duration": 5717000,
+          "prompt_eval_count": 224,
+          "eval_count": 15
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.46865,
+          "total_duration": 465511000,
+          "load_duration": 5717000,
+          "prompt_eval_count": 224,
+          "eval_count": 15
+        }
+      }
+    },
+    {
+      "id": "NCT06274359",
+      "field": "primary_window",
+      "expected": null,
+      "methods": {
+        "registry": {
+          "value": "196 days",
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": "/protocolSection/outcomesModule/primaryOutcomes/0/timeFrame",
+          "evidence_correct": false,
+          "seconds": 2e-05
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.06698
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.04274
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.00014
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.00014
+        }
+      }
+    },
+    {
+      "id": "NCT06436300",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.29117
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.10228
+        },
+        "qwen2.5:latest": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 3",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.42335,
+          "total_duration": 419143300,
+          "load_duration": 6681400,
+          "prompt_eval_count": 185,
+          "eval_count": 13
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.42353,
+          "total_duration": 419143300,
+          "load_duration": 6681400,
+          "prompt_eval_count": 185,
+          "eval_count": 13
+        }
+      }
+    },
+    {
+      "id": "NCT06614361",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.15483
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.06604
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.54251,
+          "total_duration": 539470800,
+          "load_duration": 5155900,
+          "prompt_eval_count": 261,
+          "eval_count": 15
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.54251,
+          "total_duration": 539470800,
+          "load_duration": 5155900,
+          "prompt_eval_count": 261,
+          "eval_count": 15
+        }
+      }
+    },
+    {
+      "id": "NCT06614361",
+      "field": "primary_window",
+      "expected": "6 months",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 2e-05
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.03592
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.08401
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.57897,
+          "total_duration": 568483300,
+          "load_duration": 5077800,
+          "prompt_eval_count": 250,
+          "eval_count": 15
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.57898,
+          "total_duration": 568483300,
+          "load_duration": 5077800,
+          "prompt_eval_count": 250,
+          "eval_count": 15
+        }
+      }
+    },
+    {
+      "id": "NCT07472036",
+      "field": "randomization_unit",
+      "expected": null,
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 1.21469
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 4e-05
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 1e-05
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 1e-05
+        }
+      }
+    }
+  ],
+  "manifest_sha256": "ed9b75a3bc3f582205c5f812236affaf59210eae003ddaa5cfc1e672c4ce0d09",
+  "extractor_sha256": "85a349d01320250460ff59f35e52ef39a1dfda3d9c696c9c9d63f3629d7e507a"
+}

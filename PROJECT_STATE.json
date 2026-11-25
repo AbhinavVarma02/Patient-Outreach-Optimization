@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "as_of": "2026-11-24",
-  "phase": "haryana_demo_published",
+  "as_of": "2026-11-25",
+  "phase": "sierra_leone_demo_release_candidate",
   "completed": [
     "M0",
     "M7",
@@ -41,17 +41,25 @@
     "haryana_simulation": "research/reports/haryana_simulation.json",
     "haryana_public_projection": "web/src/haryana.json",
     "document_benchmark": "research/manifests/document_holdout.json",
-    "document_benchmark_run": "research/reports/document_holdout.json"
+    "document_benchmark_run": "research/reports/document_holdout.json",
+    "sierra_leone_sources": "research/manifests/sierra_leone_v1.json",
+    "sierra_leone_protocol": "research/SIERRA_LEONE_PROTOCOL.md",
+    "sierra_leone_protocol_commit": "545f465",
+    "sierra_leone_replication": "research/reports/sierra_leone_replication.json",
+    "sierra_leone_policy": "research/reports/sierra_leone_policy.json",
+    "community_inference": "research/reports/community_inference.json",
+    "document_holdout_v2": "research/manifests/document_holdout_v2.json",
+    "document_holdout_v2_run": "research/reports/document_holdout_v2.json"
   },
   "validation": {
     "data_integrity": "20 metadata matches; payload and schema unverified",
     "analysis_rights": "unresolved",
-    "geisinger_metadata_recheck": "20 matches; null project license; primary notebook subset verified; no participant payload access",
+    "geisinger_metadata_recheck": "2026-11-25 metadata-only check returned 20 matches; reuse unresolved and correspondence unsent",
     "haryana_fallback": "CC BY 4.0 archive verified; both Figure 4 point values and CR0 reproduced; PHC interval includes zero",
-    "real_data_replication": "Geisinger not run; Haryana Figure 4 point check passed",
-    "policy_evaluation": "Haryana conditional matched-block PHC holdout; no reliable gain over uniform; temporal transfer pending",
-    "model_validation": "Haryana WLS and cluster variance cross-checked; small policy holdout simulations show uneven coverage",
-    "ai_evaluation": "30 frozen public protocols and 35 checks; local and verified approaches failed release metrics",
+    "real_data_replication": "Sierra Leone five published coefficient and SE pairs match and agree with independent statsmodels computations; Haryana Figure 4 point check passed; Geisinger blocked",
+    "policy_evaluation": "Sierra Leone ridge T and DR learners fitted on 30 triplets, frozen and evaluated on 20 separate triplets; no reliable gain at 50% expected village capacity",
+    "model_validation": "Independent reference and exact enumeration passed; conservative bounds remain wide; spillover induces bias",
+    "ai_evaluation": "New 30-trial disjoint holdout: 14/30 deterministic and 3/30 verified 7B model, both 9/9 designated abstentions; gate failed",
     "python_tests_passed": 17,
     "node_tests_passed": 3,
     "local_browser_tests_passed": 12,
@@ -61,7 +69,7 @@
     "github_actions": "https://github.com/AbhinavVarma02/Patient-Outreach-Optimization/actions/runs/45544473794",
     "npm_reported_vulnerabilities": 0,
     "python_osv_reported_vulnerabilities": 0,
-    "alternative_data": "Sierra Leone CC0 1.0 verified with original files, matched triplets and a household assignment field"
+    "alternative_data": "CC0 1.0 Sierra Leone original payload and author methods verified; structure lottery denominators unresolved in released roster"
   },
   "release": {
     "status": "published_limited",
@@ -81,9 +89,14 @@
     "integrity": "verified after v0.2.0-demo deployment"
   },
   "next_actions": [
-    "Reproduce Sierra Leone village and household assignment contrasts before freezing policy evaluation.",
-    "Obtain documented author permission or a verified applicable license for the planned reuse, linkage and reporting. The draft request is in docs/LICENSING.md and is unsent.",
-    "After approval, verify pinned payloads, extract study schemas and randomization design, resolve Study 4 date and sample differences, and run RQ0 before touching heterogeneity outcomes.",
-    "Validate adjusted ITT and design-aware variance independently. Use a fresh extraction holdout before enabling model assistance."
-  ]
+    "Verify the intended free Pages deployment target, publish the checked release to GitHub, and verify build hashes, workflows and rollback targets over HTTPS.",
+    "Obtain documented author permission or a verified applicable license for Geisinger analysis, linkage and reporting. The correspondence draft remains unsent.",
+    "Reconcile the structure lottery roster and observation rules before evaluating incremental visit targeting. Seek an independent comparable rollout before temporal claims.",
+    "Improve retrieval, vocabulary and evidence verification on development cases. Use a new independent holdout for future deployment claims."
+  ],
+  "release_candidate": {
+    "version": "0.3.0-demo",
+    "status": "locally_verified",
+    "additional_external_dollars": 0
+  }
 }

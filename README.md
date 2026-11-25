@@ -4,9 +4,9 @@ An independent research workspace for preventive-care teams evaluating which out
 
 [Open the live workspace](https://patient-outreach-optimization.pages.dev/)
 
-**Limited research demonstration.** The app includes published Geisinger evidence and an independent replication on the CC BY 4.0 Haryana immunization trial. In 902 villages, assigning information-hub ambassadors was associated with 1.89 additional recorded measles vaccinations per village-month under the published weighting. The primary-health-center interval spans zero. An exploratory 42-village holdout did not establish a gain over uniform allocation. The patient targeting, channel cost and power tools use fictional inputs. [Haryana findings and limits](docs/HARYANA_RESEARCH.md)
+**Limited research demonstration.** In Sierra Leone, mobile vaccination plus community mobilization increased recorded adult uptake by 26.1 percentage points. The extra visit estimate was −1.1 points and its interval crossed zero. Two trained causal models showed no reliable lift over uniform village allocation in a held-out comparison. Haryana's separate replication reproduced 1.89 additional recorded measles vaccinations per village-month with published weighting. The interval with primary-health-center clustering crossed zero. The patient targeting, channel cost and power tools use fictional inputs. [Sierra Leone study card](docs/SIERRA_LEONE_RESEARCH.md) · [Haryana findings](docs/HARYANA_RESEARCH.md)
 
-The Geisinger inventory covers four trials and all 20 public file metadata entries match. Independent participant-level analysis awaits verified reuse rights. A 30-trial held-out benchmark found no benefit from enabling the tested local model with evidence verification. [Data rights](docs/LICENSING.md) · [AI evaluation](docs/AI_EVALUATION.md)
+All 20 Geisinger metadata entries match. Independent participant-level analysis awaits documented reuse rights. On 30 new public trial documents, the deterministic parser matched 14 of 30 scorable fields and the verified local model matched 3. Both fell short of the release gate. The app uses reviewed summaries. [Data rights](docs/LICENSING.md) · [AI evaluation](docs/AI_EVALUATION.md)
 
 ![Production overview of the Patient Outreach Optimization workspace](docs/images/overview.png)
 

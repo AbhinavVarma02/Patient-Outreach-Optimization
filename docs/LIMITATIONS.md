@@ -1,5 +1,7 @@
 # Limitations
 
+Sierra Leone provides internal village-level policy evaluation and a structure-randomized visit replication. The released roster does not identify all visit assignment denominators, and the observed rollout allows interference. The held-out comparisons cannot establish superiority, prospective benefit, temporal transport or individual treatment effects. The new trial document evaluation is page-conditioned and single-reviewer. All extraction methods missed the unchanged accuracy threshold. [Sierra Leone evidence](SIERRA_LEONE_RESEARCH.md) · [Extraction results](AI_EVALUATION.md)
+
 - OSF published matching hash and size metadata for all 20 files. Payload bytes and participant-level data remain unverified. The repository has no evidence of permission for the intended analysis.
 - Geisinger replication, clinical effect modification, clinical policy performance, temporal transport and fairness remain unassessed. Haryana provides a village-level replication and exploratory held-out comparison. Camp-recorded counts, sparse factorial support, nonuniform observation, interference and uneven finite-sample coverage limit use. [Haryana scope](HARYANA_RESEARCH.md)
 - Synthetic inference uses i.i.d. records and independently frozen rules. The toolkit has partial coverage of the requested statistical methods. Independent R-reference validation, adjusted ITT, RATE and learned-rule cross-fit variance remain pending.

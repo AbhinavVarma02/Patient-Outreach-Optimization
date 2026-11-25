@@ -1,5 +1,7 @@
 # Data and estimand cards
 
+The CC0 Sierra Leone study uses 150 villages randomized in 50 triplets and a nested lottery for residential structures. The source verification, outcome denominators, assignment audit and pretreatment feature contract are documented in its [study card](SIERRA_LEONE_RESEARCH.md) and [protocol](../research/SIERRA_LEONE_PROTOCOL.md).
+
 The pinned historical inventory reports expected archive records: 46,602 full / 38,598 analysis for Study 1, 45,061 / 42,481 for Study 2, 40,671 / 39,129 for Study 3, and 43,225 / 42,709 for Study 4. SHA-256 values and file sizes are stored in research/manifests/osf_mqbux_manifest.json. Records are not unique people. No participant outcomes were downloaded for analysis in this workspace.
 
 | Study | Published design | Target primary contrast for replication | Checks still required |

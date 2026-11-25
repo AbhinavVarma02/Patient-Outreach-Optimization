@@ -27,3 +27,15 @@ Ship the independently verified Figure 4 replication, PHC-clustered sensitivity 
 ## D08 Extraction delivery
 
 Keep reviewed study evidence as the release path. The 30-trial benchmark gave neither local generation nor its verifier a reliable coverage gain. Keep labels, sources and results frozen for reference. Test future changes on a new holdout after development, with second review for ambiguous unit and timing labels. [Benchmark](docs/AI_EVALUATION.md)
+
+## D09 Sierra Leone estimands
+
+Publish the replicated adult uptake contrasts for assignment to the combined mobile package and the incremental structure visit. Pooled mobile assignment has known 2/3 propensity, with each package version assigned once per triplet. The released structure roster does not reconcile with the stated visit cap everywhere, so preserve the published within-village replication and limit experimental targeting to the village lottery. Use fixed ridge learners in a triplet-disjoint internal holdout. Revisit structure targeting after denominator and interference resolution. [Study card](docs/SIERRA_LEONE_RESEARCH.md)
+
+## D10 Conservative small-sample inference
+
+Use assignment-aware bounded intervals as the principal Sierra Leone policy uncertainty. Verify score and range calculations by exact enumeration and calibration. In Haryana keep the original nominal intervals and add finite-sample inference for a capped-count sensitivity. The bounded intervals trade precision for finite-sample control under documented lottery and independence assumptions. They do not repair bias due to interference or observation. [Inference validation](docs/MODEL_VALIDATION.md)
+
+## D11 Extraction gate after repair
+
+Use the original benchmark for diagnostics and the disjoint 30-trial evaluation to assess the frozen system. The best deterministic path scored 14 of 30 and the verified model scored 3 of 30. Keep reviewed sources in production. Additional OCR, vocabulary, context and verification work stays experimental and requires a successor holdout for any new quality claim. [Evaluation](docs/AI_EVALUATION.md)

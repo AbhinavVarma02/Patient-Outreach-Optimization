@@ -11,7 +11,10 @@ ALLOWED_ROOT = {
     "pyproject.toml", "uv.lock",
 }
 DENIED_PREFIXES = ("data/", "research/source-inputs/", "web/dist/", "web/qa-output/", ".wrangler/")
-DENIED_SUFFIXES = {".parquet",".csv",".pkl",".joblib",".zip",".docx",".pem",".key",".env",".map",".pyc"}
+DENIED_SUFFIXES = {
+    ".parquet", ".csv", ".tsv", ".dta", ".tab", ".do", ".pkl", ".joblib", ".zip", ".pdf", ".docx", ".xlsx",
+    ".pem", ".key", ".env", ".map", ".pyc", ".gguf", ".safetensors",
+}
 CREDENTIAL = re.compile(rb"(?:ghp_|github_pat_|sk-proj-)[A-Za-z0-9_-]{15,}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----")
 
 

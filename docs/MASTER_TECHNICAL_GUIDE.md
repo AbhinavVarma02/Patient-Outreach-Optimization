@@ -16,4 +16,6 @@ The [Haryana track](HARYANA_RESEARCH.md) starts with a verifiable deposit and a 
 
 The [document benchmark](AI_EVALUATION.md) compares exact scorable labels and abstention across registry metadata, deterministic PDF text parsing, installed local inference and an evidence verifier on the same pinned inputs. Local generation only improves a feature when the returned data are demonstrably supported and useful. The benchmark did not meet this standard.
 
+The [Sierra Leone pipeline](SIERRA_LEONE_RESEARCH.md) verifies original data and analysis materials before running an independent published regression replication. Its policy run fits T- and DR-learners on whole training triplets and keeps frozen rules, roster and fit digests in the run manifest. It evaluates the known 2/3 assignment probability on disjoint triplets and publishes only reviewed aggregate results. The finite-sample bounds quantify how little is learned about gains at matched capacity. The structure-level replication alone leaves key support and interference questions for a visit allocation policy.
+
 The [experiment report](EXPERIMENT_REPORT.md) includes a fictional null comparison. [Limitations](LIMITATIONS.md) describe unresolved scientific gates. [Deployment](DEPLOYMENT.md) covers static hosting and rollback.
