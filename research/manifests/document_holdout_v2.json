@@ -1,0 +1,708 @@
+{
+  "version": 2,
+  "annotation": "Single reviewer. Official protocol text on specified physical PDF pages. Distinct from all development trials.",
+  "trials": [
+    {
+      "id": "NCT01035151",
+      "filename": "Prot_001.pdf",
+      "registry_sha256": "47d49e1d97c5a63d4b791e308a94aa40ca8324762354a12d880f75c07f4df095",
+      "pdf_sha256": "9f59e51a88276167d4930f5d78cc435678f3251890dbe1f62ec705d2a6ed81c2",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            2
+          ],
+          "expected": "neighborhood",
+          "anchor": {
+            "page": 2,
+            "text": "randomly assign one neighborhood in each pair"
+          }
+        }
+      ],
+      "protocol_date": "2018-08-09",
+      "registry_posted": "2018-12-13"
+    },
+    {
+      "id": "NCT01946282",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "8f4b5d9505dabcd725a2d6668a009bc89e80d23bda7919a5a7011d9a050c8b32",
+      "pdf_sha256": "cef1a6d6d7270ade77c52bf331560c6a4e8ebb00311f1fef4a2c92a63bc2a54e",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            12
+          ],
+          "expected": "individual",
+          "anchor": {
+            "page": 12,
+            "text": "new participants will be randomized to receive"
+          }
+        }
+      ],
+      "protocol_date": "2015-06-29",
+      "registry_posted": "2020-03-19"
+    },
+    {
+      "id": "NCT02078804",
+      "filename": "Prot_002.pdf",
+      "registry_sha256": "3ec6a39557a75e97c4a9e6033cd35fca4dbfcd6298b0d4fdeac2cab3a379ab69",
+      "pdf_sha256": "26a7d30e213d70b6f53aaf3f508275ee90dff35b5a1d534dfb58d75dbf01b857",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            11
+          ],
+          "expected": "individual",
+          "anchor": {
+            "page": 11,
+            "text": "individuals, residents of Sweden will be randomized"
+          }
+        }
+      ],
+      "protocol_date": "2025-01-16",
+      "registry_posted": "2025-06-17"
+    },
+    {
+      "id": "NCT02096029",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "7d2f384fcd684dac55abcc883222f91af82cdc69a3ed42d0015625bedee330d6",
+      "pdf_sha256": "37e807563de7ba03d47d9d7918c21ed6ceceab1875783945167a0ed318c186d1",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            6
+          ],
+          "expected": null,
+          "abstention_basis": "No stated assignment unit on the endpoint page"
+        },
+        {
+          "field": "primary_window",
+          "pages": [
+            6
+          ],
+          "expected": "6 months",
+          "anchor": {
+            "page": 6,
+            "text": "at 6- month follow-up"
+          }
+        }
+      ],
+      "protocol_date": "2017-10-06",
+      "registry_posted": "2019-08-07"
+    },
+    {
+      "id": "NCT02485561",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "718c79a40d4e5995bee097768bf272c6bdb4830e706d47d72ce41f00a25e84ec",
+      "pdf_sha256": "9b053c6177963bc713e402e03fd339047383bcd23af23a5e49fbc3fcdb2fedfa",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            6
+          ],
+          "expected": "individual",
+          "anchor": {
+            "page": 6,
+            "text": "participants will complete a baseline survey and read basic CRCS information then be randomly assigned"
+          }
+        }
+      ],
+      "protocol_date": "2015-12-03",
+      "registry_posted": "2018-11-15"
+    },
+    {
+      "id": "NCT03044691",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "f7b49416d601ef387d176c86c94b0df754d61688b89d9fb4d67f6fede81b232d",
+      "pdf_sha256": "e1f54570c5d5713466d5649633f0a92db38b740f57dacb1512eaf9f6f61485ec",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            5
+          ],
+          "expected": "practice",
+          "anchor": {
+            "page": 5,
+            "text": "practices. Two will be randomly assigned to receive the intervention"
+          }
+        }
+      ],
+      "protocol_date": "2017-06-12",
+      "registry_posted": "2019-07-01"
+    },
+    {
+      "id": "NCT03282097",
+      "filename": "Prot_SAP_001.pdf",
+      "registry_sha256": "a1ea3f6a0efbb9f0f48a18b884059edbadf4b1bf54e56b55ae5654b94a29a5f4",
+      "pdf_sha256": "d294f1a5b78184813476de15ccbc5b4331206db7b0f5904f18e891d12656fc25",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            7
+          ],
+          "expected": "dyad",
+          "anchor": {
+            "page": 7,
+            "text": "the dyads will be randomly assigned"
+          }
+        },
+        {
+          "field": "primary_window",
+          "pages": [
+            3
+          ],
+          "expected": null,
+          "abstention_basis": "Visit index without a unique numerical duration"
+        }
+      ],
+      "protocol_date": "2022-04-28",
+      "registry_posted": "2025-08-11"
+    },
+    {
+      "id": "NCT03291587",
+      "filename": "Prot_SAP_001.pdf",
+      "registry_sha256": "0f30a84016d9216cb3416aa6e5cb9fedc0002926d98479eb7c2a76bccb694746",
+      "pdf_sha256": "07e671a8d20e8890688e27dd366fa514b0645068f1434fbec1e185c9d9067b94",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            13
+          ],
+          "expected": "imaging facility",
+          "anchor": {
+            "page": 13,
+            "text": "unit of randomization is the lung cancer screening imaging facility"
+          }
+        }
+      ],
+      "protocol_date": "2019-12-10",
+      "registry_posted": "2022-07-25"
+    },
+    {
+      "id": "NCT03481296",
+      "filename": "Prot_003.pdf",
+      "registry_sha256": "0879c35da28351c5354647a5ecdfdddc3493c2a7b876b7225784ced7ed0ba7e6",
+      "pdf_sha256": "d17ab79bc16b5eab558f180578e8bdd26d76445cabeda89a17bf666cefbc20bc",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            5
+          ],
+          "expected": "clinic",
+          "anchor": {
+            "page": 5,
+            "text": "clinics will be randomized to the culturally adapted"
+          }
+        }
+      ],
+      "protocol_date": "2018-09-25",
+      "registry_posted": "2023-07-03"
+    },
+    {
+      "id": "NCT03598166",
+      "filename": "Prot_SAP_001.pdf",
+      "registry_sha256": "1f23d03655b2e7f294fd0f47148d696aefce5fbff0a1ee29ff4231a11d02c488",
+      "pdf_sha256": "d1bbfa4dc0277e046ca16639bd623fc752da7084709aec185d0ca5bafa0ab051",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            4
+          ],
+          "expected": "individual",
+          "anchor": {
+            "page": 4,
+            "text": "patients will then be randomized"
+          }
+        },
+        {
+          "field": "primary_window",
+          "pages": [
+            5
+          ],
+          "expected": "6 months",
+          "anchor": {
+            "page": 5,
+            "text": "after 6 months"
+          }
+        }
+      ],
+      "protocol_date": "2019-04-19",
+      "registry_posted": "2023-01-05"
+    },
+    {
+      "id": "NCT03600038",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "1c6f420c97f7b47167f358ae58459e7caf6988b80fde3e6b744f7840f62243c7",
+      "pdf_sha256": "b5958996ca6eca17950a06720eb32c8b13204e7dcdbea0f77a34892e01681b4f",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            4
+          ],
+          "expected": "individual",
+          "anchor": {
+            "page": 4,
+            "text": "we will randomize participants"
+          }
+        }
+      ],
+      "protocol_date": "2019-10-25",
+      "registry_posted": "2019-12-09"
+    },
+    {
+      "id": "NCT04160975",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "8ee256307f09e4fcb26f67c89e58460610852cbc7d072ca7e0cd3977effd182e",
+      "pdf_sha256": "413f93dd52d55be4750c0135464c7f927c2d8082261b151305306fdf7b475a87",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            5
+          ],
+          "expected": "individual",
+          "anchor": {
+            "page": 5,
+            "text": "We will randomize subjects"
+          }
+        }
+      ],
+      "protocol_date": "2020-10-12",
+      "registry_posted": "2021-06-29"
+    },
+    {
+      "id": "NCT04427527",
+      "filename": "Prot_SAP_001.pdf",
+      "registry_sha256": "33c0e9196cc021e4ed6571cc126135b91d16c72bf9e79693c92a15bb50f88059",
+      "pdf_sha256": "1629b5c4f7c4dfc214c2a0881c0f2fec7712f85ce3c6a12acd98e4578c098075",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            14
+          ],
+          "expected": "county",
+          "anchor": {
+            "page": 14,
+            "text": "unit of randomization will be the county"
+          }
+        }
+      ],
+      "protocol_date": "2020-03-02",
+      "registry_posted": "2026-09-04"
+    },
+    {
+      "id": "NCT04445662",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "5011f33232d043f31e74e7cafb5e7414a6076b210675cbbd0acfe7c671e9c655",
+      "pdf_sha256": "de605efab2e020efff0fa83c3a73db047ca411147a6b7b438625838b30f10d9f",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            9
+          ],
+          "expected": "individual",
+          "anchor": {
+            "page": 9,
+            "text": "Participants will be randomized 1:1"
+          }
+        }
+      ],
+      "protocol_date": "2023-12-07",
+      "registry_posted": "2025-10-21"
+    },
+    {
+      "id": "NCT04471194",
+      "filename": "Prot_SAP_002.pdf",
+      "registry_sha256": "93a751d2fb3458df438d276fe5b8a0961567e8392ade8cdd89098818b17b9251",
+      "pdf_sha256": "5823d3570b8bfdc1563d76acb52246e9ac32c21f47d7b7e13d29d556d90df63f",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            12
+          ],
+          "expected": "individual",
+          "anchor": {
+            "page": 12,
+            "text": "Participants will be randomized to receive"
+          }
+        }
+      ],
+      "protocol_date": "2021-03-01",
+      "registry_posted": "2022-12-13"
+    },
+    {
+      "id": "NCT04672265",
+      "filename": "Prot_000.pdf",
+      "registry_sha256": "654084c3d47835ff10fdebabf4f97b9d96eeacf6d38476537f783dad35a4f9a8",
+      "pdf_sha256": "4aed973b8803b55cd02ebff643cb93795e86e347dd8b7e74585a78f823ce3c81",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            3
+          ],
+          "expected": null,
+          "abstention_basis": "No extractable text on supplied page"
+        }
+      ],
+      "protocol_date": "2023-02-06",
+      "registry_posted": "2024-04-03"
+    },
+    {
+      "id": "NCT04705363",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "a28f171b7b2d12842078cf2ee1f298511255cd08e5c981aa0a5ef9d380a4523b",
+      "pdf_sha256": "4da963a4f21c349e1738a250780fb161aaf0e7e3eb55ce99dc73c75ec394754b",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            4
+          ],
+          "expected": "individual",
+          "anchor": {
+            "page": 4,
+            "text": "participants will be randomly assigned to a VHA"
+          }
+        }
+      ],
+      "protocol_date": "2023-07-27",
+      "registry_posted": "2025-04-18"
+    },
+    {
+      "id": "NCT05395871",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "5e4bc3e39b3800df070dd166ed386370d16cdf2cd5374f1d3b834c8e6b66da9c",
+      "pdf_sha256": "ddb8234c8ede23cd0bb7eba530b5436c524591c401b923813dd06437ab67d1f4",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            6
+          ],
+          "expected": "individual",
+          "anchor": {
+            "page": 6,
+            "text": "Participants will be randomised"
+          }
+        },
+        {
+          "field": "primary_window",
+          "pages": [
+            8
+          ],
+          "expected": "3 months",
+          "anchor": {
+            "page": 8,
+            "text": "three months after"
+          }
+        }
+      ],
+      "protocol_date": "2022-02-15",
+      "registry_posted": "2025-01-30"
+    },
+    {
+      "id": "NCT05530603",
+      "filename": "Prot_003.pdf",
+      "registry_sha256": "bc601f7723cfd3fa864494d68b079dab18bc6319b7733001d75ea229abe71c6f",
+      "pdf_sha256": "0b0094cd500559dea202de2adf5d107ebefefc96b78bf0cc580b8dc3c8a9b809",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            3
+          ],
+          "expected": null,
+          "abstention_basis": "No extractable text on supplied page"
+        }
+      ],
+      "protocol_date": "2022-05-02",
+      "registry_posted": "2025-03-17"
+    },
+    {
+      "id": "NCT05645354",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "2961a6b3487c3eccf53a50736ade446a3360c37b9706dbde5fdef64496c951f0",
+      "pdf_sha256": "3bfc472398e633daac37ad6dd698c2f0420dc6b65243be56423a8a255f28766c",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            5
+          ],
+          "expected": "individual",
+          "anchor": {
+            "page": 5,
+            "text": "SGM smokers living in the United States randomized to"
+          }
+        }
+      ],
+      "protocol_date": "2023-07-25",
+      "registry_posted": "2025-08-17"
+    },
+    {
+      "id": "NCT05810714",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "d145ff7b309dd1c460e1648bf8d4524aba091fbf5de6507068b3e9826ccc8afd",
+      "pdf_sha256": "b4b5b4908c18af1acfce7cbeaae4ccc5432681f792c7e664a1d1f60aa6b82f0c",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            4
+          ],
+          "expected": "individual",
+          "anchor": {
+            "page": 4,
+            "text": "patients will be randomized to"
+          }
+        },
+        {
+          "field": "primary_window",
+          "pages": [
+            6
+          ],
+          "expected": "2 months",
+          "anchor": {
+            "page": 6,
+            "text": "FIT return at 2 months"
+          }
+        }
+      ],
+      "protocol_date": "2022-05-26",
+      "registry_posted": "2023-12-05"
+    },
+    {
+      "id": "NCT06048406",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "cbb7900be09670d1234c95523462ba7955f62a17584f50aa6b28f4b0aa650ac4",
+      "pdf_sha256": "92758d99c6b59d350ecabf6e76aa35a8c46e469f51e3206e5b2fbfba4703ff63",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            3
+          ],
+          "expected": "school",
+          "anchor": {
+            "page": 3,
+            "text": "schools will be randomly selected, with half designated as intervention group schools"
+          }
+        }
+      ],
+      "protocol_date": "2023-09-01",
+      "registry_posted": "2024-02-21"
+    },
+    {
+      "id": "NCT06062264",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "ad217bd62a15a793393a5e2db45e7ba1a0bb7beceb47d18ae590230bec14b043",
+      "pdf_sha256": "73f75636a5075e7628ce92d271828818dcd50575179a0a8c02e9aac6a02c6703",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            2
+          ],
+          "expected": "individual",
+          "anchor": {
+            "page": 2,
+            "text": "Patients will be randomized into"
+          }
+        },
+        {
+          "field": "primary_window",
+          "pages": [
+            2
+          ],
+          "expected": null,
+          "abstention_basis": "Calendar window without a unique duration"
+        }
+      ],
+      "protocol_date": "2023-08-11",
+      "registry_posted": "2025-04-20"
+    },
+    {
+      "id": "NCT06177795",
+      "filename": "Prot_000.pdf",
+      "registry_sha256": "789ffc485e18430bd2515b8971aab532fbd19b0f3586158ebf07df41a045833c",
+      "pdf_sha256": "09e6b2837582e1e1778e631fac04517fcc9e46ecf7171a974312d3b30e916e79",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            10
+          ],
+          "expected": null,
+          "abstention_basis": "Multiple intervention assignment units across health systems"
+        },
+        {
+          "field": "primary_window",
+          "pages": [
+            4
+          ],
+          "expected": "3 months",
+          "anchor": {
+            "page": 4,
+            "text": "within 3 months after"
+          }
+        }
+      ],
+      "protocol_date": "2024-10-04",
+      "registry_posted": "2026-07-06"
+    },
+    {
+      "id": "NCT06185374",
+      "filename": "Prot_SAP_001.pdf",
+      "registry_sha256": "16be17ffd9331772b411488af0aec27c5e2441c2a31268ef0f595433320dc087",
+      "pdf_sha256": "fcc189d65160f8992977f5a017651f30ccf0eb1b0dfe9d6ccd67a67dc6be305e",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            9
+          ],
+          "expected": "individual",
+          "anchor": {
+            "page": 9,
+            "text": "participants will be randomized 1:1"
+          }
+        }
+      ],
+      "protocol_date": "2023-10-27",
+      "registry_posted": "2025-08-20"
+    },
+    {
+      "id": "NCT06241768",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "3f9dde0eddcaf6b4d71ccb71fa554f72258fe61cc24401271e6f1892f9104e69",
+      "pdf_sha256": "2554c59163c210fb45846a1f658a0603ee808b62ec4e1a222dd12dcf908373a3",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            7
+          ],
+          "expected": null,
+          "abstention_basis": "Page discusses registration and recruitment without a lottery"
+        }
+      ],
+      "protocol_date": "2024-01-25",
+      "registry_posted": "2025-06-05"
+    },
+    {
+      "id": "NCT06274359",
+      "filename": "Prot_SAP_001.pdf",
+      "registry_sha256": "595fb2a76d8b38efea6c439cf08d248c0b89b1fa5d84c6af2d63625d68350d6a",
+      "pdf_sha256": "90dcf082fd47672911d410b16ffb90531d2173ab3f50194f5753b9da9f90bc81",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            9
+          ],
+          "expected": "dyad",
+          "anchor": {
+            "page": 9,
+            "text": "dyads will be randomized to intervention or control"
+          }
+        },
+        {
+          "field": "primary_window",
+          "pages": [
+            6
+          ],
+          "expected": null,
+          "abstention_basis": "Calendar cutoff without a unique duration"
+        }
+      ],
+      "protocol_date": "2024-01-26",
+      "registry_posted": "2026-08-28"
+    },
+    {
+      "id": "NCT06436300",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "20d71be983eb335a70d2213c458c5d4cd009d817a2fe964b1d01b29ca4814996",
+      "pdf_sha256": "60854afe90718bcff3d4d7eb10acd31bca58bd72b6d8526dd3f79f47b54418bb",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            3
+          ],
+          "expected": "individual",
+          "anchor": {
+            "page": 3,
+            "text": "customer-owners will be randomized in the RCT"
+          }
+        }
+      ],
+      "protocol_date": "2023-06-30",
+      "registry_posted": "2025-08-29"
+    },
+    {
+      "id": "NCT06614361",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "73bde65c4e5ba84401777a6764643ff4999caffd0d76951b09d88cba5c601645",
+      "pdf_sha256": "579dbffb6bf9b5cec2fe13f011dedce1881c81c732b51f7584e482b6e471cc03",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            8
+          ],
+          "expected": "individual",
+          "anchor": {
+            "page": 8,
+            "text": "Participants (N=560) are randomly assigned"
+          }
+        },
+        {
+          "field": "primary_window",
+          "pages": [
+            7
+          ],
+          "expected": "6 months",
+          "anchor": {
+            "page": 7,
+            "text": "at the 6-month FU"
+          }
+        }
+      ],
+      "protocol_date": "2025-01-29",
+      "registry_posted": "2025-04-29"
+    },
+    {
+      "id": "NCT07472036",
+      "filename": "Prot_000.pdf",
+      "registry_sha256": "261d639df78bfe349e535f706dbf61a3ce6d8bdba4fbdd07d9f6f20e0818290d",
+      "pdf_sha256": "bc04c67592f59ecb034d786ee5126a04fca5cd45800d599ed1ccc5f68e9f5363",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            3
+          ],
+          "expected": null,
+          "abstention_basis": "No extractable text on supplied page"
+        }
+      ],
+      "protocol_date": "2025-01-17",
+      "registry_posted": "2026-03-16"
+    }
+  ]
+}
