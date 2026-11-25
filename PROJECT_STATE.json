@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "as_of": "2026-11-25",
-  "phase": "final_demo_candidate_verified",
+  "phase": "final_demo_published",
   "completed": [
     "M0",
     "M7",
@@ -65,7 +65,7 @@
   "validation": {
     "data_integrity": "CMS and UCLA source bytes verified. Geisinger has 20 metadata matches and unverified participant payloads.",
     "analysis_rights": "CMS public contract facts, UCLA posted results and SCORE published aggregates reviewed for scoped use. Geisinger participant reuse unresolved.",
-    "geisinger_metadata_recheck": "2026-11-25 metadata-only check returned 20 matches. The owner sent the request and received an out-of-office reply. Reuse remains unresolved and no participant payload was acquired.",
+    "geisinger_metadata_recheck": "2026-11-25 metadata-only check returned 20 matches. Owner sent the request and received an out-of-office reply. Rights remain unresolved. No participant payload acquired.",
     "haryana_fallback": "CC BY 4.0 archive verified; both Figure 4 point values and CR0 reproduced; PHC interval includes zero",
     "real_data_replication": "Sierra Leone five published coefficient and SE pairs match and agree with independent statsmodels computations; Haryana Figure 4 point check passed; Geisinger blocked",
     "policy_evaluation": "Sierra Leone ridge T and DR learners fitted on 30 triplets, frozen and evaluated on 20 separate triplets; no reliable gain at 50% expected village capacity",
@@ -77,31 +77,46 @@
     "node_tests_passed": 4,
     "local_browser_tests_passed": 15,
     "production_browser_tests_passed": 15,
-    "production_reference_screenshots_matched": 13,
-    "production_integrity": "Stable and immutable v0.4.0-demo verified against the HTTPS build ledger and response headers.",
-    "github_actions": "https://github.com/AbhinavVarma02/Patient-Outreach-Optimization/actions/runs/45636045224",
+    "production_reference_screenshots_matched": 20,
+    "production_integrity": "Stable and immutable v0.5.0-demo HTTPS assets match the ledger and checked security headers.",
+    "github_actions": "https://github.com/AbhinavVarma02/Patient-Outreach-Optimization/actions/runs/45640572191",
     "npm_reported_vulnerabilities": 0,
     "python_osv_reported_vulnerabilities": 0,
     "alternative_data": "CC0 1.0 Sierra Leone original payload and author methods verified; structure lottery denominators unresolved in released roster",
-    "rollback": "v0.1.0-demo, v0.2.0-demo, and v0.3.0-demo retained as production targets. Original asset hashes and headers verified without switching traffic.",
-    "python_osv_versions_checked": 19
+    "rollback": "Four prior production deployments verified on their own HTTPS asset and header ledgers after promotion, with no traffic switch.",
+    "python_osv_versions_checked": 16,
+    "offline_replay_stages_passed": 14,
+    "offline_replay_wall_seconds": 25.854,
+    "offline_replay_peak_worker_rss_bytes": 277807104,
+    "source_paths_verified_at_build_commit": 152
   },
   "release": {
     "status": "published_limited",
-    "version": "0.4.0-demo",
-    "release_commit": "a90e404c81e381bfe6a96f8133cd5c382f60fb97",
+    "version": "0.5.0-demo",
+    "release_commit": "e18edc4f9e928abc8d77619aff1b2d68c86667b6",
     "github": "https://github.com/AbhinavVarma02/Patient-Outreach-Optimization",
     "cloudflare": "https://patient-outreach-optimization.pages.dev/",
-    "deployment_id": "bda6411e-8121-47b7-a6ff-9d6d3d5937e2",
-    "deployment": "https://bda6411e.patient-outreach-optimization.pages.dev/",
+    "deployment_id": "c293f7c3-0ea4-4b4e-8f13-97e6964b8060",
+    "deployment": "https://c293f7c3.patient-outreach-optimization.pages.dev/",
     "additional_external_dollars": 0
   },
   "next_actions": [
-    "Await substantive Geisinger authorization or verify an applicable license for analysis, linkage and reporting.",
-    "Reconcile the structure lottery roster and observation rules before evaluating incremental visit targeting. Seek an independent comparable rollout before temporal claims.",
-    "Retain reviewed trial summaries. Reconsider assisted extraction only with new evidence and an independent holdout."
+    "Final demo scope complete. Reopen Geisinger only after a substantive documented analysis and publication reuse basis.",
+    "Require the original structure lottery and observation records for new visit targeting. Require a comparable independent rollout for external or temporal evaluation.",
+    "Retain reviewed trial summaries. Reopen automated extraction with credible development gains, a new independently reviewed holdout and the original gate."
   ],
   "older_releases": [
+    {
+      "status": "published_limited",
+      "version": "0.3.0-demo",
+      "release_commit": "c0601bf4df295ee42367eacd92aaad0b7908f182",
+      "github": "https://github.com/AbhinavVarma02/Patient-Outreach-Optimization",
+      "cloudflare": "https://patient-outreach-optimization.pages.dev/",
+      "deployment_id": "466a90b7-74ae-4aad-ba13-2a7782cb559f",
+      "deployment": "https://466a90b7.patient-outreach-optimization.pages.dev/",
+      "additional_external_dollars": 0,
+      "integrity": "HTTPS assets and security headers verified after v0.5.0-demo deployment"
+    },
     {
       "status": "published_limited",
       "version": "0.2.0-demo",
@@ -111,31 +126,25 @@
       "deployment_id": "75a71ff8-c3c6-414b-b01c-12780f6dca7e",
       "deployment": "https://75a71ff8.patient-outreach-optimization.pages.dev/",
       "additional_external_dollars": 0,
-      "integrity": "verified after v0.4.0-demo deployment"
+      "integrity": "HTTPS assets and security headers verified after v0.5.0-demo deployment"
     },
     {
       "version": "0.1.0-demo",
       "release_commit": "d988063bb75e2870ad8e26e2edf316919d81c6d6",
       "deployment_id": "9112bbb3-551f-4d76-b7a4-df4e99b1b976",
       "deployment": "https://9112bbb3.patient-outreach-optimization.pages.dev/",
-      "integrity": "verified after v0.4.0-demo deployment"
+      "integrity": "HTTPS assets and security headers verified after v0.5.0-demo deployment"
     }
   ],
   "previous_release": {
     "status": "published_limited",
-    "version": "0.3.0-demo",
-    "release_commit": "c0601bf4df295ee42367eacd92aaad0b7908f182",
+    "version": "0.4.0-demo",
+    "release_commit": "a90e404c81e381bfe6a96f8133cd5c382f60fb97",
     "github": "https://github.com/AbhinavVarma02/Patient-Outreach-Optimization",
     "cloudflare": "https://patient-outreach-optimization.pages.dev/",
-    "deployment_id": "466a90b7-74ae-4aad-ba13-2a7782cb559f",
-    "deployment": "https://466a90b7.patient-outreach-optimization.pages.dev/",
+    "deployment_id": "bda6411e-8121-47b7-a6ff-9d6d3d5937e2",
+    "deployment": "https://bda6411e.patient-outreach-optimization.pages.dev/",
     "additional_external_dollars": 0,
-    "integrity": "verified after v0.4.0-demo deployment"
-  },
-  "candidate": {
-    "version": "0.5.0-demo",
-    "status": "locally_verified",
-    "browser_tests": 15,
-    "candidate_screenshot_references": 20
+    "integrity": "HTTPS assets and security headers verified after v0.5.0-demo deployment"
   }
 }

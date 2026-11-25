@@ -2,7 +2,7 @@
 
 An independent research workspace for preventive-care teams evaluating which outreach strategies merit a randomized pilot. Clinical risk predicts an outcome. The outreach decision also depends on whether the intervention changes it.
 
-[Open the live workspace](https://patient-outreach-optimization.pages.dev/)
+[Open the verified v0.5.0-demo workspace](https://patient-outreach-optimization.pages.dev/)
 
 **US payer planning.** Use CMS 2027 contract averages to ask how much incremental flu vaccination or colorectal screening a campaign would need to close a hypothetical gap at its budget and contact limit. Four CMS quality and experience measures are summarized across 675 coordinated care contracts. US randomized evidence is presented separately, including null-compatible UCLA flu reminder effects and increased screening in the SCORE mailed FIT bundle. [US evidence and worked scenario](docs/US_PAYER_EVIDENCE.md)
 
@@ -20,4 +20,4 @@ npm ci --ignore-scripts
 npm run dev
 ```
 
-Read the [technical guide](docs/MASTER_TECHNICAL_GUIDE.md), [study cards](docs/DATA_CARD.md), [experiment reports](docs/EXPERIMENT_REPORT.md), [limitations](docs/LIMITATIONS.md) and [test evidence](docs/TEST_EVIDENCE.md). [Progress](progress.md) records the latest verification and blockers. [Input reconciliation](research/INPUT_RECONCILIATION.md) records the archive and the v1.0 governing scope.
+Read the [technical guide](docs/MASTER_TECHNICAL_GUIDE.md), [offline replay](docs/REPRODUCIBILITY.md#final-offline-replay), [study cards](docs/DATA_CARD.md), [experiment reports](docs/EXPERIMENT_REPORT.md) and [test evidence](docs/TEST_EVIDENCE.md). The [requirements matrix](docs/REQUIREMENTS_TRACEABILITY.md) and [progress record](progress.md) document the verified demo scope and deferred research. [Portfolio walkthrough](docs/INTERVIEW_GUIDE.md) · [Deployment record](docs/DEPLOYMENT.md)

@@ -39,6 +39,8 @@ For v0.4.0-demo, Overview introduces the US payer workflow, Outreach Planner add
 
 For v0.5.0-demo, the five-page editorial pass removes repeated page eyebrows, shortens workflow and control labels, and puts conclusions ahead of study detail. The site keeps the CSS bundle, typography, palette, navigation, grid and breakpoints. Shorter sections naturally reduce full-page height. The 390 px Evidence & Methods capture is 862 px shorter, and the 390 px Planner capture is 220 px shorter. Long tables retain their existing local scrolling when necessary. Chart names, control units, trial attribution and scope remain available.
 
+All 20 reference images matched the local and production captures byte for byte on November 25, 2026. The prior approved references remain available in `06a8236`. [Verification record](TEST_EVIDENCE.md) · [Verified deployment](https://c293f7c3.patient-outreach-optimization.pages.dev/)
+
 | View | Desktop light | Desktop dark | Mobile light | Mobile dark |
 | --- | --- | --- | --- | --- |
 | Overview | [Reference](images/overview.png) | [Reference](images/overview-desktop-dark.png) | [Reference](images/overview-mobile-light.png) | [Reference](images/overview-mobile-dark.png) |

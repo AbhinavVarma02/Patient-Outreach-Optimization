@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.5.0-demo · 2026-11-25
+
+- Refined copy across all five views, including labels, status messages and accessible names. Preserved the approved visual system and updated 20 production-matched screenshot references.
+- Added an offline research replay and reproduced the licensed community studies, conservative inference checks, US projection, fictional experiments and deterministic extraction evaluation.
+- Completed the bounded data search, model risk assessment, extraction postmortem and final requirements review. Patient-level and external validation work remains deferred.
+- Hardened source and static publication checks. Published the verified build to the existing Pages project and checked the stable site, immutable deployment and four rollback targets.
+
 ## 0.4.0-demo · 2026-11-25
 
 - Added a Medicare Advantage benchmark gap calculator and verified CMS 2027 summaries from 675 coordinated care contracts.

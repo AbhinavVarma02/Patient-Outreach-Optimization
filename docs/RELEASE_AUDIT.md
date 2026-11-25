@@ -59,3 +59,16 @@ This release scope keeps the original patient scenarios fictional and documents 
 | G10 Deployment | See the current verified status and rollback asset checks in the deployment ledger. |
 
 Clinical validation, individual-level targeting, independent temporal validation and a deployed automated extractor remain deferred. [US evidence](US_PAYER_EVIDENCE.md) · [Verification ledger](TEST_EVIDENCE.md) · [Deployment](DEPLOYMENT.md)
+
+## v0.5.0-demo final release review
+
+| Gate | Scoped result |
+| --- | --- |
+| G0–G3 integrity, rights, design and replication | Haryana and Sierra Leone source pins, known designs and original published contrasts replayed. US source bytes reproduced the approved projection. Geisinger rechecked 20 metadata entries. Participant data rights and replication remain open. |
+| G4–G5 statistical and frozen evaluation | Fourteen replay stages passed within declared tolerances. Retain uniform for the studied village scenarios and disclose the exploratory and interference limits. Structural and independent temporal validation remain deferred. |
+| G6 claim integrity | Reviewed trial cards and fictional inputs keep effects, benchmarks and required gains distinct. Extraction stays experimental after failure of the original gate. |
+| G7 product quality | All 15 browser tests passed locally and on stable production. Verified all 20 screenshot references and the existing scope of automated accessibility rules. |
+| G8 publication safety | Verified 152 staged paths of the deployed commit, the five static files, dependency checks and isolated invalid build fixtures. Source records, trained weights and caches stay out of production. |
+| G9–G10 cost and deployment | Existing free Pages project. No paid services were used. Stable and immutable HTTPS builds matched approved digests and headers, and all four previous targets remained available. |
+
+[Traceability](REQUIREMENTS_TRACEABILITY.md) · [Critical review](FINAL_INDEPENDENT_AUDIT.md) · [Verification](TEST_EVIDENCE.md) · [Deployment](DEPLOYMENT.md)
