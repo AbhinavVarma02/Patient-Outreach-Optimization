@@ -11,3 +11,11 @@ Use a static workspace, deterministic Python research code and browser-local, cl
 
 ## D04 Deployment and release
 Deploy the vetted static build by direct upload to the existing Cloudflare account. Keep GitHub CI separate from deployment to make the publication gate explicit. Wrangler's default creation path delegated to Workers. Its direct Pages creation option created the intended Pages project. Releases remain labeled as demonstrations until the empirical and rights gates pass.
+
+## D05 Approved interface
+
+The project owner approved the v0.1.0-demo production design. Carry its typography, colors, spacing, navigation and layout forward. Add functionality and evidence through the existing patterns, with visible changes limited to functionality, accessibility or usability. The production screenshot references and comparison procedure are in [docs/UI_DESIGN.md](docs/UI_DESIGN.md). Revisit the baseline only after an intentional change is reviewed and verified in production.
+
+## D06 Randomized outreach fallback
+
+Keep the Geisinger protocol and rights gate in place. In parallel, use the CC BY 4.0 Haryana replication archive for an explicitly scoped, village-level study of immunization outreach. This is the closest inspected public candidate with verified randomization, usable aggregate baseline and outcome data, and a clear license. Its interventions and population differ from Geisinger. Begin with the published reference check and require design and disclosure review before wider use. [Feasibility evidence](research/DATASET_FEASIBILITY.md)

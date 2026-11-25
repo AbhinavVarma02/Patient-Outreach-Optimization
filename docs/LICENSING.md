@@ -1,17 +1,33 @@
 # Licensing and permission status
 
-The live OSF API on 2026-11-24 reported the target project as public and its license attribute as null. The authors’ [data availability statement](https://www.nature.com/articles/s41562-026-02603-4) identifies the deposited files as the deidentified data needed to reproduce the article. It specifies no license or explicit permission for the broader participant-level analysis, linkage and publication planned here. Published aggregate results cited from the article and supplement are distinct from new analysis of the data. The review, source scripts and all downloaded datasets retain their own rights. The repository software license excludes those materials.
+Reviewed 2026-11-24. The OSF API reports `mqbux` as public with a null license relationship. All 20 pinned names, sizes and SHA-256 metadata matched. The authors describe the deposited records and scripts as materials for reproducing the paper. Vaccination timing is shared by experimental condition because exact dates were withheld. The OSF catalog lists one analysis notebook for each study, including `Study_4_2026-04-17.Rmd`. Its Study 4 filters still require review. The authors’ supplement includes the nudge text in §11.1, Supplementary Table 41. [Publisher statements](https://www.nature.com/articles/s41562-026-02603-4?error=cookies_not_supported#data-availability) · [OSF metadata](https://api.osf.io/v2/nodes/mqbux/) · [Author supplement](https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41562-026-02603-4/MediaObjects/41562_2026_2603_MOESM1_ESM.pdf)
+
+OSF’s terms distinguish public access and limited use under its terms from extra permissions a depositor can grant through a license. Public deposition and the authors’ reproduction statement support access for the stated purpose. The terms also treat unlicensed deposits as copyrighted by default. The project will obtain a written basis for the intended participant-level work before payload acquisition. [OSF terms, §8](https://osf.io/terms-of-use/) · [OSF licensing guidance](https://help.osf.io/article/148-licensing)
+
+| Proposed use | Evidence and project decision |
+| --- | --- |
+| Download and private research | Public access and the stated reproduction purpose are documented. Obtain confirmation that private local storage and the proposed follow-on research are permitted. |
+| Independent statistical analysis | The statement supports reproducing the publication. Authorization for the project’s planned independent targeting and policy analyses remains unresolved. |
+| Publish disclosure-reviewed aggregates | The application can cite the authors’ published findings. Obtain authorization for new data-derived tables and results and complete the disclosure review. |
+| Link records across studies | Confirm whether IDs recur, what they represent, and whether the data steward permits linkage for dependence assessment. |
+| Publish trained artifacts | Establish explicit permission and assess disclosure risk before considering release. Keep weights and row-level outputs private. |
+
+The software license excludes third-party data, code and source materials. For the separately licensed Haryana replication archive, see the [dataset feasibility review](../research/DATASET_FEASIBILITY.md).
 
 ## Correspondence draft
 
-Subject: Reuse of Geisinger influenza outreach trial data from OSF mqbux
+**To** Christopher F. Chabris, `cfchabris@geisinger.edu`. The article identifies Dr. Chabris as the corresponding author and Geisinger lists this institutional address. [Publisher correspondence](https://www.nature.com/articles/s41562-026-02603-4?error=cookies_not_supported#author-information) · [Geisinger faculty directory](https://www.geisinger.org/-/media/onegeisinger/pdfs/ghs/education-gcsom/faculty-affairs/faculty-directory-040826.pdf?sc_lang=en)
 
-Dear study team,
+**Subject** Reuse of Geisinger influenza outreach trial data from OSF mqbux
 
-I’m requesting clarification on reuse of the deidentified influenza outreach trial records linked from your article and stored in OSF mqbux. Could you confirm the applicable license or whether you permit independent analysis for a reproducible, open-source methods project? The project would publish code and disclosure-reviewed aggregate results, with no release of participant-level records or derivatives.
+Dear Dr. Chabris,
 
-If deidentified IDs recur across studies, could you clarify their semantics and whether linkage for assessing sample dependence is permitted? Could you also point us to the applicable Study 4 analysis materials and confirm availability of supplementary message wording, including table 41 if applicable?
+I’m writing about the deidentified influenza outreach trial data you deposited at OSF mqbux for your Nature Human Behaviour article (DOI 10.1038/s41562-026-02603-4). Patient Outreach Optimization is an independent, open-source research project studying whether randomized outreach evidence can inform targeting and pilot design.
 
-Thank you for clarifying how the data may be used and cited.
+Could you confirm the applicable license or data-use agreement, and whether it allows local downloading and storage, replication of the published estimates, new independent analyses of outreach targeting and channel assignment, and publication of disclosure-reviewed aggregate findings with source code? Participant records and row-level derivatives would be kept private.
+
+If deidentified IDs recur across studies, could you clarify what they represent and whether linkage solely to assess sample dependence is allowed? Is release of trained model parameters ever permitted after disclosure review, or should those remain private? Could you also identify the Study 4 script and data files corresponding to the primary fully channel-eligible 29-day analysis?
+
+Thank you for clarifying the permitted uses and preferred citation. If Geisinger handles these requests through a data steward or review process, a referral would be appreciated.
 
 Draft only. No correspondence has been sent.

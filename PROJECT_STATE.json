@@ -20,6 +20,7 @@
   "scope": "limited research demonstration",
   "artifacts": {
     "contract": "MASTER_PROMPT.md",
+    "continuation": "CONTINUATION_V1.md",
     "source_reconciliation": "research/INPUT_RECONCILIATION.md",
     "protocol": "docs/RESEARCH_PROTOCOL.md",
     "protocol_commit": "16cc9ed",
@@ -30,11 +31,15 @@
     "document_smoke": "research/reports/local_model_smoke.json",
     "publication_manifest": "research/reports/public_build_sha256.json",
     "test_evidence": "docs/TEST_EVIDENCE.md",
-    "screenshots": "docs/images"
+    "screenshots": "docs/images",
+    "approved_ui": "docs/UI_DESIGN.md",
+    "dataset_feasibility": "research/DATASET_FEASIBILITY.md"
   },
   "validation": {
     "data_integrity": "20 metadata matches; payload and schema unverified",
     "analysis_rights": "unresolved",
+    "geisinger_metadata_recheck": "20 matches; null project license; no participant payload access",
+    "haryana_fallback": "CC BY 4.0 archive verified; village-month schema inspected; Figure 4 replication specified",
     "real_data_replication": "not_run",
     "policy_evaluation": "fictional independent holdout only",
     "model_validation": "fixed-policy and pilot validation on fictional data",
@@ -43,6 +48,7 @@
     "node_tests_passed": 3,
     "local_browser_tests_passed": 9,
     "production_browser_tests_passed": 9,
+    "production_reference_screenshots_matched": 9,
     "production_integrity": "verified",
     "npm_reported_vulnerabilities": 0
   },
@@ -56,6 +62,7 @@
     "additional_external_dollars": 0
   },
   "next_actions": [
+    "Reproduce the two Haryana Figure 4 reference values under the locked feasibility specification before downstream fallback policy work.",
     "Obtain documented author permission or a verified applicable license for the planned reuse, linkage and reporting. The draft request is in docs/LICENSING.md and is unsent.",
     "After approval, verify pinned payloads, extract study schemas and randomization design, resolve Study 4 date and sample differences, and run RQ0 before touching heterogeneity outcomes.",
     "Independently validate adjusted ITT and design-aware policy variance against R references. Build the multi-trial held-out document extraction benchmark before enabling model assistance."

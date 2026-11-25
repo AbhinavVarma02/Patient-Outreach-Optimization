@@ -15,3 +15,5 @@
 | M10 | Portfolio handoff | Technical guide, results and limitations, reproducible artifacts and verified release metadata |
 
 M1 rights and M2 replication gate row-level causal research. M3 and M7 may proceed using fictional inputs and explicitly cited, published aggregate results. M9 requires a passing release audit and authenticated account access. A limited release cannot close outstanding real-data milestones.
+
+While Geisinger reuse is unresolved, pursue the [Haryana fallback](research/DATASET_FEASIBILITY.md) under its own design and reporting scope. The first acceptance check is the published Figure 4 coefficient and control mean. Before downstream policy evaluation, verify the assignment hierarchy, cluster-aware variance, pretreatment features, overlap and independent evaluation split. Keep the [approved production design](docs/UI_DESIGN.md) as the baseline for any feature integration.

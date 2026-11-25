@@ -1,10 +1,15 @@
 import {test, expect} from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
+import {createHash} from 'node:crypto';
+import {readFile} from 'node:fs/promises';
 
 const headings = {overview:'Which outreach strategy is worth testing?',targeting:'Patient Targeting',
   planner:'Outreach Planner',pilot:'Pilot Designer',evidence:'Evidence & Methods'};
 const routes = Object.keys(headings) as (keyof typeof headings)[];
 const sizes = [[1440,900],[1280,800],[768,1024],[390,844]];
+const desktopReferences = {overview:'overview',targeting:'patient-targeting',planner:'outreach-planner',
+  pilot:'pilot-designer',evidence:'evidence-and-methods'};
+const referenceDigest = (png: Buffer) => createHash('sha256').update(png).digest('hex');
 
 test('all views fit the viewport in both themes without page errors or external requests', async ({page,browserName,baseURL}) => {
   const failures: string[] = [];
@@ -26,7 +31,14 @@ test('all views fit the viewport in both themes without page errors or external 
         expect(overflow, route+' '+width+' '+theme).toBe(false);
         if (browserName === 'chromium' && ((width === 1440 && theme === 'light')
           || (width === 390 && (route === 'overview' || route === 'pilot')))) {
-          await page.screenshot({path:'qa-output/'+(process.env.OUTREACH_LIVE_URL ? 'live-' : '')+route+'-'+width+'-'+theme+'.png',fullPage:true});
+          const path = 'qa-output/'+(process.env.OUTREACH_LIVE_URL ? 'live-' : '')+route+'-'+width+'-'+theme+'.png';
+          const actual = await page.screenshot({path, fullPage:true});
+          if (process.env.OUTREACH_UI_REFERENCE === '1') {
+            const name = desktopReferences[route] + (width === 390 ? `-mobile-${theme}` : '');
+            const reference = new URL(`../../docs/images/${name}.png`, import.meta.url);
+            expect.soft(referenceDigest(actual), `Compare ${path} with docs/images/${name}.png`)
+              .toBe(referenceDigest(await readFile(reference)));
+          }
         }
       }
     }

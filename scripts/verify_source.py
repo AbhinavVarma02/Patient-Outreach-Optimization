@@ -6,7 +6,7 @@ from subprocess import check_output
 ROOT = Path(__file__).resolve().parents[1]
 ALLOWED_DIRS = (".github/", "docs/", "patient_outreach/", "research/", "scripts/", "tests/", "web/")
 ALLOWED_ROOT = {
-    "AGENTS.md", "CLAUDE.md", "MASTER_PROMPT.md", "PLANS.md", "progress.md", "PROJECT_STATE.json",
+    "AGENTS.md", "CLAUDE.md", "MASTER_PROMPT.md", "CONTINUATION_V1.md", "PLANS.md", "progress.md", "PROJECT_STATE.json",
     "DECISIONS.md", "CHANGELOG.md", "README.md", "LICENSE", ".gitignore", ".gitattributes",
     "pyproject.toml", "uv.lock",
 }
