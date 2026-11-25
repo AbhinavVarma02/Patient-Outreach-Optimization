@@ -9,3 +9,7 @@
 Initial browser runs encountered a port collision, absent pinned engines, and workflow failures in label lookup and WebKit keyboard behavior. The dedicated loopback port, pinned engine installation, field names and browser key handling were adjusted.
 
 The final local production build passed nine Playwright tests across Chromium, Firefox and WebKit. The matrix exercised five views at 1440×900, 1280×800, 768×1024 and 390×844 in both themes. It checked layout and requests, keyboard activation, theme persistence, scenario recomputation and axe WCAG A/AA rules. Automated accessibility checks are scoped to the selected rules.
+
+The same nine tests passed on the public production domain. The production overview, mobile dark theme, planner and pilot screenshots are in [docs/images](images/). The compiled JavaScript is 77.53 kB gzip and the compiled CSS is 3.18 kB gzip. These are build sizes, not measured page-load latencies. [Verified initial GitHub Actions run](https://github.com/AbhinavVarma02/Patient-Outreach-Optimization/actions/runs/45539352114)
+
+Ruff 0.15.0 passed for the Python source and tests. Mypy 1.19.0 reported no issues in 10 checked source files. Chromium compared the four public assets byte for byte with the [build ledger](../research/reports/public_build_sha256.json) and verified response security headers. The Pages control file is hashed locally and validated through those response headers.

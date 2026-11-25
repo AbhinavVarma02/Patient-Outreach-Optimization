@@ -2,7 +2,11 @@
 
 An independent research workspace for preventive-care teams evaluating which outreach strategies merit a randomized pilot. Clinical risk predicts an outcome. The outreach decision also depends on whether the intervention changes it.
 
+[Open the live workspace](https://patient-outreach-optimization.pages.dev/)
+
 **Limited research demonstration.** The app presents published evidence and fictional scenarios. It offers matched-capacity targeting, channel cost and eligibility planning, and statistical power for a randomized comparison of frozen policies. The source inventory covers four Geisinger trials. OSF's public checksum metadata matches the 20 pinned files. Independent participant-level replication remains on hold pending verified reuse rights.
+
+![Production overview of the Patient Outreach Optimization workspace](docs/images/overview.png)
 
 ```sh
 python -m unittest discover -s tests

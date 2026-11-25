@@ -1,6 +1,6 @@
 # Limitations
 
-- OSF published matching hash and size metadata for all 20 files. Payload bytes and participant-level data remains unverified. The repository has no evidence of permission for the intended analysis.
+- OSF published matching hash and size metadata for all 20 files. Payload bytes and participant-level data remain unverified. The repository has no evidence of permission for the intended analysis.
 - Replication, clinical effect modification, clinical policy performance, temporal transport and fairness remain unassessed. Published trial comparisons apply to their original populations, assigned modalities and timeframes.
 - Synthetic inference uses i.i.d. records and independently frozen rules. The toolkit has partial coverage of the requested statistical methods. Independent R-reference validation, adjusted ITT, RATE and learned-rule cross-fit variance remain pending.
 - Power assumes a binary outcome, normal approximation and independent fixed strategies. The variance inflation for clustering is an approximation. Attrition is treated as a design loss.

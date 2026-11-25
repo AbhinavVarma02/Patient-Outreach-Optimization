@@ -1,34 +1,63 @@
 {
   "schema_version": 1,
-  "phase": "bootstrap",
-  "completed": [],
-  "outstanding": [
+  "as_of": "2026-11-24",
+  "phase": "limited_demo_published",
+  "completed": [
     "M0",
+    "M7",
+    "M8",
+    "M9"
+  ],
+  "outstanding": [
     "M1",
     "M2",
     "M3",
     "M4",
     "M5",
     "M6",
-    "M7",
-    "M8",
-    "M9",
     "M10"
   ],
+  "scope": "limited research demonstration",
   "artifacts": {
     "contract": "MASTER_PROMPT.md",
-    "source_reconciliation": "research/INPUT_RECONCILIATION.md"
+    "source_reconciliation": "research/INPUT_RECONCILIATION.md",
+    "protocol": "docs/RESEARCH_PROTOCOL.md",
+    "protocol_commit": "16cc9ed",
+    "osf_metadata": "research/manifests/osf_metadata_verification.json",
+    "validation": "research/reports/fictional_validation.json",
+    "frozen_policy": "research/reports/fictional_policy_holdout.json",
+    "pilot_validation": "research/reports/pilot_validation.json",
+    "document_smoke": "research/reports/local_model_smoke.json",
+    "publication_manifest": "research/reports/public_build_sha256.json",
+    "test_evidence": "docs/TEST_EVIDENCE.md",
+    "screenshots": "docs/images"
   },
   "validation": {
-    "data_integrity": "unverified",
-    "analysis_rights": "unresolved"
+    "data_integrity": "20 metadata matches; payload and schema unverified",
+    "analysis_rights": "unresolved",
+    "real_data_replication": "not_run",
+    "policy_evaluation": "fictional independent holdout only",
+    "model_validation": "fixed-policy and pilot validation on fictional data",
+    "ai_evaluation": "5-case experimental smoke only",
+    "python_tests_passed": 13,
+    "node_tests_passed": 3,
+    "local_browser_tests_passed": 9,
+    "production_browser_tests_passed": 9,
+    "production_integrity": "verified",
+    "npm_reported_vulnerabilities": 0
   },
   "release": {
-    "status": "unreleased",
-    "github": null,
-    "cloudflare": null
+    "status": "published_limited",
+    "version": "0.1.0-demo",
+    "release_commit": "d988063bb75e2870ad8e26e2edf316919d81c6d6",
+    "github": "https://github.com/AbhinavVarma02/Patient-Outreach-Optimization",
+    "cloudflare": "https://patient-outreach-optimization.pages.dev/",
+    "deployment_id": "9112bbb3-551f-4d76-b7a4-df4e99b1b976",
+    "additional_external_dollars": 0
   },
   "next_actions": [
-    "Record research protocol and implement limited demonstration"
+    "Obtain documented author permission or a verified applicable license for the planned reuse, linkage and reporting. The draft request is in docs/LICENSING.md and is unsent.",
+    "After approval, verify pinned payloads, extract study schemas and randomization design, resolve Study 4 date and sample differences, and run RQ0 before touching heterogeneity outcomes.",
+    "Independently validate adjusted ITT and design-aware policy variance against R references. Build the multi-trial held-out document extraction benchmark before enabling model assistance."
   ]
 }

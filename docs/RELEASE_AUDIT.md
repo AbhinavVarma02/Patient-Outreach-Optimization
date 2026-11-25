@@ -12,6 +12,6 @@
 | G7 Product quality | See test evidence for actual build and browser results. |
 | G8 Publication safety | See allowlist and source checks. The limited application does not bundle trial records, trained artifacts or analytics. |
 | G9 Cost | Static Pages and public GitHub only. No paid service authorized. |
-| G10 Deployment | Production verification tracked in progress.md and PROJECT_STATE.json. |
+| G10 Deployment | Passed for the demo. Production ran the full browser suite and served the approved asset digests and security headers. |
 
 The limited public release does not close the open empirical gates. Review the [publication policy](PUBLICATION_POLICY.md) and [limitations](LIMITATIONS.md) before interpreting the demo.
