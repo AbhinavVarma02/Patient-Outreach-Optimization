@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "as_of": "2026-11-25",
-  "phase": "us_payer_demo_published",
+  "phase": "final_demo_candidate_verified",
   "completed": [
     "M0",
     "M7",
@@ -55,7 +55,12 @@
     "sierra_leone_lottery_audit": "research/reports/sierra_leone_lottery_audit.json",
     "us_evidence_manifest": "research/manifests/us_evidence_v1.json",
     "us_evidence_dashboard_projection": "web/src/us-evidence.json",
-    "us_payer_documentation": "docs/US_PAYER_EVIDENCE.md"
+    "us_payer_documentation": "docs/US_PAYER_EVIDENCE.md",
+    "final_contract": "FINAL_COMPLETION.md",
+    "traceability": "docs/REQUIREMENTS_TRACEABILITY.md",
+    "final_review": "docs/FINAL_INDEPENDENT_AUDIT.md",
+    "model_risk": "docs/MODEL_RISK_ASSESSMENT.md",
+    "offline_replay": "research/reports/final_reproduction.json"
   },
   "validation": {
     "data_integrity": "CMS and UCLA source bytes verified. Geisinger has 20 metadata matches and unverified participant payloads.",
@@ -126,5 +131,11 @@
     "deployment": "https://466a90b7.patient-outreach-optimization.pages.dev/",
     "additional_external_dollars": 0,
     "integrity": "verified after v0.4.0-demo deployment"
+  },
+  "candidate": {
+    "version": "0.5.0-demo",
+    "status": "locally_verified",
+    "browser_tests": 15,
+    "candidate_screenshot_references": 20
   }
 }

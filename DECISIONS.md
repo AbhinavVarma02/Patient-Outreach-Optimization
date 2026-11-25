@@ -47,3 +47,7 @@ Use 2027 CMS Part C contract measures as descriptive references for flu vaccinat
 ## D13 Bounded research closeout
 
 Keep Sierra Leone at the replicated assignment contrasts and internal geographic holdout. The released data and registry lack original structure lottery records. Ghana and Haryana answer different intervention questions. The final extraction holdout found lower verified than deterministic recovery. Retain reviewed summaries and preserve all three evaluation records. Additional research requires a compatible external design or a new annotated holdout with evidence verification. [Structure audit](docs/SIERRA_LEONE_RESEARCH.md) · [Final extraction evaluation](docs/AI_EVALUATION.md)
+
+## D14 Final research demo and offline replay
+
+Use v0.5.0-demo for the final feasible scope. Complete the five-view editorial pass and keep the approved visual system. Include a CLI that replays the permitted research from pinned local inputs and compares numerical results without overwriting the committed reference reports. Verify the historical Haryana pins separately and retain published source summaries where automated extraction failed. The new data check leaves Geisinger, individual channel economics and compatible external validation deferred. Reopen those milestones only with the required data, documented rights and a sound evaluation design. [Final contract](FINAL_COMPLETION.md) · [Traceability](docs/REQUIREMENTS_TRACEABILITY.md) · [Reproducibility](docs/REPRODUCIBILITY.md)

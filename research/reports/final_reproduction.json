@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "measurement_date": "2026-11-25",
+  "environment": "Windows, local CPU, one OpenBLAS thread",
+  "model_generation": false,
+  "run": {
+    "python": "3.12.12",
+    "relative_tolerance": 1e-09,
+    "absolute_tolerance": 1e-10,
+    "stages": {
+      "fictional_validation": {
+        "seconds": 7.056,
+        "bytes": 2581,
+        "sha256": "a7d0a3fcf9c84f3eb9887a5d21e92904315fc1fd6994b95db365ce10b43380ae"
+      },
+      "fictional_policy_holdout": {
+        "seconds": 0.295,
+        "bytes": 2859,
+        "sha256": "b470c319a1b0fa88c6030b0c98cdd9af22e9d7b55ac8ddd77b92495da71d9652"
+      },
+      "pilot_validation": {
+        "seconds": 0.137,
+        "bytes": 989,
+        "sha256": "824220630e7846cafccb5b8fdf71d59109220d60f4efb4552a602aa5fcad85f5"
+      },
+      "haryana_figure4_replication": {
+        "seconds": 1.936,
+        "bytes": 1300,
+        "sha256": "7d44adfe1adf287a361a90f4ce4fffadba0d768527cfc4986fcee56c9e22994c"
+      },
+      "haryana_empirical": {
+        "seconds": 2.224,
+        "bytes": 18648,
+        "sha256": "46d68878a182532a4d316c8b51df197cb6a9e9c959fede319e1a37e259cc9403"
+      },
+      "haryana_simulation": {
+        "seconds": 1.495,
+        "bytes": 1035,
+        "sha256": "4ddf2dfe1638b441ef5cb4302962f943ca7027e7fd165b1809c0327343441028"
+      },
+      "haryana_projection": {
+        "seconds": 0.091
+      },
+      "sierra_leone_replication": {
+        "seconds": 3.094,
+        "bytes": 2827,
+        "sha256": "dd51d253784fda40f72fa199794b2e7a36ec8895b36e566c9b43037ac933df72"
+      },
+      "sierra_leone_policy": {
+        "seconds": 2.317,
+        "bytes": 3209,
+        "sha256": "e133359fc3647a3488664c2401d11df5c00a7f708d3504d1d714cfd259108cfb"
+      },
+      "sierra_leone_lottery_audit": {
+        "seconds": 1.71,
+        "bytes": 1154,
+        "sha256": "d498debd7c23aa57e178353baa6a8daf8bddec57bf1d7c0b76a85a91ca77af2c"
+      },
+      "sierra_leone_projection": {
+        "seconds": 0.088
+      },
+      "community_inference": {
+        "seconds": 1.994,
+        "bytes": 2378,
+        "sha256": "022b45ee60a4f3d03b5f87391af9a8942ecfc7ce93f658a395520aa9abf8ec76"
+      },
+      "us_projection": {
+        "seconds": 0.133
+      },
+      "document_holdout_v3": {
+        "seconds": 2.824,
+        "bytes": 22782,
+        "sha256": "cf09ccb70ddeddd548dc926959eb9374e47b8bccff8588946a1fd046d2e47556"
+      }
+    }
+  },
+  "performance": {
+    "replay_exit_code": 0,
+    "elapsed_seconds": 25.854,
+    "sampling_seconds": 0.05,
+    "peak_process_working_set_bytes": {
+      "scripts/reproduce.py": 20992000,
+      "patient_outreach.validate": 20193280,
+      "patient_outreach.fictional": 26337280,
+      "patient_outreach.validate_pilot": 14659584,
+      "scripts/replicate_haryana.py": 194183168,
+      "scripts/evaluate_haryana.py": 266178560,
+      "scripts/validate_haryana.py": 90636288,
+      "scripts/export_haryana.py": 12763136,
+      "scripts/replicate_sierra_leone.py": 199585792,
+      "scripts/evaluate_sierra_leone.py": 187887616,
+      "scripts/audit_sierra_leone_lottery.py": 134213632,
+      "scripts/export_sierra_leone.py": 11759616,
+      "scripts/validate_community_inference.py": 277807104,
+      "scripts/export_us_evidence.py": 18771968,
+      "patient_outreach.document_evaluation": 46444544
+    },
+    "logical_cpus": 32,
+    "system_memory_bytes": 34053414912
+  }
+}

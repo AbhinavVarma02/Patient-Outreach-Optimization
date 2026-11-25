@@ -37,16 +37,18 @@ For v0.3.0-demo, Overview updates its evidence-status strip to include Sierra Le
 
 For v0.4.0-demo, Overview introduces the US payer workflow, Outreach Planner adds the gap calculator using the existing workbench, and Evidence & Methods adds the CMS and US trial summaries above the prior research. Targeting and the three Pilot captures match the v0.3.0-demo references byte for byte. Seven existing captures changed intentionally. Two new mobile planner captures cover the added inputs and results. Desktop and mobile visual review checked the density, headings and table fit. All 13 new reference captures matched locally and on production. The v0.3.0-demo references remain available at `41f7d10`.
 
-| View | Desktop (1440 × 900), light | Mobile (390 × 844), light | Mobile (390 × 844), dark |
-| --- | --- | --- | --- |
-| Overview | [Reference](images/overview.png) | [Reference](images/overview-mobile-light.png) | [Reference](images/overview-mobile-dark.png) |
-| Patient Targeting | [Reference](images/patient-targeting.png) | — | — |
-| Outreach Planner | [Reference](images/outreach-planner.png) | [Reference](images/outreach-planner-mobile-light.png) | [Reference](images/outreach-planner-mobile-dark.png) |
-| Pilot Designer | [Reference](images/pilot-designer.png) | [Reference](images/pilot-designer-mobile-light.png) | [Reference](images/pilot-designer-mobile-dark.png) |
-| Evidence & Methods | [Reference](images/evidence-and-methods.png) | [Reference](images/evidence-and-methods-mobile-light.png) | [Reference](images/evidence-and-methods-mobile-dark.png) |
+For v0.5.0-demo, the five-page editorial pass removes repeated page eyebrows, shortens workflow and control labels, and puts conclusions ahead of study detail. The site keeps the CSS bundle, typography, palette, navigation, grid and breakpoints. Shorter sections naturally reduce full-page height. The 390 px Evidence & Methods capture is 862 px shorter, and the 390 px Planner capture is 220 px shorter. Long tables retain their existing local scrolling when necessary. Chart names, control units, trial attribution and scope remain available.
+
+| View | Desktop light | Desktop dark | Mobile light | Mobile dark |
+| --- | --- | --- | --- | --- |
+| Overview | [Reference](images/overview.png) | [Reference](images/overview-desktop-dark.png) | [Reference](images/overview-mobile-light.png) | [Reference](images/overview-mobile-dark.png) |
+| Patient Targeting | [Reference](images/patient-targeting.png) | [Reference](images/patient-targeting-desktop-dark.png) | [Reference](images/patient-targeting-mobile-light.png) | [Reference](images/patient-targeting-mobile-dark.png) |
+| Outreach Planner | [Reference](images/outreach-planner.png) | [Reference](images/outreach-planner-desktop-dark.png) | [Reference](images/outreach-planner-mobile-light.png) | [Reference](images/outreach-planner-mobile-dark.png) |
+| Pilot Designer | [Reference](images/pilot-designer.png) | [Reference](images/pilot-designer-desktop-dark.png) | [Reference](images/pilot-designer-mobile-light.png) | [Reference](images/pilot-designer-mobile-dark.png) |
+| Evidence & Methods | [Reference](images/evidence-and-methods.png) | [Reference](images/evidence-and-methods-desktop-dark.png) | [Reference](images/evidence-and-methods-mobile-light.png) | [Reference](images/evidence-and-methods-mobile-dark.png) |
 
 ## Reviewing changes
 
-1. Build and run `npm run test:browser -- --workers=1` from `web`. The browser matrix covers all five views in both themes at 1440 × 900, 1280 × 800, 768 × 1024 and 390 × 844. Chromium writes the reference views to `web/qa-output`.
+1. Build and run `npm run test:browser -- --workers=1` from `web`. The browser matrix covers all five views in both themes at 1440 × 900, 1280 × 800, 768 × 1024 and 390 × 844. Chromium writes all 20 desktop and mobile full-page references to `web/qa-output`. The browser checks for em dashes in rendered text and accessible labels.
 2. On Windows with the pinned Chromium, enable the exact comparison with `$env:OUTREACH_UI_REFERENCE = '1'` in PowerShell and run `npm run test:browser -- --project=chromium`. Set `OUTREACH_LIVE_URL` to run against production. The test reports which comparison failed and retains the new capture for inspection. On other rendering environments, compare the captures visually.
 3. Review any difference at the affected viewport and theme. Record the intended functionality, accessibility or usability change and its visual effect during review. Update the affected references from the verified production release when that change ships. Keep captures in `docs/images` and out of the deployable web directory. [Browser checks](../web/tests/workspace.spec.ts) · [Test evidence](TEST_EVIDENCE.md)

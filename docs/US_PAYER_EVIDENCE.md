@@ -13,6 +13,8 @@ The 2027 Star Ratings data tables released October 8, 2026 contain public contra
 
 C22 uses a 0–100 survey score. C03 is survey-based, so comparing a plan's claims-completion scenario to C03 remains a planning comparison. Observed variation can reflect population composition, eligibility, response and reporting differences. The product publishes four measure summaries and omits named contracts, detailed value-set workbooks, member rows and membership weights. CMS identifies its website as public domain. The projection uses only CMS-published numerical facts, with provenance, and excludes third-party value sets, measure specifications and illustrations. [CMS reuse policy](https://www.cms.gov/about-cms/web-policies-important-links/about-website/link-to-us) · [Pinned sources and reviewed measures](../research/manifests/us_evidence_v1.json)
 
+Keep the campaign denominator aligned with the chosen outcome and reporting period. Use a survey-comparable denominator when interpreting the flu reference and a screening-eligible denominator for colorectal screening. The 675 contracts define the descriptive source universe. Each published measure uses its own reporting subset. A historical comparison would require audited measure versions, matched reporting windows and a stable contract cohort plus a separate composition analysis. A change in the published national average would combine several effects. This release uses the pinned 2027 snapshot.
+
 ## Randomized US outreach
 
 | Study | Population and assignment | Endpoint and result | Use |
@@ -42,5 +44,15 @@ The strongest verified public scope in this review is CMS contract context plus 
 For either measure, the planner accepts a hypothetical eligible denominator, expected completions by the evaluation date under usual care, a reachable count from the remaining gap, an operational contact limit, a campaign budget and an all-in cost per attempted contact. Additional completions needed are the ceiling of the benchmark times the denominator minus expected usual-care completions, with a floor of zero. Feasible contacts are the minimum of reach, contact limit and the whole contacts affordable. The ratio of needed completions to feasible contacts is the required absolute incremental completion rate under these assumptions. It is undefined when there are zero contacts and a positive gap. Above 100 pp, the benchmark is infeasible under the scenario.
 
 For the default flu scenario, 10,000 eligible members and 6,000 expected completions against the 64% reference leave 400 completions to find. At a hypothetical $0.75 per contact and $1,800 campaign budget, the maximum 2,400 contacts would need a 16.67 pp incremental completion rate. Trial effects do not seed the scenario. Selecting screening changes only the observed benchmark and its arithmetic implications. To test a campaign, prospectively randomize outreach versus usual care using a defined outcome window and equal ascertainment, specify handling for opt-outs and overlap, and monitor reach and completion across groups. Budget any kit processing, navigation and follow-up in the local cost assumption where applicable. The arithmetic provides no CMS Star cutoff, bonus or projected clinical result.
+
+Budget sensitivity keeps the 400-completion gap, 3,000 reachable members and 2,500 contact limit fixed. These values come from the browser calculator using the same hypothetical inputs.
+
+| Budget | Feasible contacts | Modeled spend | Minimum incremental completion rate |
+| ---: | ---: | ---: | ---: |
+| $900 | 1,200 | $900 | 33.33 pp |
+| $1,800 | 2,400 | $1,800 | 16.67 pp |
+| $2,700 | 2,500 | $1,875 | 16.00 pp |
+
+For a real pilot, treat 16.00 pp as the lowest gain that could close this hypothetical gap under the given contact limit. Assess whether a compatible local experiment could achieve that gain and whether downstream test or appointment capacity can meet it. A financial break-even analysis also needs plan-specific value and total marginal cost per completion. Reaching a descriptive benchmark does not quantify that value.
 
 Reproduce the projection using the pinned local source files and `python scripts/export_us_evidence.py --check`. Independently compare the registry totals and SCORE rates to the primary sources before an update. The browser arithmetic has known-answer and workflow tests. [Reproduction](REPRODUCIBILITY.md)

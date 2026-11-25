@@ -83,3 +83,17 @@ python -m patient_outreach.document_evaluation --final-cycle --holdout --manifes
 ```
 
 Run the lottery audit with the Sierra Leone requirements and four original cached files listed above. For the final extraction holdout, save official PDFs and study API snapshots under the manifest's NCT identifiers in the ignored cache. Reuse the identical prior model, pypdf and local runtime. A later registry update can change bytes, so preserve or recover the dated verified snapshot. The original v2 extraction code and its run environment are identified by the earlier freeze commit, with labels preserved in the prior manifest.
+
+## Final offline replay
+
+Install the Sierra Leone numerical pins and `pypdf==7.1.1`, or use the equivalent `uv` environment. Prepare the approved local inputs listed above. Full Git history is needed for the original Haryana provenance pins. The runner does no network acquisition and does not invoke model generation.
+
+```sh
+uv run --no-project --with-requirements research/sierra-leone-requirements.txt --with pypdf==7.1.1 python scripts/reproduce.py
+python scripts/reproduce.py fictional
+python scripts/reproduce.py --help
+```
+
+The command supports `fictional`, `haryana`, `sierra-leone`, `community`, `us` and `documents` as independently runnable groups. The fixture group uses the standard library. Each run writes a new ignored directory with stage digests, byte sizes and wall times. Failure stops the run at the first mismatch and leaves the last completed stage ledger. Rerun the affected group after resolving the cause. The artifact exporters run in check mode. Model artifacts remain under the existing ignored private locations. The Sierra Leone run checks stored freezes before evaluation. The Haryana replay checks the original source and protocol digests from `dad2575`, then compares the current result to the archived numerical outputs. Historical runtime and private model metadata can vary. Finite numerical comparisons use absolute tolerance `1e-10` or relative tolerance `1e-9`, like-for-like methods and identical inputs. Document replay checks deterministic score counts and source pins, excluding timings and the historical local model path.
+
+The measured full run used Python 3.12.12 and one OpenBLAS thread on the existing Windows host. It completed all 14 stages in 25.85 s. At 50 ms sampling, the largest worker peaked at about 265 MiB RSS for community-inference validation. This is observed resident memory for a single worker and sampled peak, with no inference model, downloads or installation included. [Replay timings and artifact hashes](../research/reports/final_reproduction.json)

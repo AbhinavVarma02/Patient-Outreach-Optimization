@@ -48,6 +48,10 @@
 - Seventeen Python tests, four Node tests, 15 local and 15 production browser tests, all three projection checks, source and static allowlists, and scoped advisory checks passed. All 13 captured views matched the local build. GitHub CI passed for the production build commit. [Verification ledger](docs/TEST_EVIDENCE.md)
 - Cloudflare Pages production deployment `bda6411e-8121-47b7-a6ff-9d6d3d5937e2` serves the approved static build at the existing URL. The stable site, new immutable URL and three previous deployments passed release-specific HTTPS asset and header checks. Additional external service cost was $0. [Deployment ledger](docs/DEPLOYMENT.md)
 
+## Final demo candidate
+
+The v0.5.0-demo candidate passed the approved UI editorial pass, 17 Python tests, four Node tests, 15 cross-engine local browser tests and the five-file publication gate. The 20 reference views cover all five routes on desktop and mobile in both themes. The 14-stage offline replay passed in 25.85 seconds with about 265 MiB sampled maximum worker RSS. The bounded data and extractor reviews leave the same empirical extensions deferred. The existing v0.4.0-demo production build passed HTTPS integrity verification. The next release step is to publish the verified v0.5.0-demo build and verify CI, production and rollback. [Final contract](FINAL_COMPLETION.md) · [Traceability](docs/REQUIREMENTS_TRACEABILITY.md) · [Critical review](docs/FINAL_INDEPENDENT_AUDIT.md)
+
 ## Resume
 
 Use the [reproducibility guide](docs/REPRODUCIBILITY.md) and [deployment ledger](docs/DEPLOYMENT.md). For Geisinger, await a substantive response and follow the [protocol](docs/RESEARCH_PROTOCOL.md) after documenting the reuse basis. Structure policy requires the original preassignment lottery roster and documented observation rules. Independent validation requires a comparable rollout. The final extraction cycle is complete. Reopen only with new evidence and a disjoint benchmark. Rerun the [release audit](docs/RELEASE_AUDIT.md) after public evidence changes.
