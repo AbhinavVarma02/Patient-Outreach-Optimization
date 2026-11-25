@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "statsmodels_reference_checked": true,
+  "adult_rows": 12096,
+  "villages": 150,
+  "triplets": 50,
+  "structure_audit": {
+    "adult_rows": 3760,
+    "adult_structures": 1120,
+    "assigned_adults": 2686,
+    "eligible_census_structures": 1198,
+    "structures_with_multiple_households": 452,
+    "villages_with_both_arms_in_released_roster": 28,
+    "villages_with_all_structures_assigned_in_released_roster": 22,
+    "observed_assignment_share_range_in_overlap": [
+      0.35714285714285715,
+      0.9523809523809523
+    ],
+    "villages_matching_the_up_to_20_rule": 45,
+    "census_rows_with_unknown_periphery": 8,
+    "household_keys_crossing_structure": 2
+  },
+  "effects": {
+    "mobile_package_adult_weighted": {
+      "estimate": 0.26070742914972345,
+      "standard_error": 0.018068529765537262,
+      "lower": 0.2250037762315524,
+      "upper": 0.29641108206789446,
+      "p_value_t": 4.3764834468098956e-30,
+      "published_estimate": 0.261,
+      "published_standard_error": 0.018,
+      "rounded_match": true
+    },
+    "mobile_package_equal_village": {
+      "estimate": 0.2829610968945397,
+      "standard_error": 0.024700795895364114,
+      "lower": 0.23394935896128202,
+      "upper": 0.3319728348277974,
+      "p_value_t": 7.566155837184749e-20,
+      "published_estimate": 0.283,
+      "published_standard_error": 0.025,
+      "rounded_match": true
+    },
+    "mobile_plus_door_to_door_vs_control": {
+      "estimate": 0.293467787694705,
+      "standard_error": 0.02269419470943347,
+      "lower": 0.24862375989182012,
+      "upper": 0.3383118154975899,
+      "p_value_t": 4.013200513648474e-26,
+      "published_estimate": 0.293,
+      "published_standard_error": 0.023,
+      "rounded_match": true
+    },
+    "mobile_plus_small_group_vs_control": {
+      "estimate": 0.23074871337981182,
+      "standard_error": 0.021367824739371773,
+      "lower": 0.18852561011626007,
+      "upper": 0.27297181664336356,
+      "p_value_t": 1.928448457903955e-20,
+      "published_estimate": 0.231,
+      "published_standard_error": 0.021,
+      "rounded_match": true
+    },
+    "mobile_door_to_door_vs_small_group": {
+      "estimate": 0.06271907431489318,
+      "standard_error": 0.02529339905351248,
+      "lower": 0.012738984476601177,
+      "upper": 0.11269916415318518,
+      "p_value_t": 0.01426439990007012
+    },
+    "extra_visit_within_door_to_door_villages": {
+      "estimate": -0.011376332971375474,
+      "standard_error": 0.018584985615890063,
+      "lower": -0.04784167738194118,
+      "upper": 0.025089011439190227,
+      "p_value_t": 0.5405794618443792,
+      "published_estimate": -0.011,
+      "published_standard_error": 0.019,
+      "rounded_match": true
+    }
+  }
+}

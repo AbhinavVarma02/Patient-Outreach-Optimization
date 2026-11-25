@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "deposit": "https://doi.org/10.7910/DVN/PRXF5Z",
+  "version": "1.0",
+  "license": "CC0-1.0",
+  "metadata_url": "https://dataverse.harvard.edu/api/datasets/:persistentId/?persistentId=doi:10.7910/DVN/PRXF5Z",
+  "files": {
+    "community_data.tab": {"id": 7548810, "bytes": 112125, "md5": "9aa8aaed3288f93bfaa45be367a009cc", "sha256": "fbfd30459bf92688f59489099d2987646318565639ac4185d25c0eaab7979de7"},
+    "individual_level.tab": {"id": 7548805, "bytes": 2932566, "md5": "7cd19e27f3917c90368221850cca9250", "sha256": "9f774f4033c1469a13537830dc401d971775fabfa2ddee263f4e0e20a18fcf9c"},
+    "codebook_individual_level.xlsx": {"id": 7548811, "bytes": 15189, "md5": "476acbdf5b8644525fc4820bb27be0c9", "sha256": "6b8c0bd773020e90af75f47d94a6c96735e570907f4089fdc088d10fe49d0f56"},
+    "vaccine_replication.do": {"id": 7548809, "bytes": 62354, "md5": "6685dd2b9c951c369775ee0dbe977692", "sha256": "a31af8cb16f3fd84e1d1c67b3eead1959f189dff44fe8a61735486833ce883d2"}
+  }
+}
