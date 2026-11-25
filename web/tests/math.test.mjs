@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {test} from 'node:test';
-import {comparePolicies, pilotDesign, plan} from '../src/math.ts';
+import {comparePolicies, pilotDesign, plan, planBenchmark} from '../src/math.ts';
 const scenario = {baseline:.315,effect:.026,capacity:.2,concentration:2,capture:.7,
   allocation:.5,alpha:.05,attrition:.05,clusterSize:1,icc:0};
 
@@ -34,4 +34,13 @@ test('power calculation crosses the target and handles zero gain', () => {
   assert.equal(nullPolicy.required,null);
   assert.ok(Math.abs(nullPolicy.power(60000)-.05) < 1e-7);
   assert.throws(() => pilotDesign({...scenario,baseline:.99,effect:.2},60000,.8));
+});
+
+test('payer gap planning rounds counts up and respects budget, reach and impossible targets', () => {
+  assert.deepEqual(planBenchmark(101, 60, 40, 20, 950, 100, 64),
+    {needed:5, contacts:9, spend:9, requiredEffect:5/9});
+  assert.equal(planBenchmark(100, 60, 10, 20, 0, 0, 73).requiredEffect, 1.3);
+  assert.equal(planBenchmark(100, 60, 10, 20, 0, 100, 73).requiredEffect, null);
+  assert.equal(planBenchmark(100, 76, 24, 0, 0, 100, 73).requiredEffect, 0);
+  assert.equal(planBenchmark(100, 60, 41, 20, 0, 0, 73), null);
 });

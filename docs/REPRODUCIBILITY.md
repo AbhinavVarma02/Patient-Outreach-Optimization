@@ -70,3 +70,16 @@ python -m patient_outreach.document_evaluation --manifest research/manifests/doc
 ```
 
 The evaluator emits exact, evidence and timing metrics plus model and manifest digests. Local inference can vary across runs and hardware. The committed report is the evaluated snapshot. [Benchmark protocol and evidence](AI_EVALUATION.md)
+
+## US evidence and the final research checks
+
+Save the CMS Star Ratings ZIP and the UCLA registry JSON to ignored `.cache/us-evidence` as `cms.zip` and `NCT05525494.json`. Exact URLs, byte sizes and SHA-256 hashes are in the [US source manifest](../research/manifests/us_evidence_v1.json). The exporter reads one named CSV from the ZIP and the posted primary summary from the registry. It does not extract the archive. Compare the SCORE Table 2 transcription and the CMS technical-note averages with the sources before a future release. CI checks the approved projection hash without downloading external datasets.
+
+```powershell
+python scripts/export_us_evidence.py --check
+python scripts/audit_sierra_leone_lottery.py
+python -m patient_outreach.document_evaluation --final-cycle --model qwen2.5:latest
+python -m patient_outreach.document_evaluation --final-cycle --holdout --manifest research/manifests/document_holdout_v3.json --cache .cache/document-holdout-v3 --model qwen2.5:latest
+```
+
+Run the lottery audit with the Sierra Leone requirements and four original cached files listed above. For the final extraction holdout, save official PDFs and study API snapshots under the manifest's NCT identifiers in the ignored cache. Reuse the identical prior model, pypdf and local runtime. A later registry update can change bytes, so preserve or recover the dated verified snapshot. The original v2 extraction code and its run environment are identified by the earlier freeze commit, with labels preserved in the prior manifest.

@@ -1,5 +1,7 @@
 # Research report
 
+The [US evidence review](US_PAYER_EVIDENCE.md) verified four CMS measures and analyzes their public contract distributions. It reproduced pooled raw rates from posted UCLA trial groups, with sponsor-adjusted results compatible with no gain, and checked SCORE's published screening contrasts, including the Medicare stratum. The evidence informs a hypothetical payer-planning workflow. It establishes no covered-person targeting effect.
+
 The independent [Haryana research](HARYANA_RESEARCH.md) reproduced a published village-level result and evaluated three community targeting rules relative to uniform. The information-hub estimate was sensitive to the weighting and clustering choices. The held-out rules did not establish a policy gain over uniform. The independent Geisinger study remains on hold for participant-level reuse permission, with clinical policy and temporal validation open.
 
 Published evidence provides the decision context. In their fourth trial, the authors reported a 2.5 percentage-point higher 29-day vaccination rate for assignment to letter only versus passive control among people eligible for all three modalities (95% CI 0.9 to 4.0 pp). This estimate is from the authors’ published fully eligible analysis population. It does not establish a universal ranking of channels.

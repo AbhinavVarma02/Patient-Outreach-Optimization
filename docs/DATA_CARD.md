@@ -4,6 +4,8 @@ The CC0 Sierra Leone study uses 150 villages randomized in 50 triplets and a nes
 
 The historical Geisinger inventory reports 46,602 full and 38,598 analysis records for Study 1, 45,061 and 42,481 for Study 2, 40,671 and 39,129 for Study 3, and 43,225 and 42,709 for Study 4. The manifest pins SHA-256 values and file sizes. Records can overlap across studies. Geisinger participant outcomes remain outside this analysis. [Geisinger manifest](../research/manifests/osf_mqbux_manifest.json)
 
+US inputs include CMS's 2027 contract-level Measure Data table and technical notes, the dated ClinicalTrials.gov primary outcome results for UCLA influenza outreach and SCORE's published aggregate Table 2. The planner uses only the observed benchmark and locally entered hypothetical inputs. [US data and estimand cards](US_PAYER_EVIDENCE.md)
+
 | Study | Published design | Target primary contrast for replication | Checks still required |
 | --- | --- | --- | --- |
 | 1 · NCT04323137 | Top clinical-risk decile, passive control and three disclosure arms. Eligible modalities delivered the assigned content. | Assigned risk disclosure versus no study outreach and original author arm contrasts. Season-long vaccination outcome, with authors' analysis criteria. | Confirm randomization strata and probabilities, risk-band semantics, exclusions and endpoint fields. |

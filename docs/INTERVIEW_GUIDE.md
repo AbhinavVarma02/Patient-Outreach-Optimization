@@ -2,23 +2,25 @@
 
 ## One-minute demo
 
-Start on Overview and identify the published-evidence boundary. In Patient Targeting, switch between the fictional risk-effect patterns and explain why equal reach can still generate different yield. In Outreach Planner, reduce the budget and show the binding contact constraint. In Pilot Designer, reduce ranking quality and explain the change in the sample size. End on the linked Study 4 primary population and explain why descriptive cross-trial comparisons are insufficient.
+Open Outreach Planner and choose Annual Flu Vaccine. With the default hypothetical plan, the CMS reference leaves a 400-completion gap and the budget permits 2,400 contacts. The campaign would need a 16.67 pp incremental completion rate. Toggle to colorectal screening and show how the observed reference changes the required lift. In Evidence & Methods, compare UCLA's null-compatible reminder result with SCORE's mailed screening bundle. End on Pilot Designer to show how a small population effect can require a large sample.
 
 ## Technical questions
 
 - Why use an RCT? Known assignment probabilities support estimation of arm contrasts under the randomized design. Trial population, estimand and post-assignment missingness still matter.
 - Why freeze policy thresholds? Selecting an apparently superior rule using the same outcomes that evaluate it distorts reported intervals.
 - Why can the pilot require many participants? A targeted policy can improve individual outreach yield while shifting the all-eligible outcome rate by only a fraction of a percentage point.
-- Why is the local extractor experimental? Its smoke run checks exact support and abstention. The held-out multitrial evaluation is open.
+- Why use the CMS reference? It gives the planner a measured contract-level benchmark. A payer supplies its own hypothetical denominator, usual-care completions, reach and cost. The tool solves for a minimum required effect without estimating it.
+- Why did the extractor stay experimental? The final 12-trial holdout gave the strongest deterministic method 7/13 exact values and the verified local model 2/13. Retrieval found the relevant anchors in the supplied pages, but source attribution and ambiguous endpoint or unit interpretation remained difficult.
+- Why hold the Sierra Leone structure policy? In five villages the released nonperipheral roster fails a simple lottery-cap reconstruction. Matching the cap elsewhere does not confirm the original denominator or isolate spillover.
 
 ## Portfolio description
 
-Built a decision workspace for comparing preventive outreach at matched capacity and designing prospective randomized pilots. It pairs simulated causal-policy validation with a transparent evidence trail to published vaccination studies.
+Built an open-source preventive outreach workspace for payer quality teams. It combines CMS contract benchmarks, reviewed US randomized trial evidence, study-level international replications and browser-local campaign and pilot planning. The research documents where community policy models and automated trial extraction failed their evaluation criteria.
 
 ## Resume bullets
 
-- Built a TypeScript workspace for matched-capacity targeting, channel costing and randomized pilot sizing, with a separate evidence trail to four published study designs.
-- Implemented known-propensity AIPW and a reproducible fictional holdout and assessed coverage in six known-truth scenarios with 1,500 replications each.
+- Built a TypeScript Medicare Advantage outreach planner using four audited CMS measures from 675 coordinated care contracts, with separate randomized evidence and browser-local budget, reach and pilot calculations.
+- Reproduced five published Sierra Leone vaccination estimates and standard errors. Evaluated frozen causal models on 20 held-out village triplets and found no reliable gain over uniform outreach.
 
 ## Continuation talking points
 

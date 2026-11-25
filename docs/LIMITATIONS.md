@@ -1,5 +1,8 @@
 # Limitations
 
+- The Medicare Advantage reference is a descriptive contract average. Plan-specific measure definitions, reporting denominators, member engagement and outreach cost are unknown. UCLA and SCORE estimates apply to their respective populations and bundles. US individual benefit, Stars effects and prospective performance remain unverified. [US evidence](US_PAYER_EVIDENCE.md)
+- The Sierra Leone structure lottery audit corroborates the remote exclusion and leaves the preassignment roster unresolved. No matching independent trial was found for temporal or external validation of its mobile-package policy. [Structure audit](SIERRA_LEONE_RESEARCH.md#structure-lottery-reconciliation-and-external-validation)
+
 Sierra Leone provides internal village-level policy evaluation and a structure-randomized visit replication. The released roster does not identify all visit assignment denominators, and the observed rollout allows interference. The held-out comparisons cannot establish superiority, prospective benefit, temporal transport or individual treatment effects. The new trial document evaluation is page-conditioned and single-reviewer. All extraction methods missed the unchanged accuracy threshold. [Sierra Leone evidence](SIERRA_LEONE_RESEARCH.md) · [Extraction results](AI_EVALUATION.md)
 
 - OSF published matching hash and size metadata for all 20 files. Payload bytes and participant-level data remain unverified. The repository has no evidence of permission for the intended analysis.

@@ -30,7 +30,7 @@ test('all views fit the viewport in both themes without page errors or external 
         const overflow = await page.evaluate(() => document.documentElement.scrollWidth > innerWidth);
         expect(overflow, route+' '+width+' '+theme).toBe(false);
         if (browserName === 'chromium' && ((width === 1440 && theme === 'light')
-          || (width === 390 && (route === 'overview' || route === 'pilot' || route === 'evidence')))) {
+          || (width === 390 && (route === 'overview' || route === 'planner' || route === 'pilot' || route === 'evidence')))) {
           const path = 'qa-output/'+(process.env.OUTREACH_LIVE_URL ? 'live-' : '')+route+'-'+width+'-'+theme+'.png';
           const actual = await page.screenshot({path, fullPage:true});
           if (process.env.OUTREACH_UI_REFERENCE === '1') {
@@ -102,7 +102,28 @@ test('empirical evidence keeps village outcomes and equal-capacity results disti
   }
   await expect(page.getByRole('link', {name:/Banerjee et al. data/})).toHaveAttribute('href', 'https://zenodo.org/records/11392582');
   await page.getByText('Trial document extraction evaluation', {exact:true}).click();
-  await expect(page.getByText(/The verified local model matched 3 of 30/)).toBeVisible();
+  await expect(page.getByText(/The verified local model matched 2 of 13/)).toBeVisible();
   await page.getByRole('navigation').getByRole('link', {name:'Patient Targeting'}).click();
   await expect(page.getByText('Fictional inputs', {exact:true})).toBeVisible();
+});
+
+test('US payer planner uses CMS benchmarks and keeps randomized estimates out of assumptions', async ({page}) => {
+  await page.goto('/#planner');
+  const payer = page.locator('section').filter({has:page.getByRole('heading', {name:'Medicare Advantage gap planning'})});
+  await expect(payer).toContainText('16.67 pp');
+  await payer.getByLabel('Quality measure').selectOption('C02');
+  await expect(payer).toContainText('73%');
+  await expect(payer).toContainText('54.17 pp');
+  await payer.getByLabel('Operational contact limit').fill('100');
+  await expect(payer).toContainText('exceeds the maximum possible completions');
+  await payer.getByLabel('Reachable members with a remaining gap').fill('5000');
+  await expect(payer.getByRole('status')).toContainText('Reachable members');
+  await payer.getByRole('button', {name:'Reset gap assumptions'}).click();
+  await expect(payer).toContainText('64%');
+  await payer.getByRole('link', {name:/Review the US randomized evidence/}).click();
+  await expect(page.getByRole('table', {name:'Observed contract quality and member experience'}))
+    .toContainText('480');
+  await expect(page.getByRole('table', {name:'UCLA influenza vaccination by assigned reminder'}))
+    .toContainText('1.00 (0.98 to 1.01)');
+  await expect(page.getByText(/22.04 pp/)).toContainText('Medicare Advantage effect is unknown');
 });

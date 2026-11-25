@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.4.0-demo · US payer research consolidation
+
+- Added a Medicare Advantage benchmark gap calculator and verified CMS 2027 summaries from 675 coordinated care contracts.
+- Integrated UCLA influenza reminder and SCORE screening trial results with study-specific outcomes and estimands.
+- Compared Sierra Leone roster variants, reproduced the remote exclusion reference and documented the unresolved structure lottery.
+- Completed a final 12-trial extraction benchmark. Automated extraction remains experimental after the accuracy and evidence gate failed.
+- Recorded the owner's Geisinger permission request and out-of-office reply. Participant-level reuse remains pending.
+
 ## 0.3.0-demo · 2026-11-25
 
 - Reproduced Sierra Leone village and nested structure assignment effects. Added a frozen village policy comparison with two fitted causal learners and matched-capacity baselines.

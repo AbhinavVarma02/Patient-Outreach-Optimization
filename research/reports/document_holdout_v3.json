@@ -1,0 +1,1274 @@
+{
+  "purpose": "held-out evaluation",
+  "pypdf": "7.1.1",
+  "trial_count": 12,
+  "models": {
+    "qwen2.5:latest": {
+      "digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "bytes": 4683087332,
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen2",
+        "families": [
+          "qwen2"
+        ],
+        "parameter_size": "7.6B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 32768,
+        "embedding_length": 3584,
+        "runner": "ggml"
+      }
+    }
+  },
+  "scores": {
+    "registry": {
+      "checks": 18,
+      "scorable": 13,
+      "abstention_cases": 5,
+      "covered": 3,
+      "exact": 1,
+      "evidence_correct": 1,
+      "schema_valid": 18,
+      "incorrect_populated": 2,
+      "unsupported_populated": 2,
+      "correct_abstentions": 3,
+      "median_seconds": 0.0,
+      "max_seconds": 3e-05,
+      "passes_original_accuracy_abstention_gate": false
+    },
+    "deterministic_layout": {
+      "checks": 18,
+      "scorable": 13,
+      "abstention_cases": 5,
+      "covered": 8,
+      "exact": 7,
+      "evidence_correct": 0,
+      "schema_valid": 18,
+      "incorrect_populated": 1,
+      "unsupported_populated": 8,
+      "correct_abstentions": 4,
+      "median_seconds": 0.08502,
+      "max_seconds": 0.17167,
+      "passes_original_accuracy_abstention_gate": false
+    },
+    "deterministic_plain": {
+      "checks": 18,
+      "scorable": 13,
+      "abstention_cases": 5,
+      "covered": 8,
+      "exact": 7,
+      "evidence_correct": 1,
+      "schema_valid": 18,
+      "incorrect_populated": 1,
+      "unsupported_populated": 7,
+      "correct_abstentions": 4,
+      "median_seconds": 0.045425,
+      "max_seconds": 0.08959,
+      "passes_original_accuracy_abstention_gate": false
+    },
+    "deterministic_final": {
+      "checks": 18,
+      "scorable": 13,
+      "abstention_cases": 5,
+      "covered": 7,
+      "exact": 6,
+      "evidence_correct": 4,
+      "schema_valid": 18,
+      "incorrect_populated": 1,
+      "unsupported_populated": 3,
+      "correct_abstentions": 4,
+      "median_seconds": 0.04532,
+      "max_seconds": 0.08959,
+      "passes_original_accuracy_abstention_gate": false
+    },
+    "qwen2.5:latest": {
+      "checks": 18,
+      "scorable": 13,
+      "abstention_cases": 5,
+      "covered": 9,
+      "exact": 8,
+      "evidence_correct": 3,
+      "schema_valid": 17,
+      "incorrect_populated": 1,
+      "unsupported_populated": 6,
+      "correct_abstentions": 3,
+      "median_seconds": 0.5260849999999999,
+      "max_seconds": 0.82642,
+      "passes_original_accuracy_abstention_gate": false
+    },
+    "hybrid:qwen2.5:latest": {
+      "checks": 18,
+      "scorable": 13,
+      "abstention_cases": 5,
+      "covered": 2,
+      "exact": 2,
+      "evidence_correct": 1,
+      "schema_valid": 17,
+      "incorrect_populated": 0,
+      "unsupported_populated": 1,
+      "correct_abstentions": 4,
+      "median_seconds": 0.52614,
+      "max_seconds": 0.82643,
+      "passes_original_accuracy_abstention_gate": false
+    }
+  },
+  "results": [
+    {
+      "id": "NCT02236273",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.06598
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.03793
+        },
+        "deterministic_final": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.03781
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.82642,
+          "total_duration": 805390600,
+          "load_duration": 2562100,
+          "prompt_eval_count": 519,
+          "eval_count": 15
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.82643,
+          "total_duration": 805390600,
+          "load_duration": 2562100,
+          "prompt_eval_count": 519,
+          "eval_count": 15
+        }
+      },
+      "retrieval_anchor": true,
+      "pdf_errors": []
+    },
+    {
+      "id": "NCT02236273",
+      "field": "primary_window",
+      "expected": "12 months",
+      "methods": {
+        "registry": {
+          "value": "12 months",
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": "/protocolSection/outcomesModule/primaryOutcomes/0/timeFrame",
+          "evidence_correct": true,
+          "seconds": 3e-05
+        },
+        "deterministic_layout": {
+          "value": "12 months",
+          "schema": true,
+          "source_page": "page 4",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.07425
+        },
+        "deterministic_plain": {
+          "value": "12 months",
+          "schema": true,
+          "source_page": "page 4",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.04876
+        },
+        "deterministic_final": {
+          "value": "12 months",
+          "schema": true,
+          "source_page": "page 3",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.04876
+        },
+        "qwen2.5:latest": {
+          "value": "12 months",
+          "schema": true,
+          "source_page": "page 3",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.47549,
+          "total_duration": 474610800,
+          "load_duration": 10613800,
+          "prompt_eval_count": 255,
+          "eval_count": 15
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": "12 months",
+          "schema": true,
+          "source_page": "page 3",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.47553,
+          "total_duration": 474610800,
+          "load_duration": 10613800,
+          "prompt_eval_count": 255,
+          "eval_count": 15
+        }
+      },
+      "retrieval_anchor": true,
+      "pdf_errors": []
+    },
+    {
+      "id": "NCT02360605",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 2",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.12194
+        },
+        "deterministic_plain": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 2",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.06273
+        },
+        "deterministic_final": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 2",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.06198
+        },
+        "qwen2.5:latest": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 2",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.50818,
+          "total_duration": 505032900,
+          "load_duration": 2565500,
+          "prompt_eval_count": 347,
+          "eval_count": 13
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 2",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.50831,
+          "total_duration": 505032900,
+          "load_duration": 2565500,
+          "prompt_eval_count": 347,
+          "eval_count": 13
+        }
+      },
+      "retrieval_anchor": true,
+      "pdf_errors": []
+    },
+    {
+      "id": "NCT02360605",
+      "field": "primary_window",
+      "expected": null,
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 2e-05
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.17167
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.08959
+        },
+        "deterministic_final": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.08959
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.00021
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.00021
+        }
+      },
+      "retrieval_anchor": null,
+      "pdf_errors": []
+    },
+    {
+      "id": "NCT02970136",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 7",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.1463
+        },
+        "deterministic_plain": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 3",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.06776
+        },
+        "deterministic_final": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 3",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.06697
+        },
+        "qwen2.5:latest": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 7",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.51012,
+          "total_duration": 505816700,
+          "load_duration": 2381300,
+          "prompt_eval_count": 379,
+          "eval_count": 13
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.51024,
+          "total_duration": 505816700,
+          "load_duration": 2381300,
+          "prompt_eval_count": 379,
+          "eval_count": 13
+        }
+      },
+      "retrieval_anchor": true,
+      "pdf_errors": []
+    },
+    {
+      "id": "NCT02970136",
+      "field": "primary_window",
+      "expected": "6 months",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 2e-05
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.08143
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.03789
+        },
+        "deterministic_final": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.03789
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.53111,
+          "total_duration": 528579200,
+          "load_duration": 2971900,
+          "prompt_eval_count": 253,
+          "eval_count": 15
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.53111,
+          "total_duration": 528579200,
+          "load_duration": 2971900,
+          "prompt_eval_count": 253,
+          "eval_count": 15
+        }
+      },
+      "retrieval_anchor": true,
+      "pdf_errors": []
+    },
+    {
+      "id": "NCT03604393",
+      "field": "randomization_unit",
+      "expected": "practice",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.06648
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.03363
+        },
+        "deterministic_final": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.03357
+        },
+        "qwen2.5:latest": {
+          "value": "practice",
+          "schema": true,
+          "source_page": "page 5",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.54918,
+          "total_duration": 533122300,
+          "load_duration": 2229400,
+          "prompt_eval_count": 385,
+          "eval_count": 13
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.54928,
+          "total_duration": 533122300,
+          "load_duration": 2229400,
+          "prompt_eval_count": 385,
+          "eval_count": 13
+        }
+      },
+      "retrieval_anchor": true,
+      "pdf_errors": []
+    },
+    {
+      "id": "NCT03604393",
+      "field": "primary_window",
+      "expected": null,
+      "methods": {
+        "registry": {
+          "value": "3 months",
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": "/protocolSection/outcomesModule/primaryOutcomes/0/timeFrame",
+          "evidence_correct": false,
+          "seconds": 2e-05
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.05312
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.02798
+        },
+        "deterministic_final": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.02795
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.49737,
+          "total_duration": 486671100,
+          "load_duration": 2365400,
+          "prompt_eval_count": 177,
+          "eval_count": 15
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.49737,
+          "total_duration": 486671100,
+          "load_duration": 2365400,
+          "prompt_eval_count": 177,
+          "eval_count": 15
+        }
+      },
+      "retrieval_anchor": null,
+      "pdf_errors": []
+    },
+    {
+      "id": "NCT03825965",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 19",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.09251
+        },
+        "deterministic_plain": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 19",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.05509
+        },
+        "deterministic_final": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 18",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.05493
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.72942,
+          "total_duration": 705999500,
+          "load_duration": 2213600,
+          "prompt_eval_count": 577,
+          "eval_count": 15
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.72943,
+          "total_duration": 705999500,
+          "load_duration": 2213600,
+          "prompt_eval_count": 577,
+          "eval_count": 15
+        }
+      },
+      "retrieval_anchor": true,
+      "pdf_errors": []
+    },
+    {
+      "id": "NCT03825965",
+      "field": "primary_window",
+      "expected": null,
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 2e-05
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.07815
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.04521
+        },
+        "deterministic_final": {
+          "value": "6 months",
+          "schema": true,
+          "source_page": "page 25",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.04522
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": false,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.4628,
+          "total_duration": 447059200,
+          "load_duration": 2627500,
+          "prompt_eval_count": 181,
+          "eval_count": 15
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": false,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.46281,
+          "total_duration": 447059200,
+          "load_duration": 2627500,
+          "prompt_eval_count": 181,
+          "eval_count": 15
+        }
+      },
+      "retrieval_anchor": null,
+      "pdf_errors": []
+    },
+    {
+      "id": "NCT04046497",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 4",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.07161
+        },
+        "deterministic_plain": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 4",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.03198
+        },
+        "deterministic_final": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 3",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.03183
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.53702,
+          "total_duration": 528033500,
+          "load_duration": 2402000,
+          "prompt_eval_count": 330,
+          "eval_count": 15
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.53703,
+          "total_duration": 528033500,
+          "load_duration": 2402000,
+          "prompt_eval_count": 330,
+          "eval_count": 15
+        }
+      },
+      "retrieval_anchor": true,
+      "pdf_errors": []
+    },
+    {
+      "id": "NCT04046497",
+      "field": "primary_window",
+      "expected": null,
+      "methods": {
+        "registry": {
+          "value": "12 months",
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": "/protocolSection/outcomesModule/primaryOutcomes/0/timeFrame",
+          "evidence_correct": false,
+          "seconds": 2e-05
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0853
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.04794
+        },
+        "deterministic_final": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.04794
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.00017
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.00017
+        }
+      },
+      "retrieval_anchor": null,
+      "pdf_errors": []
+    },
+    {
+      "id": "NCT05004662",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0928
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.04323
+        },
+        "deterministic_final": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.04301
+        },
+        "qwen2.5:latest": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 2",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.52106,
+          "total_duration": 517646500,
+          "load_duration": 2593500,
+          "prompt_eval_count": 411,
+          "eval_count": 13
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.52117,
+          "total_duration": 517646500,
+          "load_duration": 2593500,
+          "prompt_eval_count": 411,
+          "eval_count": 13
+        }
+      },
+      "retrieval_anchor": true,
+      "pdf_errors": []
+    },
+    {
+      "id": "NCT05505760",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.08474
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.04564
+        },
+        "deterministic_final": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.04542
+        },
+        "qwen2.5:latest": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 7",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.48853,
+          "total_duration": 486581600,
+          "load_duration": 4501800,
+          "prompt_eval_count": 404,
+          "eval_count": 13
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.48866,
+          "total_duration": 486581600,
+          "load_duration": 4501800,
+          "prompt_eval_count": 404,
+          "eval_count": 13
+        }
+      },
+      "retrieval_anchor": true,
+      "pdf_errors": []
+    },
+    {
+      "id": "NCT05515497",
+      "field": "randomization_unit",
+      "expected": null,
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": "household",
+          "schema": true,
+          "source_page": "page 8",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.09151
+        },
+        "deterministic_plain": {
+          "value": "household",
+          "schema": true,
+          "source_page": "page 8",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.04715
+        },
+        "deterministic_final": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.04689
+        },
+        "qwen2.5:latest": {
+          "value": "facility",
+          "schema": true,
+          "source_page": "page 7",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.56392,
+          "total_duration": 561288100,
+          "load_duration": 4214900,
+          "prompt_eval_count": 370,
+          "eval_count": 16
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.56403,
+          "total_duration": 561288100,
+          "load_duration": 4214900,
+          "prompt_eval_count": 370,
+          "eval_count": 16
+        }
+      },
+      "retrieval_anchor": null,
+      "pdf_errors": []
+    },
+    {
+      "id": "NCT05997225",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 8",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.10629
+        },
+        "deterministic_plain": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 8",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.04696
+        },
+        "deterministic_final": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 3",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.04587
+        },
+        "qwen2.5:latest": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 4",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.78271,
+          "total_duration": 751759600,
+          "load_duration": 4542900,
+          "prompt_eval_count": 804,
+          "eval_count": 13
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.78282,
+          "total_duration": 751759600,
+          "load_duration": 4542900,
+          "prompt_eval_count": 804,
+          "eval_count": 13
+        }
+      },
+      "retrieval_anchor": true,
+      "pdf_errors": []
+    },
+    {
+      "id": "NCT06173375",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.11978
+        },
+        "deterministic_plain": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.04379
+        },
+        "deterministic_final": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.04372
+        },
+        "qwen2.5:latest": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 15",
+          "registry_pointer": null,
+          "evidence_correct": true,
+          "seconds": 0.5408,
+          "total_duration": 538505700,
+          "load_duration": 5338200,
+          "prompt_eval_count": 490,
+          "eval_count": 13
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.5409,
+          "total_duration": 538505700,
+          "load_duration": 5338200,
+          "prompt_eval_count": 490,
+          "eval_count": 13
+        }
+      },
+      "retrieval_anchor": true,
+      "pdf_errors": []
+    },
+    {
+      "id": "NCT07458607",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.0
+        },
+        "deterministic_layout": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 3",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.03799
+        },
+        "deterministic_plain": {
+          "value": "individual",
+          "schema": true,
+          "source_page": "page 3",
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.02211
+        },
+        "deterministic_final": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.02192
+        },
+        "qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.57409,
+          "total_duration": 550477000,
+          "load_duration": 2517300,
+          "prompt_eval_count": 390,
+          "eval_count": 15
+        },
+        "hybrid:qwen2.5:latest": {
+          "value": null,
+          "schema": true,
+          "source_page": null,
+          "registry_pointer": null,
+          "evidence_correct": false,
+          "seconds": 0.5741,
+          "total_duration": 550477000,
+          "load_duration": 2517300,
+          "prompt_eval_count": 390,
+          "eval_count": 15
+        }
+      },
+      "retrieval_anchor": true,
+      "pdf_errors": []
+    }
+  ],
+  "manifest_sha256": "9de4986c51aa6f7a6ffd591b21a89cfdb5f6ecda7f105b60cf454b47b1e378f9",
+  "extractor_sha256": "941d44091a8a7f7adbff03d8925ef9dea33cc85b26c4e50b25f971e7b67e90fc"
+}

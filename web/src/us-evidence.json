@@ -1,0 +1,120 @@
+{
+  "ratingsYear": 2027,
+  "contracts": 675,
+  "measures": [
+    {
+      "id": "C03",
+      "name": "Annual Flu Vaccine",
+      "unit": "%",
+      "cmsMean": 64,
+      "reported": 480,
+      "median": 64.5,
+      "iqr": [
+        58.0,
+        70.0
+      ]
+    },
+    {
+      "id": "C02",
+      "name": "Colorectal Cancer Screening",
+      "unit": "%",
+      "cmsMean": 73,
+      "reported": 511,
+      "median": 75,
+      "iqr": [
+        69.0,
+        80.0
+      ]
+    },
+    {
+      "id": "C01",
+      "name": "Breast Cancer Screening",
+      "unit": "%",
+      "cmsMean": 74,
+      "reported": 477,
+      "median": 75,
+      "iqr": [
+        70.0,
+        81.0
+      ]
+    },
+    {
+      "id": "C22",
+      "name": "Getting Appointments and Care Quickly",
+      "unit": "score",
+      "cmsMean": 84,
+      "reported": 345,
+      "median": 84,
+      "iqr": [
+        83.0,
+        86.0
+      ]
+    }
+  ],
+  "influenzaTrial": {
+    "id": "NCT05525494",
+    "registryPosted": "2024-08-07",
+    "window": "6 months",
+    "arms": {
+      "Text": {
+        "n": 87350,
+        "vaccinated": 41259,
+        "rate": 47.23,
+        "adjustedRR": 1.0,
+        "ci": [
+          0.98,
+          1.01
+        ]
+      },
+      "Portal": {
+        "n": 87478,
+        "vaccinated": 41368,
+        "rate": 47.29,
+        "adjustedRR": 0.99,
+        "ci": [
+          0.98,
+          1.01
+        ]
+      },
+      "Control": {
+        "n": 87257,
+        "vaccinated": 41166,
+        "rate": 47.18
+      }
+    }
+  },
+  "screeningTrial": {
+    "doi": "10.1001/jamanetworkopen.2024.46693",
+    "window": "6 months",
+    "total": {
+      "intervention": [
+        600,
+        2001
+      ],
+      "control": [
+        194,
+        2001
+      ],
+      "pp": 20.29,
+      "ci": [
+        17.85,
+        22.73
+      ]
+    },
+    "medicare": {
+      "intervention": [
+        206,
+        613
+      ],
+      "control": [
+        71,
+        614
+      ],
+      "pp": 22.04,
+      "ci": [
+        17.36,
+        26.72
+      ]
+    }
+  }
+}

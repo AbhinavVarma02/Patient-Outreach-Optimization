@@ -30,6 +30,7 @@ jobs:
       - run: python scripts/verify_source.py
       - run: python scripts/export_haryana.py --check
       - run: python scripts/export_sierra_leone.py --check
+      - run: python scripts/export_us_evidence.py --check
       - run: python scripts/validate_community_inference.py
       - working-directory: web
         run: npm ci --ignore-scripts

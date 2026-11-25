@@ -44,3 +44,18 @@ The auditable release scope is a community research demonstration. Patient polic
 | G9–G10 Cost and release | v0.3.0-demo passed the production browser and hash checks on the existing free Pages project. Both verified rollback targets remain available. Additional external service cost was $0. |
 
 This release scope keeps the original patient scenarios fictional and documents incomplete scientific gates. [Sierra Leone analysis](SIERRA_LEONE_RESEARCH.md) · [Extractor evaluation](AI_EVALUATION.md) · [Publication scope](PUBLICATION_POLICY.md)
+
+## v0.4.0-demo consolidation review
+
+| Gate | Disposition |
+| --- | --- |
+| G0–G1 Integrity and rights | CMS archive and selected member and UCLA registry snapshot match pins. SCORE numerical facts verified against Table 2. Public aggregates only. Geisinger participant reuse awaits a substantive response. |
+| G2–G3 Design and replication | Published US trial estimates remain separate from observational CMS benchmarks. Sierra Leone replication agrees with the prior verified report. The assignment audit reproduced the remote exclusion and left the lottery denominators unresolved. |
+| G4–G5 Inference and freeze | Reference regression, exact enumeration, fixed-policy replay and known-answer capacity and cost checks. Temporal and structural policy validation remain open. |
+| G6 Claim integrity | Fictional planning inputs and the required lift are labeled as scenario arithmetic. UCLA and SCORE report different trial bundles, populations and endpoints. The extraction gate failed on the untouched holdout. |
+| G7 Accessibility and product quality | Keyboard workflows, accessible form and table labels, scenario status announcements, four viewport sizes, both themes, three engines and automated WCAG A/AA rules. Manual screenshot review is scoped to changed views. |
+| G8 Publication and security | CSP bars connections and the static scanner allows only five files. Source scan covers staged tracked content. Local model and all raw data remain outside the deployable paths. |
+| G9 Cost | Existing free Cloudflare Pages direct upload. No paid API calls, paid services, billing access or upgrades used. |
+| G10 Deployment | See the current verified status and rollback asset checks in the deployment ledger. |
+
+Clinical validation, individual-level targeting, independent temporal validation and a deployed automated extractor remain deferred. [US evidence](US_PAYER_EVIDENCE.md) · [Verification ledger](TEST_EVIDENCE.md) · [Deployment](DEPLOYMENT.md)

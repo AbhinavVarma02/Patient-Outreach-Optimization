@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import { bands, comparePolicies, pilotDesign, plan } from './math';
+import { bands, comparePolicies, pilotDesign, plan, planBenchmark } from './math';
 import { osf, paper, studies, supplement } from './evidence';
 import haryana from './haryana.json';
 import sierra from './sierra-leone.json';
+import us from './us-evidence.json';
 import './style.css';
 
 const views = {overview: 'Overview', targeting: 'Patient Targeting', planner: 'Outreach Planner',
@@ -13,6 +14,9 @@ const readView = () => Object.hasOwn(views, location.hash.slice(1)) ? location.h
 const number = (value: number, digits = 0) => value.toLocaleString('en-US', {maximumFractionDigits: digits});
 const money = (value: number) => value.toLocaleString('en-US', {style:'currency',currency:'USD'});
 const pp = (value: number) => number(value * 100, 2) + ' pp';
+const cmsNotes = 'https://www.cms.gov/files/document/2027-star-ratings-technical-notes.pdf';
+const uclaResults = 'https://clinicaltrials.gov/study/NCT05525494?tab=results';
+const scoreArticle = 'https://doi.org/10.1001/jamanetworkopen.2024.46693';
 
 function Icon({name}: { name: 'mark' | 'arrow' | 'theme' }) {
   const paths = {mark: 'M3 17h18M5 13l5-4 4 2 5-6m-4 0h4v4', arrow: 'M4 12h15m-6-6 6 6-6 6',
@@ -90,11 +94,11 @@ function Overview() {
         <p>Assumed vaccination effect by clinical risk band (pp)</p>
       </figure>
     </section>
-    <aside className="evidence-strip"><span className="dot"/><p><strong>Limited research demonstration.</strong> Review independent community research from Haryana and Sierra Leone and published Geisinger findings. Interactive outputs use fictional assumptions.</p><a href="#evidence">Evidence status <span aria-hidden="true">↗</span></a></aside>
+    <aside className="evidence-strip"><span className="dot"/><p><strong>Limited research demonstration.</strong> Use CMS quality benchmarks to frame a US payer scenario and review US randomized trials alongside independent research from Haryana and Sierra Leone.</p><a href="#evidence">Evidence status <span aria-hidden="true">↗</span></a></aside>
     <section className="section"><div className="section-title"><h2>From evidence to a pilot</h2><p>Work through a fictional outreach decision.</p></div>
       <div className="workflow">
         <Workflow view="targeting" verb="Compare allocation rules" detail="See how risk and estimated benefit change who receives the same number of contacts."/>
-        <Workflow view="planner" verb="Estimate channel costs" detail="Compare the contacts and incremental vaccinations each channel could deliver under your assumptions."/>
+        <Workflow view="planner" verb="Compare costs and quality gaps" detail="Estimate channel costs and calculate the lift a Medicare Advantage scenario would need to reach a benchmark."/>
         <Workflow view="pilot" verb="Size the experiment" detail="Estimate how many participants a randomized comparison would need to detect a policy difference."/>
       </div>
     </section>
@@ -204,8 +208,56 @@ function Planner() {
       </> : <p role="status" className="callout">Enter a valid population, capacity, budget and channel assumptions to calculate results.</p>}
       <div className="callout"><strong>Published comparison.</strong> Study 4 evaluated assigned modality bundles within defined eligibility groups. <a href={supplement}>Read its study design</a>.</div>
     </section></div>
+    <PayerPlanning/>
     <div className="page-next"><a className="text-link" href="#pilot">Next: size the pilot <Icon name="arrow"/></a></div>
   </Page>;
+}
+
+const gapDefaults = {eligible:10000, complete:6000, reachable:3000, contacts:2500, budget:1800, cost:0.75};
+
+function PayerPlanning() {
+  const measures = us.measures.filter(measure => measure.id === 'C03' || measure.id === 'C02');
+  const [measureId, setMeasureId] = useState('C03');
+  const [inputs, setInputs] = useState(gapDefaults);
+  const measure = measures.find(candidate => candidate.id === measureId)!;
+  const fields = [
+    ['eligible', 'Measure-eligible members', 1, 10000000, 1],
+    ['complete', 'Members expected to complete under usual care', 0, 10000000, 1],
+    ['reachable', 'Reachable members with a remaining gap', 0, 10000000, 1],
+    ['contacts', 'Operational contact limit', 0, 10000000, 1],
+    ['budget', 'Campaign budget (USD)', 0, 10000000, 0.01],
+    ['cost', 'Campaign cost per contact (USD)', 0, 10000, 0.01],
+  ] as const;
+  const inRange = fields.every(([key, , min, max]) => inputs[key] >= min && inputs[key] <= max);
+  const result = inRange ? planBenchmark(inputs.eligible, inputs.complete, inputs.reachable, inputs.contacts,
+    Math.round(inputs.budget * 100), Math.round(inputs.cost * 100), measure.cmsMean) : null;
+  return <section className="section">
+    <div className="section-title"><h2>Medicare Advantage gap planning</h2><a href={cmsNotes}>CMS benchmark <span aria-hidden="true">↗</span></a></div>
+    <p>Use an observed contract average as a reference and estimate the minimum additional completions a pilot would need to deliver.</p>
+    <div className="workbench"><aside className="controls"><p className="eyebrow">Hypothetical plan inputs</p><h3>Campaign assumptions</h3>
+      <label className="field">Quality measure<select value={measureId} onChange={event => setMeasureId(event.target.value)}>
+        {measures.map(item => <option key={item.id} value={item.id}>{item.name}</option>)}
+      </select></label>
+      {fields.map(([key, label, min, max, step]) => <Field key={key} label={label} value={inputs[key]} min={min}
+        max={max} step={step} onChange={value => setInputs(previous => ({...previous, [key]: value}))}/>)}
+      <button className="secondary-button" onClick={() => {setInputs(gapDefaults); setMeasureId('C03');}}>Reset gap assumptions</button>
+    </aside><div className="output"><p className="eyebrow">Benchmark scenario</p><h3>What the campaign would need to deliver</h3>
+      {result ? <>
+        <div className="metrics" aria-live="polite">
+          <div><span>CMS {us.ratingsYear} contract average</span><strong>{measure.cmsMean}%</strong></div>
+          <div><span>Additional completions needed</span><strong>{number(result.needed)}</strong></div>
+          <div><span>Feasible contacts</span><strong>{number(result.contacts)}</strong></div>
+        </div>
+        <p>Contact spend at full reach is {money(result.spend)}.</p>
+        <div className="callout" aria-live="polite">{result.needed === 0 ? 'Usual care already meets the benchmark in this scenario.'
+          : result.requiredEffect === null ? 'No contacts are feasible at this budget and capacity.'
+          : result.requiredEffect > 1 ? 'The gap exceeds the maximum possible completions from feasible contacts.'
+          : <><strong>{pp(result.requiredEffect)}</strong> minimum incremental completion rate per feasible contact.</>}</div>
+      </> : <p className="callout" role="status">Enter valid counts and costs. Reachable members must fit inside the remaining gap.</p>}
+      <p className="small">The benchmark is an observational contract average. The calculation holds the plan denominator fixed and assumes at most one completion per contacted member. Trial effects are listed separately and do not populate this scenario.</p>
+      <a href="#evidence">Review the US randomized evidence <span aria-hidden="true">↗</span></a>
+    </div></div>
+  </section>;
 }
 
 const pilotDefaults = {enrollment:60000, baseline:31.5, effect:2.6, capacity:20, concentration:2,
@@ -274,6 +326,7 @@ function Pilot() {
 function Evidence() {
   return <Page title="Evidence & Methods" copy="Trace the trial design behind each workflow and see which analyses remain pending.">
     <div className="evidence-strip"><span className="dot"/><p><strong>Current status.</strong> Sierra Leone and Haryana contribute independent randomized analyses. The Geisinger summaries report authors’ published findings while reuse permission remains open.</p></div>
+    <USEvidence/>
     <SierraLeoneEvidence/>
     <HaryanaEvidence/>
     <section className="section"><div className="section-title"><h2>Trial explorer</h2><a href={paper}>Published article <span aria-hidden="true">↗</span></a></div>
@@ -288,10 +341,37 @@ function Evidence() {
     <section className="section methods"><h2>Methods and limits</h2>
       <details open><summary>Assignment and outcomes</summary><p>Intent-to-treat contrasts compare assigned outreach. Delivery, receipt and engagement are separate. Different enrollment rules, flu seasons and outcome windows constrain comparisons across trials.</p></details>
       <details><summary>Scenario and power assumptions</summary><p>Targeting uses fictional, fixed group effects. The planner evaluates alternative single-channel strategies with user-entered assumptions. The pilot uses a normal approximation and a mean-cluster-size design effect. It assumes a frozen policy, stable outcome rates, and noninformative attrition.</p></details>
-      <details><summary>Trial document extraction evaluation</summary><p>On 30 new public trial protocols, the deterministic parser matched 14 of 30 scorable fields. The verified local model matched 3 of 30. Both abstained on all nine designated cases. The release gate requires at least 90% exact match and correct abstention. Trial summaries use reviewed sources. <a href="https://github.com/AbhinavVarma02/Patient-Outreach-Optimization/blob/main/docs/AI_EVALUATION.md">Benchmark methods and results</a></p></details>
+      <details><summary>Trial document extraction evaluation</summary><p>On a final holdout of 12 public trial protocols, the strongest deterministic method matched 7 of 13 scorable fields. The verified local model matched 2 of 13. The release gate requires at least 90% exact match and correct abstention. Trial summaries use reviewed sources. <a href="https://github.com/AbhinavVarma02/Patient-Outreach-Optimization/blob/main/docs/AI_EVALUATION.md">Benchmark methods and results</a></p></details>
       <details><summary>Data provenance and rights</summary><p>The <a href={osf}>OSF catalog</a> is public and records no dataset license. The application does not load trial records, accept patient identifiers or store scenario inputs. Only theme preference is saved locally.</p></details>
     </section>
   </Page>;
+}
+
+function USEvidence() {
+  const flu = us.influenzaTrial;
+  const crc = us.screeningTrial;
+  const shown = (value: number, unit: string) => number(value, 1) + (unit === '%' ? '%' : '');
+  const rr = (value: number) => value.toFixed(2);
+  return <section className="section snapshot">
+    <div className="section-title"><h2>US payer evidence</h2><a href={cmsNotes}>CMS technical notes <span aria-hidden="true">↗</span></a></div>
+    <p>CMS reports observational quality measures for the {us.ratingsYear} Medicare Advantage ratings. The middle half summarizes
+      reported values across local and regional coordinated care contracts. Contracts without a numeric value are omitted for that measure.</p>
+    <Table caption="Observed contract quality and member experience" headings={['Measure', 'CMS average', 'Middle half', 'Reported contracts']}
+      rows={us.measures.map(measure => [measure.name, shown(measure.cmsMean, measure.unit),
+        measure.iqr.map(value => shown(value, measure.unit)).join(' to '), number(measure.reported)])}/>
+    <p className="small">CMS uses distinct reporting periods and denominators. Getting appointments and care quickly is a survey score on a 0–100 scale.</p>
+    <h3>Randomized US outreach evidence</h3>
+    <p><a href={uclaResults}>UCLA influenza trial · ClinicalTrials.gov</a> compared pooled text and portal reminder bundles with no added reminder.
+      Vaccination was measured over {flu.window}. Both adjusted intervals include a risk ratio of 1. Registry update posted {flu.registryPosted}.</p>
+    <Table caption="UCLA influenza vaccination by assigned reminder" headings={['Group', 'Vaccination', 'Adjusted risk ratio (95% CI)']}
+      rows={Object.entries(flu.arms).map(([name, arm]) => [name, shown(arm.rate, '%'),
+        'adjustedRR' in arm ? rr(arm.adjustedRR) + ' (' + arm.ci.map(rr).join(' to ') + ')' : 'Reference'])}/>
+    <p><a href={scoreArticle}>SCORE randomized screening trial</a> evaluated mailed fecal immunochemical test kits,
+      reminders and navigation in two North Carolina health centers. At {crc.window} the published increase in colorectal screening
+      was {crc.total.pp} pp overall (95% CI {crc.total.ci.join(' to ')} pp). In the Medicare subgroup, it was {crc.medicare.pp} pp
+      (95% CI {crc.medicare.ci.join(' to ')} pp). The subgroup covers Medicare insurance and its Medicare Advantage effect is unknown.</p>
+    <p>Trial estimates apply to the studied outreach bundles, populations and endpoints. <a href="#planner">Use separate hypothetical plan inputs</a> to size a benchmark gap.</p>
+  </section>;
 }
 
 function SierraLeoneEvidence() {

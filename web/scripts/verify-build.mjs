@@ -14,6 +14,8 @@ const reviewedLinks = new Set([
   'https://zenodo.org/records/11392582',
   'https://github.com/AbhinavVarma02/Patient-Outreach-Optimization/blob/main/docs/HARYANA_RESEARCH.md',
   'https://doi.org/10.7910/DVN/PRXF5Z',
+  'https://doi.org/10.1001/jamanetworkopen.2024.46693',
+  'https://www.cms.gov/files/document/2027-star-ratings-technical-notes.pdf',
   'https://github.com/AbhinavVarma02/Patient-Outreach-Optimization/blob/main/docs/SIERRA_LEONE_RESEARCH.md',
   'https://github.com/AbhinavVarma02/Patient-Outreach-Optimization/blob/main/docs/AI_EVALUATION.md',
 ]);

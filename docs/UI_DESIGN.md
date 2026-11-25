@@ -35,6 +35,8 @@ The Overview copy now points readers to the Haryana evidence. Evidence & Methods
 
 For v0.3.0-demo, Overview updates its evidence-status strip to include Sierra Leone. Evidence & Methods adds the Sierra Leone replication, policy tables and a collapsible extraction evaluation using the same components. The five Targeting, Planner and Pilot screenshots matched the v0.2.0-demo references exactly. The six changed captures cover Overview and Evidence & Methods in desktop light and mobile light and dark. All 11 local and production captures matched byte for byte on 2026-11-25. The v0.2.0-demo screenshots are preserved in checkpoint `88f323c`.
 
+For v0.4.0-demo, Overview introduces the US payer workflow, Outreach Planner adds the gap calculator using the existing workbench, and Evidence & Methods adds the CMS and US trial summaries above the prior research. Targeting and the three Pilot captures match the v0.3.0-demo references byte for byte locally. Seven existing captures changed intentionally. Two new mobile planner captures cover the added inputs and results. Desktop and mobile visual review checked the density, headings and table fit. The v0.3.0-demo references remain available at `41f7d10`.
+
 | View | Desktop (1440 × 900), light | Mobile (390 × 844), light | Mobile (390 × 844), dark |
 | --- | --- | --- | --- |
 | Overview | [Reference](images/overview.png) | [Reference](images/overview-mobile-light.png) | [Reference](images/overview-mobile-dark.png) |

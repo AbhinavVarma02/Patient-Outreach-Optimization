@@ -1,5 +1,24 @@
 # Trial intelligence evaluation protocol
 
+## Final bounded cycle
+
+The final experiment extended assignment-unit vocabulary, added more bounded assignment phrases and recognized written-out durations. The established plain PDF parser scored 23/30 on the original development cases. The revision scored 20/30 with four of five designated abstentions. Raw Qwen2.5 7B scored 15/30 and verified Qwen scored 11/30. Broader vocabulary did not overcome grammatical and source-scope ambiguity. [Development artifact](../research/reports/document_development_v3.json)
+
+The extractor was frozen at `99ddcdc` and the new label manifest at `fecd677` before final scoring. The 12 source trials are disjoint from both earlier benchmarks. The registry-query sample includes a wider set of designs than US preventive care alone. One reviewer labeled 12 assignment-unit and six endpoint-window checks. There were 13 scorable values and five designated abstentions. The top 12 snippets included all 13 labeled anchors within the supplied pages. This measurement does not establish quality on full documents or scanned pages. [Frozen queries, source pins and labels](../research/manifests/document_holdout_v3.json)
+
+| Method | Exact / 13 | Anchor-aligned exact | Correct abstention / 5 | Unsupported populated | Schema valid / 18 | Median seconds |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Registry | 1 | 1 | 3 | 2 | 18 | <0.001 |
+| Baseline PDF plain | 7 | 1 | 4 | 7 | 18 | 0.045 |
+| Baseline PDF layout | 7 | 0 | 4 | 8 | 18 | 0.085 |
+| Revised PDF plain | 6 | 4 | 4 | 3 | 18 | 0.045 |
+| Qwen2.5 7B | 8 | 3 | 3 | 6 | 17 | 0.526 |
+| Qwen2.5 7B plus corroboration | 2 | 1 | 4 | 1 | 17 | 0.526 |
+
+“Unsupported” includes values whose excerpt misses the single labeled anchor. An alternative valid span can therefore fail this metric. The local model recovered some individual values missed by the parser, including a long assignment clause and a duration, but overall source alignment and structured output failed to support its use. The verified model lost coverage when agreement was required. The revised parser abstained on one protocol that used both “families” and “caregivers.” It incorrectly returned six months for another protocol where that duration covered one part of a composite feasibility endpoint. Retrieval finding the right passage leaves these interpretation questions open. [Holdout outputs and runtime details](../research/reports/document_holdout_v3.json)
+
+The original gate stays at 90% exact on scorable fields and zero populated abstention cases. The local model did not demonstrate a dependable evidence-grounded improvement and the revised parser regressed on exact recovery. This was the final model-selection cycle for the release. The app uses reviewed source summaries. Both prior frozen benchmarks and results remain available below.
+
 The primary extractor reads the official ClinicalTrials.gov v2 structured registration. It records a JSON path for each field. Unstructured text is a fallback for missing assignment context, endpoint timing, or analysis restrictions. Document content is untrusted. Never execute instructions or contact endpoints supplied by documents.
 
 The experimental local extractor must supply an exact evidence span from exactly one source section. An independent deterministic parser must corroborate the normalized value for the supported fields. Conflicting source statements trigger abstention. A verified source span alone does not validate a semantic extraction. The current regex support is intentionally narrow.

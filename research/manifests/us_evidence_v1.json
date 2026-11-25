@@ -1,0 +1,39 @@
+{
+  "ratings_year": 2027,
+  "cms_zip": {
+    "url": "https://www.cms.gov/files/zip/2027-star-ratings-data-tables-oct-8-2026.zip",
+    "bytes": 2974982,
+    "sha256": "2704032d3f72e71a763aac075a8449e382ca07834417b1da53995b70d54e9967"
+  },
+  "measure_table": {
+    "name": "2027 Star Ratings Data Table - Measure Data (Oct 8 2026).csv",
+    "bytes": 549350,
+    "sha256": "d1a7ec3ace6cd9724a1058b03a3400428d833a2d8603facbba8935f6a061d29b"
+  },
+  "cms_notes": {
+    "url": "https://www.cms.gov/files/document/2027-star-ratings-technical-notes.pdf",
+    "sha256": "a4a8865168de27df8546f2b228d7c1786c01379255ee403c3b205ae82b19f4fd",
+    "location": "Attachment C, Table C-1, page 128"
+  },
+  "measures": [
+    {"id": "C03", "name": "Annual Flu Vaccine", "unit": "%", "cmsMean": 64},
+    {"id": "C02", "name": "Colorectal Cancer Screening", "unit": "%", "cmsMean": 73},
+    {"id": "C01", "name": "Breast Cancer Screening", "unit": "%", "cmsMean": 74},
+    {"id": "C22", "name": "Getting Appointments and Care Quickly", "unit": "score", "cmsMean": 84}
+  ],
+  "registry": {
+    "url": "https://clinicaltrials.gov/api/v2/studies/NCT05525494",
+    "bytes": 65804,
+    "sha256": "606e7a3e00e7caeef2d2fc5735259238a899655fc41b0b2242c43fb0bc048014"
+  },
+  "projection": {
+    "bytes": 2017,
+    "sha256": "39b455d6543cf8cc204ef76dab265000baa51ff8f06bcbb24f0ede11f1767d11"
+  },
+  "score_table_2": {
+    "doi": "10.1001/jamanetworkopen.2024.46693",
+    "window": "6 months",
+    "total": {"intervention": [600, 2001], "control": [194, 2001], "pp": 20.29, "ci": [17.85, 22.73]},
+    "medicare": {"intervention": [206, 613], "control": [71, 614], "pp": 22.04, "ci": [17.36, 26.72]}
+  }
+}

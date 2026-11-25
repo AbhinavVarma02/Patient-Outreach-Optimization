@@ -97,3 +97,18 @@ export function plan(population: number, capacity: number, budget: number, chann
       high: contacts * (channel.effect + channel.spread), perGain: gain > 0 ? spend / gain : null};
   });
 }
+
+export function planBenchmark(eligible: number, complete: number, reachable: number, capacity: number,
+  budgetCents: number, costCents: number, benchmarkPercent: number) {
+  if (![eligible, complete, reachable, capacity, budgetCents, costCents, benchmarkPercent].every(Number.isSafeInteger)
+    || eligible < 1 || eligible > 10000000 || complete < 0 || complete > eligible || reachable < 0
+    || reachable > eligible - complete || capacity < 0 || budgetCents < 0 || costCents < 0
+    || benchmarkPercent < 0 || benchmarkPercent > 100) {
+    return null;
+  }
+  const needed = Math.max(0, Math.ceil(eligible * benchmarkPercent / 100) - complete);
+  const affordable = costCents === 0 ? reachable : Math.floor(budgetCents / costCents);
+  const contacts = Math.min(reachable, capacity, affordable);
+  return {needed, contacts, spend: contacts * costCents / 100,
+    requiredEffect: needed === 0 ? 0 : contacts > 0 ? needed / contacts : null};
+}

@@ -1,0 +1,44 @@
+# US payer evidence and planning
+
+## Medicare Advantage quality context
+
+The 2027 Star Ratings data tables released October 8, 2026 contain public contract-level measure values. The review selected 675 Local and Regional Coordinated Care Plan contracts from the CMS Measure Data table. It calculated an equal-contract median and the inclusive 25th and 75th percentiles over numeric reports for each measure. No enrollment weighting or missing-value imputation was applied. Contracts can appear in one measure and have no value in another. The CMS national averages come separately from Attachment C of its November 4 technical notes and use the CMS reporting universe after disaster adjustment. Rounding, eligibility and data source vary by measure. [CMS ratings data](https://www.cms.gov/medicare/health-drug-plans/part-c-d-performance-data) · [Technical notes and measurement windows](https://www.cms.gov/files/document/2027-star-ratings-technical-notes.pdf)
+
+| Measure | Source window | Reported subset | Subset median (IQR) | CMS average |
+| --- | --- | ---: | --- | ---: |
+| C03 Annual Flu Vaccine | CAHPS, March–May 2026 survey fielding | 480 | 64.5% (58%–70%) | 64% |
+| C02 Colorectal Cancer Screening | HEDIS, calendar 2025 | 511 | 75% (69%–80%) | 73% |
+| C01 Breast Cancer Screening | HEDIS, calendar 2025 | 477 | 75% (70%–81%) | 74% |
+| C22 Getting Appointments and Care Quickly | CAHPS, March–May 2026 survey fielding | 345 | 84 (83–86) | 84 |
+
+C22 uses a 0–100 survey score. C03 is survey-based, so comparing a plan's claims-completion scenario to C03 remains a planning comparison. Observed variation can reflect population composition, eligibility, response and reporting differences. The product publishes four measure summaries and omits named contracts, detailed value-set workbooks, member rows and membership weights. CMS identifies its website as public domain. The projection uses only CMS-published numerical facts, with provenance, and excludes third-party value sets, measure specifications and illustrations. [CMS reuse policy](https://www.cms.gov/about-cms/web-policies-important-links/about-website/link-to-us) · [Pinned sources and reviewed measures](../research/manifests/us_evidence_v1.json)
+
+## Randomized US outreach
+
+| Study | Population and assignment | Endpoint and result | Use |
+| --- | --- | --- | --- |
+| UCLA influenza, 2022–23 | 262,085 index patients in the posted primary denominator. Assigned text variants, portal variants or no added reminder. | Registry's six-month flu outcome. Text 41,259/87,350 (47.23%); portal 41,368/87,478 (47.29%); control 41,166/87,257 (47.18%). Posted adjusted RR vs control 1.00 (95% CI 0.98–1.01) for text and 0.99 (0.98–1.01) for portal. | Null-compatible outcomes for the tested bundles at UCLA. The pooled raw rates are descriptive arm arithmetic. The adjusted estimates are sponsor-reported. |
+| SCORE screening, two North Carolina FQHCs | 4,002 patients due for colorectal screening, randomized within insurance and site strata to mailed FIT outreach with follow-up and navigation or usual care. | Six-month screening completion 600/2,001 vs 194/2,001. Published difference +20.29 pp (95% CI 17.85–22.73). Medicare subgroup 206/613 vs 71/614, published +22.04 pp (17.36–26.72). | A bundled preventive-care program. Medicare is an insurance stratum and the paper does not identify a Medicare Advantage-specific effect. |
+
+The UCLA snapshot was retrieved 2026-11-25. ClinicalTrials.gov posted its update on 2024-08-07. The exporter reads the first primary outcome, pools the two text and four portal cells by summing numerators and denominators, rounds the display rates, and passes through two adjusted comparisons. The published article has several analysis populations and adjusts for design features. The projection reports the posted primary index-patient denominator and corresponding estimates. No raw registry file or protocol is published here. SCORE Table 2 was reviewed from the CC BY article. The project transcribes only group counts, reported contrasts and confidence intervals. The article license describes the publication, and its data sharing statement is a separate source for participant data. [UCLA registry results](https://clinicaltrials.gov/study/NCT05525494?tab=results) · [UCLA paper](https://pubmed.ncbi.nlm.nih.gov/38497955/) · [Registry reuse terms](https://clinicaltrials.gov/terms-conditions) · [SCORE article, Table 2](https://doi.org/10.1001/jamanetworkopen.2024.46693)
+
+### Other candidate checks
+
+| Candidate | Decision |
+| --- | --- |
+| Geisinger influenza, OSF `mqbux` | Strong fit for channel and targeting research. Metadata matched all 20 pins. Owner sent the permission request and received an out-of-office reply. Participant acquisition and analysis remain on hold. [Permission record](LICENSING.md) |
+| CVS bivalent COVID booster megastudy | The paper reports greater CVS booster uptake after reminders and no detected benefit of adding a free-ride offer to the baseline reminder. The OSF deposit's license is explicitly “No license.” Its listed main archive is approximately 308 MB and combines files. Only metadata was accessed. [Article](https://www.nature.com/articles/s41586-024-07591-x) · [OSF node](https://api.osf.io/v2/nodes/t45d9/) · [License metadata](https://api.osf.io/v2/licenses/563c1cf88c5e4a3877f9e965/) |
+| UCLA early COVID-19 reminder experiments | Distinct rollout timings and uptake endpoints. The authors describe protected data and an approval-dependent deidentified request. [Article and data availability](https://www.nature.com/articles/s41586-021-03843-2) |
+| Penn/Geisinger flu megastudy | Relevant randomized SMS trials. The registry describes an NDA and protected analysis environment. [Registry](https://clinicaltrials.gov/study/NCT04565353?tab=table) |
+| Arizona FQHC COVID-19 physician recommendation trial | The CC BY Figshare collection contains one supplementary item and the paper describes restricted Adelante Healthcare participant data. The result did not show increased uptake from personalized clinician recommendation. [Supplement collection](https://doi.org/10.6084/m9.figshare.c.7356509.v1) · [Article](https://doi.org/10.1186/s12889-024-18648-x) |
+| Rural Medicaid SMARTER CRC and ACA-plan influenza outreach | Direct payer relevance in distinct populations and bundles. Their published randomized findings support investigation of those designs. This review established no reusable participant payload. [Medicaid study](https://pmc.ncbi.nlm.nih.gov/articles/PMC11915063/) · [ACA plan study](https://pubmed.ncbi.nlm.nih.gov/30630342/) |
+
+The strongest verified public scope in this review is CMS contract context plus randomized aggregate results. This supports evidence-informed pilot design. It leaves US individual-level treatment-effect modeling and across-season validation open.
+
+## Payer decision
+
+For either measure, the planner accepts a hypothetical eligible denominator, expected completions by the evaluation date under usual care, a reachable count from the remaining gap, an operational contact limit, a campaign budget and an all-in cost per attempted contact. Additional completions needed are the ceiling of the benchmark times the denominator minus expected usual-care completions, with a floor of zero. Feasible contacts are the minimum of reach, contact limit and the whole contacts affordable. The ratio of needed completions to feasible contacts is the required absolute incremental completion rate under these assumptions. It is undefined when there are zero contacts and a positive gap. Above 100 pp, the benchmark is infeasible under the scenario.
+
+For the default flu scenario, 10,000 eligible members and 6,000 expected completions against the 64% reference leave 400 completions to find. At a hypothetical $0.75 per contact and $1,800 campaign budget, the maximum 2,400 contacts would need a 16.67 pp incremental completion rate. Trial effects do not seed the scenario. Selecting screening changes only the observed benchmark and its arithmetic implications. To test a campaign, prospectively randomize outreach versus usual care using a defined outcome window and equal ascertainment, specify handling for opt-outs and overlap, and monitor reach and completion across groups. Budget any kit processing, navigation and follow-up in the local cost assumption where applicable. The arithmetic provides no CMS Star cutoff, bonus or projected clinical result.
+
+Reproduce the projection using the pinned local source files and `python scripts/export_us_evidence.py --check`. Independently compare the registry totals and SCORE rates to the primary sources before an update. The browser arithmetic has known-answer and workflow tests. [Reproduction](REPRODUCIBILITY.md)

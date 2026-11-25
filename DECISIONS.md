@@ -39,3 +39,11 @@ Use assignment-aware bounded intervals as the principal Sierra Leone policy unce
 ## D11 Extraction gate after repair
 
 Use the original benchmark for diagnostics and the disjoint 30-trial evaluation to assess the frozen system. The best deterministic path scored 14 of 30 and the verified model scored 3 of 30. Keep reviewed sources in production. Additional OCR, vocabulary, context and verification work stays experimental and requires a successor holdout for any new quality claim. [Evaluation](docs/AI_EVALUATION.md)
+
+## D12 US payer planning boundary
+
+Use 2027 CMS Part C contract measures as descriptive references for flu vaccination and colorectal screening. Keep published randomized effects on the separate evidence view. Solve for the incremental completion rate needed under a hypothetical plan's budget and reach. A single effect estimate from an unrelated trial would make the result look more precise than the evidence allows. Reconsider local effect estimates after a compatible randomized payer pilot with usable data. [US evidence and scenario](docs/US_PAYER_EVIDENCE.md)
+
+## D13 Bounded research closeout
+
+Keep Sierra Leone at the replicated assignment contrasts and internal geographic holdout. The released data and registry lack original structure lottery records. Ghana and Haryana answer different intervention questions. The final extraction holdout found lower verified than deterministic recovery. Retain reviewed summaries and preserve all three evaluation records. Additional research requires a compatible external design or a new annotated holdout with evidence verification. [Structure audit](docs/SIERRA_LEONE_RESEARCH.md) · [Final extraction evaluation](docs/AI_EVALUATION.md)

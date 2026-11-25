@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "as_of": "2026-11-25",
-  "phase": "us_healthcare_integration",
+  "phase": "us_healthcare_release_candidate",
   "completed": [
     "M0",
     "M7",
@@ -49,7 +49,13 @@
     "sierra_leone_policy": "research/reports/sierra_leone_policy.json",
     "community_inference": "research/reports/community_inference.json",
     "document_holdout_v2": "research/manifests/document_holdout_v2.json",
-    "document_holdout_v2_run": "research/reports/document_holdout_v2.json"
+    "document_holdout_v2_run": "research/reports/document_holdout_v2.json",
+    "document_holdout_v3": "research/manifests/document_holdout_v3.json",
+    "document_holdout_v3_run": "research/reports/document_holdout_v3.json",
+    "sierra_leone_lottery_audit": "research/reports/sierra_leone_lottery_audit.json",
+    "us_evidence_manifest": "research/manifests/us_evidence_v1.json",
+    "us_evidence_dashboard_projection": "web/src/us-evidence.json",
+    "us_payer_documentation": "docs/US_PAYER_EVIDENCE.md"
   },
   "validation": {
     "data_integrity": "20 metadata matches; payload and schema unverified",
@@ -59,7 +65,9 @@
     "real_data_replication": "Sierra Leone five published coefficient and SE pairs match and agree with independent statsmodels computations; Haryana Figure 4 point check passed; Geisinger blocked",
     "policy_evaluation": "Sierra Leone ridge T and DR learners fitted on 30 triplets, frozen and evaluated on 20 separate triplets; no reliable gain at 50% expected village capacity",
     "model_validation": "Independent reference and exact enumeration passed; conservative bounds remain wide; spillover induces bias",
-    "ai_evaluation": "New 30-trial disjoint holdout: 14/30 deterministic and 3/30 verified 7B model, both 9/9 designated abstentions; gate failed",
+    "ai_evaluation": "Final holdout of 12 disjoint protocols: best deterministic 7/13, raw 7B 8/13 and verified 7B 2/13 exact. Original gate failed. Reviewed-source workflow retained.",
+    "us_payer_evidence": "Pinned public CMS 2027 contract data and UCLA primary registry outcome; independently reviewed published SCORE trial table and kept all effects out of scenario assumptions.",
+    "sierra_leone_lottery": "Confirmed remote exclusion; 45 of 50 nonperipheral census rosters match the reported cap rule, including at least one observed assignment count over the cap among nonmatches. No comparable independent rollout was identified.",
     "python_tests_passed": 17,
     "node_tests_passed": 3,
     "local_browser_tests_passed": 12,
@@ -96,7 +104,7 @@
   "next_actions": [
     "Await substantive Geisinger authorization or verify an applicable license for analysis, linkage and reporting.",
     "Reconcile the structure lottery roster and observation rules before evaluating incremental visit targeting. Seek an independent comparable rollout before temporal claims.",
-    "Improve retrieval, vocabulary and evidence verification on development cases. Use a new independent holdout for future deployment claims."
+    "Retain reviewed trial summaries. Reconsider assisted extraction only with new evidence and an independent holdout."
   ],
   "older_release": {
     "version": "0.1.0-demo",

@@ -1,0 +1,33 @@
+{
+  "release": "Harvard Dataverse V1",
+  "unit": "residential structure nested in village",
+  "roster_checks": {
+    "all_census_structures": {
+      "structures": 1210,
+      "matches_minimum_of_cap_and_roster": 44,
+      "villages_with_both_arms": 29,
+      "observed_assignments_exceed_cap": true
+    },
+    "nonperipheral_census_structures": {
+      "structures": 1198,
+      "matches_minimum_of_cap_and_roster": 45,
+      "villages_with_both_arms": 28,
+      "observed_assignments_exceed_cap": true
+    },
+    "add_unknown_periphery": {
+      "structures": 1198,
+      "matches_minimum_of_cap_and_roster": 45,
+      "villages_with_both_arms": 28,
+      "observed_assignments_exceed_cap": true
+    },
+    "adult_analysis_structures": {
+      "structures": 1120,
+      "matches_minimum_of_cap_and_roster": 35,
+      "villages_with_both_arms": 28,
+      "observed_assignments_exceed_cap": true
+    }
+  },
+  "remote_exclusion_reference_reproduced": true,
+  "documented_preassignment_roster_in_deposit": false,
+  "decision": "Lottery denominators and propensities remain unresolved. No new structure policy estimates."
+}
