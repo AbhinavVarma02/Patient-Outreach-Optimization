@@ -14,7 +14,9 @@ OSF’s terms distinguish public access and limited use under its terms from ext
 
 The software license excludes third-party data, code and source materials. For the separately licensed Haryana replication archive, see the [dataset feasibility review](../research/DATASET_FEASIBILITY.md).
 
-## Correspondence draft
+## Geisinger correspondence
+
+On 2026-11-25 the project owner reported sending the permission request and receiving an out-of-office response. There is no substantive authorization on record. No duplicate request was sent and no Geisinger participant payload was acquired. The text below is the repository's preparation copy. No private email or reply is stored here.
 
 **To** Christopher F. Chabris, `cfchabris@geisinger.edu`. The article identifies Dr. Chabris as the corresponding author and Geisinger lists this institutional address. [Publisher correspondence](https://www.nature.com/articles/s41562-026-02603-4?error=cookies_not_supported#author-information) · [Geisinger faculty directory](https://www.geisinger.org/-/media/onegeisinger/pdfs/ghs/education-gcsom/faculty-affairs/faculty-directory-040826.pdf?sc_lang=en)
 
@@ -30,8 +32,6 @@ If deidentified IDs recur across studies, could you clarify what they represent 
 
 Thank you for clarifying the permitted uses and preferred citation. If Geisinger handles these requests through a data steward or review process, a referral would be appreciated.
 
-Draft only. No correspondence has been sent.
-
 ## Continuation verification
 
 The OSF API again returned a public project with `attributes.node_license` equal to null, and all 20 pinned metadata entries matched. The requested rights to new secondary analyses, derived aggregate publication, linkage and model export remain unresolved. The deposited participant files were left untouched. The study article's research-reproduction statement and the absence of a reuse license are separate pieces of evidence. [OSF node](https://api.osf.io/v2/nodes/mqbux/) · [Publisher data availability](https://www.nature.com/articles/s41562-026-02603-4#data-availability) · [OSF licensing guidance](https://help.osf.io/article/148-licensing)
@@ -40,4 +40,4 @@ The public OSF storage catalog contained no filename matching a license, terms d
 
 Haryana and its companion replication archive are CC BY 4.0. Published project results attribute the authors, identify the pinned data deposit and describe the transformations. The Sierra Leone feasibility deposit is CC0 1.0. Study materials and data are licensed separately from this repository's original software. [Haryana data card and attribution](HARYANA_RESEARCH.md) · [Feasibility sign-off](../research/DATASET_FEASIBILITY.md#companion-and-alternative-datasets)
 
-On 2026-11-25, the metadata-only verification again matched all 20 Geisinger entries. The reuse request remains unresolved and the correspondence draft is unsent. The continuation used the independently licensed Sierra Leone files. [Sierra Leone source and scope](SIERRA_LEONE_RESEARCH.md)
+On 2026-11-25, the metadata-only verification again matched all 20 Geisinger entries. Reuse remains unresolved after the owner's request and the out-of-office reply. The continuation used the independently licensed Sierra Leone files. [Sierra Leone source and scope](SIERRA_LEONE_RESEARCH.md)

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "as_of": "2026-11-25",
-  "phase": "sierra_leone_demo_published",
+  "phase": "us_healthcare_integration",
   "completed": [
     "M0",
     "M7",
@@ -54,7 +54,7 @@
   "validation": {
     "data_integrity": "20 metadata matches; payload and schema unverified",
     "analysis_rights": "unresolved",
-    "geisinger_metadata_recheck": "2026-11-25 metadata-only check returned 20 matches; reuse unresolved and correspondence unsent",
+    "geisinger_metadata_recheck": "2026-11-25 metadata-only check returned 20 matches. The owner sent the request and received an out-of-office reply. Reuse remains unresolved and no participant payload was acquired.",
     "haryana_fallback": "CC BY 4.0 archive verified; both Figure 4 point values and CR0 reproduced; PHC interval includes zero",
     "real_data_replication": "Sierra Leone five published coefficient and SE pairs match and agree with independent statsmodels computations; Haryana Figure 4 point check passed; Geisinger blocked",
     "policy_evaluation": "Sierra Leone ridge T and DR learners fitted on 30 triplets, frozen and evaluated on 20 separate triplets; no reliable gain at 50% expected village capacity",
@@ -94,7 +94,7 @@
     "integrity": "verified after v0.3.0-demo deployment"
   },
   "next_actions": [
-    "Obtain documented author permission or a verified applicable license for Geisinger analysis, linkage and reporting. The correspondence draft remains unsent.",
+    "Await substantive Geisinger authorization or verify an applicable license for analysis, linkage and reporting.",
     "Reconcile the structure lottery roster and observation rules before evaluating incremental visit targeting. Seek an independent comparable rollout before temporal claims.",
     "Improve retrieval, vocabulary and evidence verification on development cases. Use a new independent holdout for future deployment claims."
   ],

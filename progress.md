@@ -37,6 +37,11 @@
 - The v0.3.0-demo release passed 17 Python tests, three Node tests, Ruff, mypy, the release allowlist, scoped advisory checks and 12 local and 12 production browser tests across three engines. Eleven local and production captures matched. Five workflow captures exactly match the v0.2.0-demo references. Overview and Evidence & Methods changed to present new evidence. [Test evidence](docs/TEST_EVIDENCE.md)
 - GitHub published build commit `c0601bf` and CI passed. Stable Pages serves v0.3.0-demo, deployment `466a90b7-74ae-4aad-ba13-2a7782cb559f`. The two former production versions remain valid rollback targets and their original asset hashes were verified. Additional external service spending was $0. [Deployment ledger](docs/DEPLOYMENT.md)
 
+## 2026-11-25 · US integration
+
+- The owner sent the Geisinger permission request and received an out-of-office response. Reuse remains pending. No duplicate message was sent and no participant data was acquired. [Permission record](docs/LICENSING.md)
+- Resumed from verified v0.3.0-demo handoff commit `41f7d10`. The scoped continuation reviews CMS and US trial data, audits the Sierra Leone roster, and runs one final extraction experiment.
+
 ## Resume
 
-Use the [reproducibility guide](docs/REPRODUCIBILITY.md) and [deployment ledger](docs/DEPLOYMENT.md). For the next research run, resolve the structure lottery roster and explore independent temporal validation where a comparable design exists. For Geisinger, use the [unsent permission draft](docs/LICENSING.md) and follow the [protocol](docs/RESEARCH_PROTOCOL.md) after documenting the reuse basis. After development, use a new holdout before reconsidering model assistance. Rerun the [release audit](docs/RELEASE_AUDIT.md) after public evidence changes.
+Use the [reproducibility guide](docs/REPRODUCIBILITY.md) and [deployment ledger](docs/DEPLOYMENT.md). Investigate the structure lottery roster and seek a comparable independent rollout. For Geisinger, await a substantive response and follow the [protocol](docs/RESEARCH_PROTOCOL.md) after documenting the reuse basis. Use a new holdout for the final extraction experiment. Rerun the [release audit](docs/RELEASE_AUDIT.md) after public evidence changes.

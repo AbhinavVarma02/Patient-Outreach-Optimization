@@ -38,6 +38,26 @@ TRIAL_LEVEL = re.compile(rf"\b(?:multi|two|2)[- ]level\b|\bsecond (?:stage|level
 DURATION = re.compile(r"\b(\d+)\s*[- ]?\s*(days?|weeks?|months?|years?)\b", re.I)
 PRIMARY = re.compile(r"\bprimary (?:study )?(?:outcomes?|end\s?points?|follow[- ]up)\b", re.I)
 LOCATORS = {"randomization_unit": re.compile(ASSIGN, re.I), "primary_window": PRIMARY}
+EXTRA_ALIASES = {
+    "dyad": r"dyads?", "county": r"count(?:y|ies)", "neighborhood": r"neighbou?rhoods?",
+    "hospital": r"hospitals?", "facility": r"facilit(?:y|ies)", "team": r"teams?",
+    "classroom": r"classrooms?", "worksite": r"worksites?", "village": r"villages?",
+}
+FINAL_ALIASES = ALIASES | EXTRA_ALIASES
+FINAL_UNIT = r"(?P<unit>" + "|".join(FINAL_ALIASES.values()) + r")"
+FINAL_PATTERNS = tuple(re.compile(pattern, re.I) for pattern in (
+    rf"\b(?:unit|level) of (?:the )?{ASSIGN}\s*(?:is|was|will be|:)?\s*(?:the |each )?{FINAL_UNIT}\b",
+    rf"\b(?:each |the )?{FINAL_UNIT}\s+(?:that (?:consent|enroll)\w* )?"
+    rf"(?:(?:are|is|were|was|will be|would be|have been|are then|are being) )?{ASSIGN}\s+(?:to|into|across|between)\b",
+    rf"\b{ASSIGN}\s+(?:at |by |within )?(?:the )?{FINAL_UNIT}\s+level\b",
+    rf"\b{FINAL_UNIT}[- ]level\s+(?:cluster[- ]?)?{ASSIGN}\b",
+    rf"\b(?:we (?:will )?|study staff (?:will )?|will ){ASSIGN}\s+"
+    rf"(?:(?:the|each|all|one|eligible|enrolled|consenting|participating) ){{0,4}}{FINAL_UNIT}\b",
+))
+WORDS = dict(zip("one two three four five six seven eight nine ten eleven twelve".split(), range(1, 13)))
+FINAL_DURATION = re.compile(r"\b(\d+|" + "|".join(WORDS) + r")\s*[- ]?\s*(days?|weeks?|months?|years?)\b", re.I)
+FINAL_PRIMARY = re.compile(r"\bprimary (?:study |efficacy )?(?:outcome(?: measure)?s?|end\s?points?|follow[- ]up)\b",
+                           re.I)
 
 
 @dataclass(frozen=True)
@@ -53,7 +73,7 @@ def normalize(text: str) -> str:
 
 
 def duration(number: str, unit: str) -> str:
-    count, unit = int(number), unit.lower().rstrip("s")
+    count, unit = WORDS[number.lower()] if number.isalpha() else int(number), unit.lower().rstrip("s")
     if unit == "year":
         count, unit = 12 * count, "month"
     return f"{count} {unit}{'s' if count != 1 else ''}"
@@ -80,13 +100,42 @@ def deterministic(field: str, pages: dict[str, str]) -> tuple[str | None, Eviden
     return next(iter(matches.items()))
 
 
-def retrieve(field: str, pages: dict[str, str]) -> list[Evidence]:
+def final_deterministic(field: str, pages: dict[str, str]) -> tuple[str | None, Evidence | None]:
+    matches: dict[str, Evidence] = {}
+    for page, text in pages.items():
+        if field == "randomization_unit":
+            if TRIAL_LEVEL.search(text):
+                return None, None
+            for pattern in FINAL_PATTERNS:
+                for match in pattern.finditer(text):
+                    unit = next(key for key, pattern in FINAL_ALIASES.items()
+                                if re.fullmatch(pattern, match["unit"], re.I))
+                    matches.setdefault(unit, Evidence(page, match[0]))
+        else:
+            for anchor in FINAL_PRIMARY.finditer(text):
+                tail = re.split(r"[.!?](?:\s|$)|\bsecondary (?:outcome|end\s?point)",
+                                text[anchor.end():anchor.end() + 285], maxsplit=1, flags=re.I)[0]
+                clocks = list(FINAL_DURATION.finditer(tail))
+                if len(clocks) > 1:
+                    return None, None
+                for clock in clocks:
+                    if re.search(r"\b(?:at|after|by|within|through|for|over|up to)\s*$", tail[:clock.start()], re.I):
+                        value = duration(*clock.groups())
+                        matches.setdefault(value, Evidence(page, text[anchor.start():anchor.end() + clock.end()]))
+    if len(matches) == 1:
+        return next(iter(matches.items()))
+    return None, None
+
+
+def retrieve(field: str, pages: dict[str, str], final_cycle: bool = False) -> list[Evidence]:
     excerpts: list[tuple[int, Evidence]] = []
     for page, body in pages.items():
-        for match in LOCATORS[field].finditer(body):
+        locator = FINAL_PRIMARY if final_cycle and field == "primary_window" else LOCATORS[field]
+        parser = final_deterministic if final_cycle else deterministic
+        for match in locator.finditer(body):
             begin, end = max(0, match.start() - 115), min(len(body), match.end() + 200)
             snippet = body[begin:end]
-            rank = 2 if deterministic(field, {page: snippet})[0] is not None else 1
+            rank = 2 if parser(field, {page: snippet})[0] is not None else 1
             excerpts.append((rank, Evidence(page, snippet)))
     ranked = sorted(excerpts, key=lambda item: -item[0])
     chosen: list[Evidence] = []
@@ -99,9 +148,12 @@ def retrieve(field: str, pages: dict[str, str]) -> list[Evidence]:
     return chosen
 
 
-def propose(model: str, field: str, excerpts: list[Evidence]) -> tuple[str | None, Evidence | None, bool, dict]:
-    values = (list(ALIASES) if field == "randomization_unit" else sorted({
-        duration(*match.groups()) for e in excerpts for match in DURATION.finditer(e.snippet)
+def propose(model: str, field: str, excerpts: list[Evidence],
+            final_cycle: bool = False) -> tuple[str | None, Evidence | None, bool, dict]:
+    aliases = FINAL_ALIASES if final_cycle else ALIASES
+    clock = FINAL_DURATION if final_cycle else DURATION
+    values = (list(aliases) if field == "randomization_unit" else sorted({
+        duration(*match.groups()) for e in excerpts for match in clock.finditer(e.snippet)
     }))
     if not excerpts or not values:
         return None, None, True, {}
@@ -138,7 +190,7 @@ def propose(model: str, field: str, excerpts: list[Evidence]) -> tuple[str | Non
     return value, excerpts[index - 1], True, resources
 
 
-def run(manifest: dict, cache: Path, models: list[str], holdout: bool) -> dict:
+def run(manifest: dict, cache: Path, models: list[str], holdout: bool, final_cycle: bool = False) -> dict:
     from pypdf import PdfReader, __version__
 
     inventory = {}
@@ -164,15 +216,18 @@ def run(manifest: dict, cache: Path, models: list[str], holdout: bool) -> dict:
             field, expected = case["field"], case["expected"]
             methods = {}
 
-            def record_output(name: str, value: str | None, evidence: Evidence | None, start: float,
-                              valid: bool = True, resources: dict | None = None,
-                              registry_pointer: str | None = None) -> None:
+            def aligns(evidence: Evidence | None) -> bool:
                 anchor = case.get("anchor")
-                # Short, manually reviewed anchors are independent of the extracted prediction.
-                aligned = bool(evidence and (not anchor or (
+                return bool(evidence and (not anchor or (
                     evidence.page == f"page {anchor['page']}" and
                     (evidence.snippet.lower() in anchor["text"].lower()
                      or anchor["text"].lower() in evidence.snippet.lower()))))
+
+            def record_output(name: str, value: str | None, evidence: Evidence | None, start: float,
+                              valid: bool = True, resources: dict | None = None,
+                              registry_pointer: str | None = None) -> None:
+                # Short, manually reviewed anchors are independent of the extracted prediction.
+                aligned = aligns(evidence)
                 methods[name] = {"value": value, "schema": valid, "source_page": evidence.page if evidence else None,
                                  "registry_pointer": registry_pointer,
                                  "evidence_correct": value is not None and value == expected and
@@ -184,21 +239,44 @@ def run(manifest: dict, cache: Path, models: list[str], holdout: bool) -> dict:
             record_output("registry", structured, None, started,
                           registry_pointer="/protocolSection/outcomesModule/primaryOutcomes/0/timeFrame"
                           if structured is not None else None)
+            pdf_errors = []
             for mode in ("layout", "plain"):
                 started = perf_counter()
-                pages = {f"page {i}": normalize(reader.pages[i - 1].extract_text(extraction_mode=mode) or "")
-                         for i in case["pages"]}
+                try:
+                    pages = {f"page {i}": normalize(reader.pages[i - 1].extract_text(extraction_mode=mode) or "")
+                             for i in case["pages"]}
+                except TypeError:
+                    if not final_cycle or mode != "layout":
+                        raise
+                    pdf_errors.append(mode)
+                    record_output(f"deterministic_{mode}", None, None, started, False)
+                    continue
+                parsed_at = perf_counter()
                 value, evidence = deterministic(field, pages)
                 record_output(f"deterministic_{mode}", value, evidence, started)
-            for model in models:
+            parser = final_deterministic if final_cycle else deterministic
+            if final_cycle:
+                preprocessing_seconds = parsed_at - started
                 started = perf_counter()
-                proposed, source, valid, resources = propose(model, field, retrieve(field, pages))
+                value, evidence = parser(field, pages)
+                record_output("deterministic_final", value, evidence, started - preprocessing_seconds)
+            retrieval_start = perf_counter()
+            excerpts = retrieve(field, pages, final_cycle) if final_cycle else []
+            retrieval_seconds = perf_counter() - retrieval_start if final_cycle else 0
+            for model in models:
+                started = perf_counter() - retrieval_seconds
+                selected = excerpts if final_cycle else retrieve(field, pages)
+                proposed, source, valid, resources = propose(model, field, selected, final_cycle)
                 record_output(model, proposed, source, started, valid, resources)
-                supported = source and deterministic(field, {source.page: source.snippet})[0] == proposed
+                supported = source and parser(field, {source.page: source.snippet})[0] == proposed
                 verified = value is not None and proposed == value and supported
                 record_output(f"hybrid:{model}", proposed if verified else None,
                               source if verified else None, started, valid, resources)
-            rows.append({"id": identifier, "field": field, "expected": expected, "methods": methods})
+            row = {"id": identifier, "field": field, "expected": expected, "methods": methods}
+            if final_cycle:
+                row["retrieval_anchor"] = (any(aligns(e) for e in excerpts) if case.get("anchor") else None)
+                row["pdf_errors"] = pdf_errors
+            rows.append(row)
 
     counts: dict[str, Counter] = defaultdict(Counter)
     seconds: dict[str, list[float]] = defaultdict(list)
@@ -228,18 +306,22 @@ def main() -> None:
     parser.add_argument("--cache", type=Path, default=ROOT / ".cache/benchmark")
     parser.add_argument("--model", action="append", choices=MODELS, default=[])
     parser.add_argument("--holdout", action="store_true")
+    parser.add_argument("--final-cycle", action="store_true")
     args = parser.parse_args()
     payload = args.manifest.read_bytes()
     manifest = json.loads(payload)
     if args.holdout:
         previous = {trial["id"] for trial in json.loads(MANIFEST.read_bytes())["trials"]}
+        if args.final_cycle:
+            earlier = ROOT / "research/manifests/document_holdout_v2.json"
+            previous.update(trial["id"] for trial in json.loads(earlier.read_bytes())["trials"])
         ids = [trial["id"] for trial in manifest["trials"]]
         if previous.intersection(ids) or len(ids) != len(set(ids)):
             parser.error("Held-out trials must be unique and disjoint from development")
         if any(not check.get("anchor") for trial in manifest["trials"] for check in trial["checks"]
                if check["expected"] is not None):
             parser.error("Scorable holdout fields require an independently reviewed page anchor")
-    result = run(manifest, args.cache, args.model, args.holdout)
+    result = run(manifest, args.cache, args.model, args.holdout, args.final_cycle)
     result["manifest_sha256"] = sha256(payload).hexdigest()
     result["extractor_sha256"] = sha256(Path(__file__).read_bytes()).hexdigest()
     print(json.dumps(result, indent=2))
