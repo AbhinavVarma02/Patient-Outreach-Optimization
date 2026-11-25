@@ -1,0 +1,533 @@
+{
+  "version": 1,
+  "annotation": "Single-reviewer. Evidence limited to the supplied 1-based PDF pages. Use null for absent, ambiguous, or multi-level unit in the supplied excerpt.",
+  "trials": [
+    {
+      "id": "NCT01795833",
+      "filename": "Prot_000.pdf",
+      "registry_sha256": "38be289ab81646c3097bba8c14a09de70217ccd71315c66bc0377c2d6984fd8a",
+      "registry_last_update": "2020-10-30",
+      "pdf_sha256": "d0b661890f661298873479a673e61d1b4e4b4b8fa10943a4b5db9809be610239",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            5,
+            7
+          ],
+          "expected": "individual"
+        }
+      ]
+    },
+    {
+      "id": "NCT02584998",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "e1da544676c69f4bd1fe942728a026455d468c196220227a95ac8df0855e0674",
+      "registry_last_update": "2018-12-24",
+      "pdf_sha256": "8797630ffd7bfb10550837871313d2f957b7b1033fd5b79bf97c54dcf6ef886e",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            1,
+            10
+          ],
+          "expected": null,
+          "note": "Scanned pages yield no text with the locked parser; OCR is outside this benchmark."
+        }
+      ]
+    },
+    {
+      "id": "NCT02870049",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "eeb88531f5d2751348a478ba2ab154c4ea3251278d6e71020d32673dd2b3ab3c",
+      "registry_last_update": "2025-09-04",
+      "pdf_sha256": "79f7aaf041fd8ca1205780a43472760d16c4df4de2e28aa02da18ecbdf040417",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            8,
+            10
+          ],
+          "expected": "individual"
+        },
+        {
+          "field": "primary_window",
+          "pages": [
+            9
+          ],
+          "expected": "12 months"
+        }
+      ]
+    },
+    {
+      "id": "NCT02986230",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "cc8bd9f365782a1dfa1782e127dd4a8d5cae55fc37d1dc19f66bfecb7eae0ba0",
+      "registry_last_update": "2024-01-24",
+      "pdf_sha256": "637210e4751420fe7d3a330305feb896c0707282493e597a9b1e234350683450",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            13
+          ],
+          "expected": "clinic"
+        }
+      ]
+    },
+    {
+      "id": "NCT03130699",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "5c28f6808cc6e0b3ee9349f9552ba9d5edee8efefc0a032aa3434c9bc9e6d8f3",
+      "registry_last_update": "2025-06-25",
+      "pdf_sha256": "c06b8e40582ad2f3716301c155db31808164655fc8729ae1cddcb3dd02bfe66e",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            3
+          ],
+          "expected": "individual"
+        }
+      ]
+    },
+    {
+      "id": "NCT03200366",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "5cdf23aaaadf172bafa877488f1e6ccc4953c15d89860664df4a5e9d5709b8bc",
+      "registry_last_update": "2021-09-13",
+      "pdf_sha256": "26e346f1372a920b412a22ebfd7e6b9961a927dc8e63aede04184c6642847235",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            7
+          ],
+          "expected": "individual"
+        }
+      ]
+    },
+    {
+      "id": "NCT03413605",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "485c08775e8dddc115d050d45aeb8c5f8618360e7933530c5d7fffebc22d5d09",
+      "registry_last_update": "2023-08-14",
+      "pdf_sha256": "c32cfcd6b5dd0db07e78b2427d98fec191ded7c132fa7f96c9a43b3d0948cd0a",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            4
+          ],
+          "expected": "community partner"
+        }
+      ]
+    },
+    {
+      "id": "NCT03501992",
+      "filename": "Prot_000.pdf",
+      "registry_sha256": "80a473f9d396a261acd3c781e2e5bbb75ed828272d74cf7ffe4e335b15eef122",
+      "registry_last_update": "2024-10-24",
+      "pdf_sha256": "d2b6975205478bc50d3b5f85262149ece425f076aa956d8be432c284f6424365",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            4
+          ],
+          "expected": "practice"
+        }
+      ]
+    },
+    {
+      "id": "NCT03843957",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "7ae320fba684afb1f0141d93d4603edbb5d309d49a8977b99b8952d7f45ebb9d",
+      "registry_last_update": "2024-01-31",
+      "pdf_sha256": "579702d85c14ec6da8c7dd54047d10c4aa99a413bce2bc161fa96dc95e65aee0",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            11,
+            12
+          ],
+          "expected": "clinic"
+        }
+      ]
+    },
+    {
+      "id": "NCT03900767",
+      "filename": "Prot_001.pdf",
+      "registry_sha256": "c766cd0fe100cd85203fdfec285786f200a7e560314c0a6240346a4b5bcebdc7",
+      "registry_last_update": "2026-09-08",
+      "pdf_sha256": "d68d0e71da10f7cf8f1fd6d87be499fc4dbcabf7e9d15b0372f39b23199dd903",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            5
+          ],
+          "expected": "individual",
+          "note": "Score the randomized patient sequences described on the supplied phase page."
+        }
+      ]
+    },
+    {
+      "id": "NCT03973931",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "35e966cebafbd87df8846c16ff8e30629bfd91dff71d2061dd177206a6402cb4",
+      "registry_last_update": "2025-04-02",
+      "pdf_sha256": "9ac7d833517b1030b5db721da60cf00977b12d932692ca0b05d9bf82b0d3a417",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            7
+          ],
+          "expected": "individual"
+        }
+      ]
+    },
+    {
+      "id": "NCT04110314",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "519a12c9a611c9ea7c9543a9279b09d480c8c9515f5b5995158a48d525c8196b",
+      "registry_last_update": "2022-05-05",
+      "pdf_sha256": "500ae52d7616856862e8f6e746531d79996d57a2509719c101612bce25d9fb1d",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            2
+          ],
+          "expected": "individual"
+        }
+      ]
+    },
+    {
+      "id": "NCT04336397",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "a0fcd7058a07698bfebf186e40c7563161e7102c752758f5423a961ef8f5de96",
+      "registry_last_update": "2026-09-10",
+      "pdf_sha256": "944c3739d357cb8b9b73accd93de21835123be8b7773e34ebf10e0cba8d94c7a",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            10,
+            11
+          ],
+          "expected": null,
+          "note": "Pages include individual and community assignments across different phases."
+        }
+      ]
+    },
+    {
+      "id": "NCT04406714",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "44fef642585404c9d2501f8286b739ba79009cc30c069906094dc69656e5e710",
+      "registry_last_update": "2026-05-15",
+      "pdf_sha256": "fd8acb7dd1cf57e64e665f9075e10c45dc4165e790efc6a508f75e030363ddbe",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            14
+          ],
+          "expected": "individual"
+        }
+      ]
+    },
+    {
+      "id": "NCT04462289",
+      "filename": "Prot_SAP_001.pdf",
+      "registry_sha256": "5b75d6ad16ab4ccd578e7539d738a566543ef315eead7d33b38e46e4d3532227",
+      "registry_last_update": "2025-08-22",
+      "pdf_sha256": "c4f9ec9d971098725cd3f22a389c57ef67936feb8a7a88eeecd545d65de12491",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            3
+          ],
+          "expected": "individual"
+        }
+      ]
+    },
+    {
+      "id": "NCT04585919",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "a3b4e400c7118695b765507350e8c234cffc7b4f9a7c9d80038de10dd6188ae0",
+      "registry_last_update": "2023-08-01",
+      "pdf_sha256": "d5b23db6958a9b2b7db433fa7365e48bdcd463ac2e3bddd41fdb5f3b8dd27a73",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            2
+          ],
+          "expected": "site"
+        }
+      ]
+    },
+    {
+      "id": "NCT04683731",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "0b327e0d0b6dc9938c5458963bcc1632a86c5ef945013112b309142714673b36",
+      "registry_last_update": "2024-12-13",
+      "pdf_sha256": "00b096122a84783eeb7722b4d5b13d02faa443e5fe12fa5e105bcb2e13ae463d",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            18
+          ],
+          "expected": "provider"
+        }
+      ]
+    },
+    {
+      "id": "NCT04890054",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "db6cd4856c4b6685ace917da014b8c1513da2e3aa035e4c1e84d706534e05255",
+      "registry_last_update": "2025-08-19",
+      "pdf_sha256": "958712548db80c1b9648445a36de3037254acc043873abbf7863208885746f37",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            7
+          ],
+          "expected": "clinic"
+        }
+      ]
+    },
+    {
+      "id": "NCT04939532",
+      "filename": "Prot_000.pdf",
+      "registry_sha256": "7fe8b084496fb529d542d66a2517fb1bd4352536a5e4ac9bc4509a95d1ee0a68",
+      "registry_last_update": "2026-02-04",
+      "pdf_sha256": "e3aec5553d304f6f06ea61ccf925f4bc130a4a7ba891d9317699263e741a6832",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            4
+          ],
+          "expected": "individual"
+        }
+      ]
+    },
+    {
+      "id": "NCT05006833",
+      "filename": "Prot_SAP_001.pdf",
+      "registry_sha256": "1e9da68aef2c5c6816735685817e4993b123deeaa73430d543479f61909925df",
+      "registry_last_update": "2026-08-04",
+      "pdf_sha256": "0541b916bfafea78a2f401a5b70bcc887cb383d4f764e8639639a870881110b7",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            9
+          ],
+          "expected": null,
+          "note": "Nested clinic and patient/parent assignment."
+        }
+      ]
+    },
+    {
+      "id": "NCT05341622",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "6d6260913cb33aa356d0b6e1615d22541154bffd353606040587ac7644ae636d",
+      "registry_last_update": "2024-07-24",
+      "pdf_sha256": "c6c583a37b99a64854abf03a9ce9d27aeb35b9f94edcbc2d2d102ac0a91311b4",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            2
+          ],
+          "expected": "individual"
+        },
+        {
+          "field": "primary_window",
+          "pages": [
+            3
+          ],
+          "expected": "4 months"
+        }
+      ]
+    },
+    {
+      "id": "NCT05453630",
+      "filename": "Prot_000.pdf",
+      "registry_sha256": "c3a4ce28c524e0fd2a2a442784bb6205e1b746efb8c97a903bbfce0275bb77df",
+      "registry_last_update": "2026-07-15",
+      "pdf_sha256": "c6463212a5cf84ac19a1f071571fa26a3e3305e59fa4ecb2218553a6b84bf5c3",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            4
+          ],
+          "expected": "individual"
+        },
+        {
+          "field": "primary_window",
+          "pages": [
+            5
+          ],
+          "expected": "12 months"
+        }
+      ]
+    },
+    {
+      "id": "NCT05537441",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "c6566848e22151eb3c9cf7280b1ed67f854a1a87a65364c9626d90e818d48989",
+      "registry_last_update": "2024-10-01",
+      "pdf_sha256": "46263477627417bd6fb6aad04ab952637d07e26559d8080435763ebdff167f1e",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            14
+          ],
+          "expected": "household"
+        }
+      ]
+    },
+    {
+      "id": "NCT05646355",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "d3625f029008b62b3ab6140982863646a7863247a33a245141c1804809e17a01",
+      "registry_last_update": "2024-12-27",
+      "pdf_sha256": "fa718c273008d8cbea846bc5a40505ac2657a81d170838400c403ffcab58d35f",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            21
+          ],
+          "expected": "individual"
+        }
+      ]
+    },
+    {
+      "id": "NCT05683821",
+      "filename": "Prot_SAP_001.pdf",
+      "registry_sha256": "ce8c11f4d5fb813aa80ddeeb54b1a05c942d0d6ecbc3b11d2e63828bde30764b",
+      "registry_last_update": "2026-06-26",
+      "pdf_sha256": "1f543fd3bf03abb16eefb871cb6aff4b32853fbb88a060ba7b92fea1ffb8f03e",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            40
+          ],
+          "expected": "clinic"
+        }
+      ]
+    },
+    {
+      "id": "NCT05787249",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "4ed573fa86f83676eba76c827d204746769532d6d85accdfe39037e708d59f54",
+      "registry_last_update": "2026-10-02",
+      "pdf_sha256": "1765786686b01c2c408e72a792815d1dd6065fd8629d23b1874d5cf1f33c85c4",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            10
+          ],
+          "expected": null,
+          "note": "Clinic-group and individual patient assignments in the same design."
+        }
+      ]
+    },
+    {
+      "id": "NCT05987709",
+      "filename": "Prot_ICF_000.pdf",
+      "registry_sha256": "2b2d9187440c75384c2359f371ae955fdc351380b0e08c92ef4f47638f94b3a6",
+      "registry_last_update": "2025-12-16",
+      "pdf_sha256": "3cc9547eec85fa66634ffcef46d6aa73fbcc132a3ea8615d7473c56f70b5c436",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            2
+          ],
+          "expected": "individual"
+        },
+        {
+          "field": "primary_window",
+          "pages": [
+            8
+          ],
+          "expected": "3 months"
+        }
+      ]
+    },
+    {
+      "id": "NCT06052202",
+      "filename": "Prot_SAP_000.pdf",
+      "registry_sha256": "b65a76a46e556fb472db253ca84c30c84575e0e1f71a881f51694f8d1a57e65a",
+      "registry_last_update": "2026-01-02",
+      "pdf_sha256": "76bbd641b90a65aa4d2ddaef6bcc06ce51122d1a885d751b375796698b1cd533",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            16
+          ],
+          "expected": "individual"
+        }
+      ]
+    },
+    {
+      "id": "NCT06626321",
+      "filename": "Prot_000.pdf",
+      "registry_sha256": "0a42c071ce56c9b0ee43a7a1db123572f48a34f3090343b5f2a030c7197ebd24",
+      "registry_last_update": "2026-03-30",
+      "pdf_sha256": "f2cf9a11c6fc33dc86284b4b186083568d35d1867f781154fd5f72ea70f9d493",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            9
+          ],
+          "expected": "clinic"
+        }
+      ]
+    },
+    {
+      "id": "NCT06698640",
+      "filename": "Prot_SAP_001.pdf",
+      "registry_sha256": "ef8a742fccaccfa9204aceed5f1bdfd328cf060c37606ddef25dedf51923f560",
+      "registry_last_update": "2026-10-16",
+      "pdf_sha256": "2557bdb265fd384b99e835487bccd6d4c138a8f1704c21b43395baeafa8c57c2",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            8
+          ],
+          "expected": "household",
+          "note": "Use the finalized design column of the amendment table."
+        },
+        {
+          "field": "primary_window",
+          "pages": [
+            8
+          ],
+          "expected": null,
+          "note": "Final endpoint has a calendar cutoff in this excerpt, without a single numeric duration."
+        }
+      ]
+    }
+  ]
+}
