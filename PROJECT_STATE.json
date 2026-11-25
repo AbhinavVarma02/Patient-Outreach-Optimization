@@ -1,12 +1,13 @@
 {
   "schema_version": 1,
   "as_of": "2026-11-25",
-  "phase": "us_healthcare_release_candidate",
+  "phase": "us_payer_demo_published",
   "completed": [
     "M0",
     "M7",
     "M8",
-    "M9"
+    "M9",
+    "M10"
   ],
   "outstanding": [
     "M1",
@@ -14,10 +15,9 @@
     "M3",
     "M4",
     "M5",
-    "M6",
-    "M10"
+    "M6"
   ],
-  "scope": "limited research demonstration",
+  "scope": "limited US payer and community research demonstration",
   "artifacts": {
     "contract": "MASTER_PROMPT.md",
     "continuation": "CONTINUATION_V1.md",
@@ -58,8 +58,8 @@
     "us_payer_documentation": "docs/US_PAYER_EVIDENCE.md"
   },
   "validation": {
-    "data_integrity": "20 metadata matches; payload and schema unverified",
-    "analysis_rights": "unresolved",
+    "data_integrity": "CMS and UCLA source bytes verified. Geisinger has 20 metadata matches and unverified participant payloads.",
+    "analysis_rights": "CMS public contract facts, UCLA posted results and SCORE published aggregates reviewed for scoped use. Geisinger participant reuse unresolved.",
     "geisinger_metadata_recheck": "2026-11-25 metadata-only check returned 20 matches. The owner sent the request and received an out-of-office reply. Reuse remains unresolved and no participant payload was acquired.",
     "haryana_fallback": "CC BY 4.0 archive verified; both Figure 4 point values and CR0 reproduced; PHC interval includes zero",
     "real_data_replication": "Sierra Leone five published coefficient and SE pairs match and agree with independent statsmodels computations; Haryana Figure 4 point check passed; Geisinger blocked",
@@ -69,18 +69,54 @@
     "us_payer_evidence": "Pinned public CMS 2027 contract data and UCLA primary registry outcome; independently reviewed published SCORE trial table and kept all effects out of scenario assumptions.",
     "sierra_leone_lottery": "Confirmed remote exclusion; 45 of 50 nonperipheral census rosters match the reported cap rule, including at least one observed assignment count over the cap among nonmatches. No comparable independent rollout was identified.",
     "python_tests_passed": 17,
-    "node_tests_passed": 3,
-    "local_browser_tests_passed": 12,
-    "production_browser_tests_passed": 12,
-    "production_reference_screenshots_matched": 11,
-    "production_integrity": "stable and immutable v0.3.0 authenticated HTTPS asset integrity and headers verified",
-    "github_actions": "https://github.com/AbhinavVarma02/Patient-Outreach-Optimization/actions/runs/45631462871",
+    "node_tests_passed": 4,
+    "local_browser_tests_passed": 15,
+    "production_browser_tests_passed": 15,
+    "production_reference_screenshots_matched": 13,
+    "production_integrity": "Stable and immutable v0.4.0-demo verified against the HTTPS build ledger and response headers.",
+    "github_actions": "https://github.com/AbhinavVarma02/Patient-Outreach-Optimization/actions/runs/45636045224",
     "npm_reported_vulnerabilities": 0,
     "python_osv_reported_vulnerabilities": 0,
     "alternative_data": "CC0 1.0 Sierra Leone original payload and author methods verified; structure lottery denominators unresolved in released roster",
-    "rollback": "v0.1.0-demo and v0.2.0-demo retained as production targets; original asset hashes verified without switching traffic"
+    "rollback": "v0.1.0-demo, v0.2.0-demo, and v0.3.0-demo retained as production targets. Original asset hashes and headers verified without switching traffic.",
+    "python_osv_versions_checked": 19
   },
   "release": {
+    "status": "published_limited",
+    "version": "0.4.0-demo",
+    "release_commit": "a90e404c81e381bfe6a96f8133cd5c382f60fb97",
+    "github": "https://github.com/AbhinavVarma02/Patient-Outreach-Optimization",
+    "cloudflare": "https://patient-outreach-optimization.pages.dev/",
+    "deployment_id": "bda6411e-8121-47b7-a6ff-9d6d3d5937e2",
+    "deployment": "https://bda6411e.patient-outreach-optimization.pages.dev/",
+    "additional_external_dollars": 0
+  },
+  "next_actions": [
+    "Await substantive Geisinger authorization or verify an applicable license for analysis, linkage and reporting.",
+    "Reconcile the structure lottery roster and observation rules before evaluating incremental visit targeting. Seek an independent comparable rollout before temporal claims.",
+    "Retain reviewed trial summaries. Reconsider assisted extraction only with new evidence and an independent holdout."
+  ],
+  "older_releases": [
+    {
+      "status": "published_limited",
+      "version": "0.2.0-demo",
+      "release_commit": "dad257536b358a5035f8f51f6da1719b4050fdd5",
+      "github": "https://github.com/AbhinavVarma02/Patient-Outreach-Optimization",
+      "cloudflare": "https://patient-outreach-optimization.pages.dev/",
+      "deployment_id": "75a71ff8-c3c6-414b-b01c-12780f6dca7e",
+      "deployment": "https://75a71ff8.patient-outreach-optimization.pages.dev/",
+      "additional_external_dollars": 0,
+      "integrity": "verified after v0.4.0-demo deployment"
+    },
+    {
+      "version": "0.1.0-demo",
+      "release_commit": "d988063bb75e2870ad8e26e2edf316919d81c6d6",
+      "deployment_id": "9112bbb3-551f-4d76-b7a4-df4e99b1b976",
+      "deployment": "https://9112bbb3.patient-outreach-optimization.pages.dev/",
+      "integrity": "verified after v0.4.0-demo deployment"
+    }
+  ],
+  "previous_release": {
     "status": "published_limited",
     "version": "0.3.0-demo",
     "release_commit": "c0601bf4df295ee42367eacd92aaad0b7908f182",
@@ -88,29 +124,7 @@
     "cloudflare": "https://patient-outreach-optimization.pages.dev/",
     "deployment_id": "466a90b7-74ae-4aad-ba13-2a7782cb559f",
     "deployment": "https://466a90b7.patient-outreach-optimization.pages.dev/",
-    "additional_external_dollars": 0
-  },
-  "previous_release": {
-    "status": "published_limited",
-    "version": "0.2.0-demo",
-    "release_commit": "dad257536b358a5035f8f51f6da1719b4050fdd5",
-    "github": "https://github.com/AbhinavVarma02/Patient-Outreach-Optimization",
-    "cloudflare": "https://patient-outreach-optimization.pages.dev/",
-    "deployment_id": "75a71ff8-c3c6-414b-b01c-12780f6dca7e",
-    "deployment": "https://75a71ff8.patient-outreach-optimization.pages.dev/",
     "additional_external_dollars": 0,
-    "integrity": "verified after v0.3.0-demo deployment"
-  },
-  "next_actions": [
-    "Await substantive Geisinger authorization or verify an applicable license for analysis, linkage and reporting.",
-    "Reconcile the structure lottery roster and observation rules before evaluating incremental visit targeting. Seek an independent comparable rollout before temporal claims.",
-    "Retain reviewed trial summaries. Reconsider assisted extraction only with new evidence and an independent holdout."
-  ],
-  "older_release": {
-    "version": "0.1.0-demo",
-    "release_commit": "d988063bb75e2870ad8e26e2edf316919d81c6d6",
-    "deployment_id": "9112bbb3-551f-4d76-b7a4-df4e99b1b976",
-    "deployment": "https://9112bbb3.patient-outreach-optimization.pages.dev/",
-    "integrity": "verified after v0.3.0-demo deployment"
+    "integrity": "verified after v0.4.0-demo deployment"
   }
 }
