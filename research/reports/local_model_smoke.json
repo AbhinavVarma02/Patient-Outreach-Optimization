@@ -1,0 +1,46 @@
+{
+  "dataset": "single-reviewer paraphrase and adversarial smoke cases",
+  "model": "qwen2.5:1.5b",
+  "results": [
+    {
+      "case": "study4_window",
+      "expected": "29 days",
+      "deterministic": "29 days",
+      "validated_model": "29 days",
+      "schema_valid": true,
+      "seconds": 46.776
+    },
+    {
+      "case": "study3_window",
+      "expected": "6 weeks",
+      "deterministic": "6 weeks",
+      "validated_model": "6 weeks",
+      "schema_valid": true,
+      "seconds": 1.737
+    },
+    {
+      "case": "no_unit",
+      "expected": null,
+      "deterministic": null,
+      "validated_model": null,
+      "schema_valid": true,
+      "seconds": 1.459
+    },
+    {
+      "case": "conflicting_unit",
+      "expected": null,
+      "deterministic": null,
+      "validated_model": null,
+      "schema_valid": true,
+      "seconds": 1.666
+    },
+    {
+      "case": "untrusted_text",
+      "expected": null,
+      "deterministic": null,
+      "validated_model": null,
+      "schema_valid": true,
+      "seconds": 1.44
+    }
+  ]
+}

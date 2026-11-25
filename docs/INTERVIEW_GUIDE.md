@@ -1,0 +1,21 @@
+# Portfolio walkthrough
+
+## One-minute demo
+
+Start on Overview and identify the published-evidence boundary. In Patient Targeting, switch between the fictional risk-effect patterns and explain why equal reach can still generate different yield. In Outreach Planner, reduce the budget and show the binding contact constraint. In Pilot Designer, reduce ranking quality and explain the change in the sample size. End on the linked Study 4 primary population and explain why descriptive cross-trial comparisons are insufficient.
+
+## Technical questions
+
+- Why use an RCT? Known assignment probabilities support estimation of arm contrasts under the randomized design. Trial population, estimand and post-assignment missingness still matter.
+- Why freeze policy thresholds? Selecting an apparently superior rule using the same outcomes that evaluate it distorts reported intervals.
+- Why can the pilot require many participants? A targeted policy can improve individual outreach yield while shifting the all-eligible outcome rate by only a fraction of a percentage point.
+- Why is the local extractor experimental? Its smoke run checks exact support and abstention. The held-out multitrial evaluation is open.
+
+## Portfolio description
+
+Built a decision workspace for comparing preventive outreach at matched capacity and designing prospective randomized pilots. It pairs simulated causal-policy validation with a transparent evidence trail to published vaccination studies.
+
+## Resume bullets
+
+- Built a TypeScript workspace for matched-capacity targeting, channel costing and randomized pilot sizing, with a separate evidence trail to four published study designs.
+- Implemented known-propensity AIPW and a reproducible fictional holdout and assessed coverage in six known-truth scenarios with 1,500 replications each.

@@ -1,0 +1,126 @@
+{
+  "kind": "fictional_independent_holdout",
+  "training_seed": 20261124,
+  "evaluation_seed": 20261125,
+  "training_rows": 10000,
+  "evaluation_rows": 40000,
+  "capacity": 0.2,
+  "code_sha256": "9ef65693cb89129833b0feef4713f9e503b772ea4212d7b2db89051c4d6b546a",
+  "frozen_policy_sha256": "c1cd26254c4892229ad7e1ab6be0e8a000b3bf52b0e30f36ce79d7e62c2e4bb8",
+  "frozen": {
+    "m0": [
+      0.2519809825673534,
+      0.3047945205479452,
+      0.35131048387096775
+    ],
+    "m1": [
+      0.2317932654659358,
+      0.3327654741624077,
+      0.3810728744939271
+    ],
+    "policies": {
+      "behavioral_risk": [
+        0.8,
+        0.0,
+        0.0
+      ],
+      "clinical_risk": [
+        0.8,
+        0.0,
+        0.0
+      ],
+      "intermediate_behavioral_risk": [
+        0.0,
+        0.5714285714285715,
+        0.0
+      ],
+      "subgroup_cell_means": [
+        0.0,
+        0.0,
+        0.5
+      ],
+      "uniform": [
+        0.2,
+        0.2,
+        0.2
+      ]
+    }
+  },
+  "results": {
+    "uniform": {
+      "frozen_probabilities": [
+        0.2,
+        0.2,
+        0.2
+      ],
+      "truth_gain": 0.0,
+      "estimate": {
+        "value": 0.0,
+        "se": 0.0,
+        "lower": 0.0,
+        "upper": 0.0,
+        "n": 40000
+      }
+    },
+    "clinical_risk": {
+      "frozen_probabilities": [
+        0.8,
+        0.0,
+        0.0
+      ],
+      "truth_gain": -0.0028299999999999996,
+      "estimate": {
+        "value": 0.0008386144230680964,
+        "se": 0.0015462054168107818,
+        "lower": -0.002191892506581778,
+        "upper": 0.0038691213527179704,
+        "n": 40000
+      }
+    },
+    "behavioral_risk": {
+      "frozen_probabilities": [
+        0.8,
+        0.0,
+        0.0
+      ],
+      "truth_gain": -0.0028299999999999996,
+      "estimate": {
+        "value": 0.0008386144230680964,
+        "se": 0.0015462054168107818,
+        "lower": -0.002191892506581778,
+        "upper": 0.0038691213527179704,
+        "n": 40000
+      }
+    },
+    "intermediate_behavioral_risk": {
+      "frozen_probabilities": [
+        0.0,
+        0.5714285714285715,
+        0.0
+      ],
+      "truth_gain": 0.0029700000000000004,
+      "estimate": {
+        "value": -4.095813404374025e-05,
+        "se": 0.0012688975903094228,
+        "lower": -0.0025279517111198692,
+        "upper": 0.0024460354430323886,
+        "n": 40000
+      }
+    },
+    "subgroup_cell_means": {
+      "frozen_probabilities": [
+        0.0,
+        0.0,
+        0.5
+      ],
+      "truth_gain": -0.0008300000000000002,
+      "estimate": {
+        "value": -0.0004882956471292869,
+        "se": 0.0011512733526498665,
+        "lower": -0.0027447499546837057,
+        "upper": 0.0017681586604251318,
+        "n": 40000
+      }
+    }
+  }
+}

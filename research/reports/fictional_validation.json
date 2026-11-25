@@ -1,0 +1,88 @@
+{
+  "kind": "fictional_known_truth",
+  "seed": 20261124,
+  "replicates": 1500,
+  "n": 700,
+  "code_sha256": "da8e6ef048e33a4835c2b1bceaddf075c027c059b1b23c2b30ee2661dd1d8b73",
+  "estimator_sha256": "9036862d6c110ad57d07efbd58e488c087ab371c723bc3d3111b9b8c3d107c50",
+  "results": {
+    "null": {
+      "truth": 0.0,
+      "bias": 6.0017777777773046e-05,
+      "sampling_sd": 0.014906925266144126,
+      "bias_mcse": 0.00038489515532623176,
+      "coverage": 0.942,
+      "coverage_mc_interval": [
+        0.9290033955548014,
+        0.9527384876885583
+      ],
+      "null_rejection": 0.058,
+      "policy_regret": 0.0
+    },
+    "homogeneous": {
+      "truth": 4.336808689942018e-19,
+      "bias": -0.0005308285714285772,
+      "sampling_sd": 0.01445459665825115,
+      "bias_mcse": 0.0003732160808903472,
+      "coverage": 0.954,
+      "coverage_mc_interval": [
+        0.9421892993629768,
+        0.9634912775430986
+      ],
+      "null_rejection": 0.046,
+      "policy_regret": 0.0
+    },
+    "monotonic": {
+      "truth": 0.008200000000000002,
+      "bias": 0.00022747555555555424,
+      "sampling_sd": 0.015244932155872018,
+      "bias_mcse": 0.00039362245569169504,
+      "coverage": 0.9386666666666666,
+      "coverage_mc_interval": [
+        0.925367528388899,
+        0.9497247177259286
+      ],
+      "null_rejection": null,
+      "policy_regret": 0.0
+    },
+    "inverted_u": {
+      "truth": -0.006399999999999999,
+      "bias": 7.809714285714458e-05,
+      "sampling_sd": 0.014511111240364359,
+      "bias_mcse": 0.0003746752811259628,
+      "coverage": 0.952,
+      "coverage_mc_interval": [
+        0.9399798382607145,
+        0.9617109563682416
+      ],
+      "null_rejection": null,
+      "policy_regret": 0.013999999999999999
+    },
+    "weak": {
+      "truth": -9.99999999999994e-05,
+      "bias": 0.0003768098412698446,
+      "sampling_sd": 0.014966347384912823,
+      "bias_mcse": 0.0003864294278354819,
+      "coverage": 0.9446666666666667,
+      "coverage_mc_interval": [
+        0.9319198418009124,
+        0.955141751145273
+      ],
+      "null_rejection": null,
+      "policy_regret": 0.0008
+    },
+    "strong": {
+      "truth": -0.008599999999999998,
+      "bias": 8.811873015872676e-05,
+      "sampling_sd": 0.01471807974817205,
+      "bias_mcse": 0.00038001918501882003,
+      "coverage": 0.946,
+      "coverage_mc_interval": [
+        0.9333808071332249,
+        0.9563406406643734
+      ],
+      "null_rejection": null,
+      "policy_regret": 0.025
+    }
+  }
+}

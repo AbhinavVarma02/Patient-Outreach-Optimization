@@ -1,6 +1,6 @@
 # Licensing and permission status
 
-The live OSF API on 2026-11-24 reported the target project as public and its license attribute as null. Authoritative permission for the intended independent participant-level analysis, linkage and aggregate reporting remains open. Published aggregate results cited from the article and supplement are distinct from new analysis of the data. The review, source scripts and all downloaded datasets retain their own rights. The repository software license excludes those materials.
+The live OSF API on 2026-11-24 reported the target project as public and its license attribute as null. The authors’ [data availability statement](https://www.nature.com/articles/s41562-026-02603-4) identifies the deposited files as the deidentified data needed to reproduce the article. It specifies no license or explicit permission for the broader participant-level analysis, linkage and publication planned here. Published aggregate results cited from the article and supplement are distinct from new analysis of the data. The review, source scripts and all downloaded datasets retain their own rights. The repository software license excludes those materials.
 
 ## Correspondence draft
 

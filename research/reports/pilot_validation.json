@@ -1,0 +1,43 @@
+{
+  "seed": 20261124,
+  "replicates": 5000,
+  "kind": "independent_binary_policy_trial",
+  "results": [
+    {
+      "n": 517318,
+      "allocation": 0.5,
+      "gain": 0.0036399999999999766,
+      "analytic": 0.8000005561393448,
+      "empirical": 0.8014,
+      "wilson_interval": [
+        0.7901124183589471,
+        0.8122248109085725
+      ],
+      "analytic_inside_interval": true
+    },
+    {
+      "n": 688733,
+      "allocation": 0.75,
+      "gain": 0.0036399999999999766,
+      "analytic": 0.8000000251926115,
+      "empirical": 0.8102,
+      "wilson_interval": [
+        0.7990939788978298,
+        0.8208297388154567
+      ],
+      "analytic_inside_interval": true
+    },
+    {
+      "n": 10000,
+      "allocation": 0.5,
+      "gain": 0.0,
+      "analytic": 0.05,
+      "empirical": 0.0494,
+      "wilson_interval": [
+        0.04373172063796719,
+        0.05576013235491826
+      ],
+      "analytic_inside_interval": true
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "source": "https://api.osf.io/v2/files/",
+  "verification": "metadata_only",
+  "files": [
+    {
+      "study": 1,
+      "name": "study_1_analysis_data_deid.csv",
+      "status": "match",
+      "size": 3692875,
+      "sha256": "0b93dc4379661bae759dd5fde8f07daba42c971698ad02a0a507461069cb0f37"
+    },
+    {
+      "study": 1,
+      "name": "study_1_fulldata_deid.csv",
+      "status": "match",
+      "size": 4560156,
+      "sha256": "632d8b5bf565b4dc8d7926d8120185822001d5322351e733146f87311627c0af"
+    },
+    {
+      "study": 1,
+      "name": "study_1_data_dictionary.txt",
+      "status": "match",
+      "size": 3977,
+      "sha256": "84358d016910f0301c22a6fc280b196cb761ae64a29f437d52d4e081f01bb6a6"
+    },
+    {
+      "study": 1,
+      "name": "study_1_time_data.csv",
+      "status": "match",
+      "size": 34822,
+      "sha256": "7d69b212503e3428007263a87cbf0fd6bf76b65f19e07da7c875c3b38d151a27"
+    },
+    {
+      "study": 2,
+      "name": "study_2_analysis_data_deid.csv",
+      "status": "match",
+      "size": 4587739,
+      "sha256": "0329c09a27057eb5d234f3e248f8bdd9b176cd1d7008700809dc6b97fbcc412c"
+    },
+    {
+      "study": 2,
+      "name": "study_2_fulldata_deid.csv",
+      "status": "match",
+      "size": 4196451,
+      "sha256": "55ae3d70ccc05e3126d57285d496da629400afbd4aea1d4c5163485480fd1277"
+    },
+    {
+      "study": 2,
+      "name": "study_2_data_dictionary.txt",
+      "status": "match",
+      "size": 4826,
+      "sha256": "ff1758567c67cd0a280c9314c2a3c48db3f6ed7ee59b70be4061daed1b12c7fb"
+    },
+    {
+      "study": 2,
+      "name": "study_2_time_data.csv",
+      "status": "match",
+      "size": 21862,
+      "sha256": "b1c160a655fb63a8b748bf1920498232bbf6205458d4e9e89eecee231ba593d7"
+    },
+    {
+      "study": 2,
+      "name": "study2_ctgov_analysis_deid_2024-11-25.csv",
+      "status": "match",
+      "size": 2960173,
+      "sha256": "af5f453cd18e88280e97a7674db4d54662ab329d7b66a0e514651bab1865fbfb"
+    },
+    {
+      "study": 2,
+      "name": "study2_ctgov_analysis_deid_data_dictionary_2024-11-25.txt",
+      "status": "match",
+      "size": 2416,
+      "sha256": "f92de005e8a383b04ebf591ec7ec01f96f6ad4f552e47239f55bf62f033074a5"
+    },
+    {
+      "study": 1,
+      "name": "study1_ctgov_analysis_deid_2024-11-25.csv",
+      "status": "match",
+      "size": 2386999,
+      "sha256": "5b877e188b0f21c60345f026fe4cf46ea3bcd453ced5eeb329f81c844336343e"
+    },
+    {
+      "study": 1,
+      "name": "study1_ctgov_analysis_deid_data_dictionary_2024-11-25.txt",
+      "status": "match",
+      "size": 1034,
+      "sha256": "02b90d28414840e73de5910a71f7a51ca53e30c047ab699a0adc17eaaf0b54f2"
+    },
+    {
+      "study": 3,
+      "name": "study_3_analysis_data_deid.csv",
+      "status": "match",
+      "size": 3730515,
+      "sha256": "3f577527682183d96aa2346f8b49c420815ef02de48fbda7ac8324e35280b69a"
+    },
+    {
+      "study": 3,
+      "name": "study_3_fulldata_deid.csv",
+      "status": "match",
+      "size": 3834347,
+      "sha256": "0688080e8c46ff6dea1dbe0dfab0016f146e048cec2fb0d51984d301427d05c1"
+    },
+    {
+      "study": 3,
+      "name": "study_3_data_dictionary.txt",
+      "status": "match",
+      "size": 3377,
+      "sha256": "eaf90b0a77d30ab951496f004d58e180e51a66bb5781b8bd0eac6023d05ba7d3"
+    },
+    {
+      "study": 3,
+      "name": "study_3_time_data.csv",
+      "status": "match",
+      "size": 14028,
+      "sha256": "567d4e0cd919a40cdde71cfca66f98d22c3bf9263c8f5031ee692d5ff700c4c8"
+    },
+    {
+      "study": 4,
+      "name": "study_4_analysis_data_deid.csv",
+      "status": "match",
+      "size": 3815508,
+      "sha256": "1b949b87933b4c8e1f3217ca6032590d91c6e6e7e4f13d0ea0b8020acdd40b77"
+    },
+    {
+      "study": 4,
+      "name": "study_4_fulldata_deid.csv",
+      "status": "match",
+      "size": 3163243,
+      "sha256": "9323d95b0133a9f00af9943db83808d089180efe95e91ffbf9140414768289bd"
+    },
+    {
+      "study": 4,
+      "name": "study_4_data_dictionary.txt",
+      "status": "match",
+      "size": 2841,
+      "sha256": "06d48e1f0896d0650e2607a9cc525d8b1da0a13564bcdad1fb857725b74e5726"
+    },
+    {
+      "study": 4,
+      "name": "study_4_time_data.csv",
+      "status": "match",
+      "size": 6767,
+      "sha256": "5fe995ca89c7feeb4f22e58dd68cdf8712ef1565fea30a856ebf841e2ed27be2"
+    }
+  ]
+}
