@@ -1,0 +1,388 @@
+{
+  "version": 3,
+  "annotation": "Single reviewer. Physical PDF pages; fields frozen before scoring.",
+  "selection": "First 80 registry hits per documented query, filtered to randomized studies with official protocol files and excluding earlier benchmark and known project trials. Sort by SHA-256 of 20261125: plus NCT ID, take three distinct records per query in listed order.",
+  "extractor_checkpoint": "99ddcdc",
+  "queries": [
+    {
+      "term": "vaccination reminder",
+      "url": "https://clinicaltrials.gov/api/v2/studies?query.term=vaccination+reminder&filter.advanced=AREA%5BStudyType%5DINTERVENTIONAL+AND+AREA%5BLargeDocHasProtocol%5Dtrue&pageSize=80&sort=LastUpdatePostDate%3Adesc",
+      "query_sha256": "236e0a34dbc7a028df16b29282847aec0f6884b9fcc891423e1730e24a5e8582",
+      "selected": [
+        "NCT03604393",
+        "NCT02236273",
+        "NCT05505760"
+      ]
+    },
+    {
+      "term": "colorectal cancer screening outreach",
+      "url": "https://clinicaltrials.gov/api/v2/studies?query.term=colorectal+cancer+screening+outreach&filter.advanced=AREA%5BStudyType%5DINTERVENTIONAL+AND+AREA%5BLargeDocHasProtocol%5Dtrue&pageSize=80&sort=LastUpdatePostDate%3Adesc",
+      "query_sha256": "47e1627cb3e09c2a872451a5c149c73b0ac646a65830bdfd5f40239de718f3c0",
+      "selected": [
+        "NCT02360605",
+        "NCT06173375",
+        "NCT02970136"
+      ]
+    },
+    {
+      "term": "smoking cessation",
+      "url": "https://clinicaltrials.gov/api/v2/studies?query.term=smoking+cessation&filter.advanced=AREA%5BStudyType%5DINTERVENTIONAL+AND+AREA%5BLargeDocHasProtocol%5Dtrue&pageSize=80&sort=LastUpdatePostDate%3Adesc",
+      "query_sha256": "a10a2fe3878690edfa6071f6ed80aeedcdb5535dd3d1a691f15bebd0de2ddeb8",
+      "selected": [
+        "NCT05004662",
+        "NCT05997225",
+        "NCT07458607"
+      ]
+    },
+    {
+      "term": "medication adherence",
+      "url": "https://clinicaltrials.gov/api/v2/studies?query.term=medication+adherence&filter.advanced=AREA%5BStudyType%5DINTERVENTIONAL+AND+AREA%5BLargeDocHasProtocol%5Dtrue&pageSize=80&sort=LastUpdatePostDate%3Adesc",
+      "query_sha256": "f97b712ad8816562c79ac86d53d391a5cc4b798d9f24659f04858910915d73d5",
+      "selected": [
+        "NCT03825965",
+        "NCT05515497",
+        "NCT04046497"
+      ]
+    }
+  ],
+  "trials": [
+    {
+      "id": "NCT02236273",
+      "filename": "Prot_SAP_000.pdf",
+      "protocol_date": "2021-01-05",
+      "title": "Interactive, Health Literacy Promoting Text Messages and HPV Vaccine Completion In Minority Adolescents",
+      "registry_sha256": "b3c185a4ffa25f84754ac1df5bce40d42db81a866b4cd20f00f851832c6aeb80",
+      "pdf_sha256": "c9178cbeafa63281efb7f4d4f74ec0d9d039694543726fbb67d9ad5305e21c95",
+      "registry_posted": "2025-07-29",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            3,
+            4
+          ],
+          "expected": "individual",
+          "anchor": {
+            "page": 3,
+            "text": "receiving their first HPV vaccine dose will be randomized to"
+          }
+        },
+        {
+          "field": "primary_window",
+          "pages": [
+            3,
+            4
+          ],
+          "expected": "12 months",
+          "anchor": {
+            "page": 3,
+            "text": "completion of the 3-dose HPV vaccine series within 12 months of initiation"
+          }
+        }
+      ]
+    },
+    {
+      "id": "NCT02360605",
+      "filename": "Prot_SAP_000.pdf",
+      "protocol_date": "2020-08-09",
+      "title": "Health Literacy Interventions to Overcome Disparities in CRC Screening",
+      "registry_sha256": "ddd0c1f387d43d383a6c45b906b4f5c5aeb82a11931d3e13299dc85cf7d652ba",
+      "pdf_sha256": "36916e9f2dade81ed44de201c774fe8d75e5bef07eb0cb33cb49ace634ab5370",
+      "registry_posted": "2021-06-30",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            2,
+            6
+          ],
+          "expected": "individual",
+          "anchor": {
+            "page": 2,
+            "text": "Randomization will be done at the patient level"
+          }
+        },
+        {
+          "field": "primary_window",
+          "pages": [
+            2,
+            3,
+            6
+          ],
+          "expected": null,
+          "reason": "The primary screening outcome has no unique duration. Six months refers to the interview and 12/24 months to outreach."
+        }
+      ]
+    },
+    {
+      "id": "NCT02970136",
+      "filename": "Prot_SAP_000.pdf",
+      "protocol_date": "2020-02-11",
+      "title": "Increasing Uptake of Evidence-Based Screening Services Through CHW-led Multi-modality Intervention",
+      "registry_sha256": "c8f9f8f01b688f713761ff0a34063251cc49b25a495068f509ac38b167a7bf62",
+      "pdf_sha256": "c902c891293f015f1d7aa5e6810b74cbc88f2404760cf5634d786735cf0006f6",
+      "registry_posted": "2021-12-28",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            3,
+            6,
+            7
+          ],
+          "expected": "individual",
+          "anchor": {
+            "page": 3,
+            "text": "Persons will be randomized to one of two active CHW led intervention arms"
+          }
+        },
+        {
+          "field": "primary_window",
+          "pages": [
+            5,
+            6
+          ],
+          "expected": "6 months",
+          "anchor": {
+            "page": 5,
+            "text": "had no t completed at six months"
+          }
+        }
+      ]
+    },
+    {
+      "id": "NCT03604393",
+      "filename": "Prot_SAP_000.pdf",
+      "protocol_date": "2018-09-10",
+      "title": "Increasing HPV Immunization Rates: The Rural Adolescent Vaccine Enterprise",
+      "registry_sha256": "58fb7ab46364bf10efa1a55a4a4b698b43e63ac48651f4192a6e97e8fb67fbfb",
+      "pdf_sha256": "1d7c0c03c89c3a35710c71c0f502c655fb0a66c41091dbf3508e5ac06e50bcfe",
+      "registry_posted": "2022-03-31",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            5,
+            11
+          ],
+          "expected": "practice",
+          "anchor": {
+            "page": 11,
+            "text": "block randomization of practices in five waves"
+          }
+        },
+        {
+          "field": "primary_window",
+          "pages": [
+            5,
+            11
+          ],
+          "expected": null,
+          "reason": "Three months is the repeated measurement cadence and six months is the wave interval. No unique primary outcome window is stated."
+        }
+      ]
+    },
+    {
+      "id": "NCT03825965",
+      "filename": "Prot_SAP_000.pdf",
+      "protocol_date": "2023-05-12",
+      "title": "Cannabinoids vs. Placebo on Persistent Post-surgical Pain Following TKA: A Pilot RCT",
+      "registry_sha256": "8277229b468aada8baa98c6a5826c116dcf5bb66072755bbcc76515f7fdf5f1a",
+      "pdf_sha256": "8dac39e9c8c0e434270a4356e7ae3b05b875358a4a1949c4b126041f0f41901f",
+      "registry_posted": "2026-10-22",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            18,
+            19
+          ],
+          "expected": "individual",
+          "anchor": {
+            "page": 18,
+            "text": "eligible patients will be randomized to either MPL-001 or placebo"
+          }
+        },
+        {
+          "field": "primary_window",
+          "pages": [
+            13,
+            25
+          ],
+          "expected": null,
+          "reason": "Six months applies to one feasibility component. Recruitment and adherence also enter the primary feasibility endpoint."
+        }
+      ]
+    },
+    {
+      "id": "NCT04046497",
+      "filename": "Prot_SAP_000.pdf",
+      "protocol_date": "2020-08-03",
+      "title": "Artificial Intelligence to Measure Adherence to Oral Medication",
+      "registry_sha256": "05cc5f7a91b25ad62fb3a6a21873a5fcbbeffb32f654eff247d5d1c988158aa5",
+      "pdf_sha256": "87d6762710ceaaa24eb5f50b623fb93983e454b0a783487d3cb1e9b9dfa3bba0",
+      "registry_posted": "2026-10-13",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            3,
+            4
+          ],
+          "expected": "individual",
+          "anchor": {
+            "page": 3,
+            "text": "Participants will be randomly assigned to AiCure"
+          }
+        },
+        {
+          "field": "primary_window",
+          "pages": [
+            6,
+            7,
+            8
+          ],
+          "expected": null,
+          "reason": "Multiple primary components and several assessment points without a unique duration for all primary endpoints on the supplied pages."
+        }
+      ]
+    },
+    {
+      "id": "NCT05004662",
+      "filename": "Prot_SAP_000.pdf",
+      "protocol_date": "2024-03-28",
+      "title": "Partnering With Food Bank to Provide Tobacco Treatment to Underserved Smokers",
+      "registry_sha256": "2366acb415c1de413b52fdd18e044cb6bce8e4aa3f8483320bcb180094d9f286",
+      "pdf_sha256": "9c6b8b3b206e0d962b97012210289fc36b377ba78f87b9708aee47f93e1237ba",
+      "registry_posted": "2026-09-24",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            2,
+            6
+          ],
+          "expected": "individual",
+          "anchor": {
+            "page": 6,
+            "text": "Participants will then be randomized to ST or AT"
+          }
+        }
+      ]
+    },
+    {
+      "id": "NCT05505760",
+      "filename": "Prot_SAP_000.pdf",
+      "protocol_date": "2023-09-20",
+      "title": "Testing Content Delivery Models for MomConnect",
+      "registry_sha256": "90a1cea1ee146b8e595c551c6102b34a8b2b44562abf7a6a07a83e40263361e2",
+      "pdf_sha256": "f9cd59214035a561bea6fb570963ef6edabbbd4ec5c50f27b10fd9c4846422e6",
+      "registry_posted": "2023-10-27",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            7,
+            8
+          ],
+          "expected": "individual",
+          "anchor": {
+            "page": 7,
+            "text": "Randomization will be at the individual level"
+          }
+        }
+      ]
+    },
+    {
+      "id": "NCT05515497",
+      "filename": "Prot_SAP_000.pdf",
+      "protocol_date": "2026-02-24",
+      "title": "BMT4me: Post-HSCT Medication Adherence mHealth App",
+      "registry_sha256": "45388e6f6921c3a784ea1db6a359e5072c7fbc813df0a3ba9dcec3b8c0a1ddcd",
+      "pdf_sha256": "87c2243323806a27f43d0743e7ebe071f74de1e3b01850ebcbcfd2bcbdbe0ed1",
+      "registry_posted": "2026-10-27",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            7,
+            8
+          ],
+          "expected": null,
+          "reason": "The protocol uses caregivers and families for the same allocation, without resolving the independent unit on these pages."
+        }
+      ]
+    },
+    {
+      "id": "NCT05997225",
+      "filename": "Prot_SAP_000.pdf",
+      "protocol_date": "2025-07-18",
+      "title": "Tobacco Cessation at FDNY",
+      "registry_sha256": "2586de90d40458a1ddea1371d3be54b7574ada946392cd8c85a11d6041205614",
+      "pdf_sha256": "f0b93f68a93fd45510345bb141d2d54d0c0718ec5ce5acc1b0dd13ccf7d2a505",
+      "registry_posted": "2026-11-05",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            3,
+            4,
+            8
+          ],
+          "expected": "individual",
+          "anchor": {
+            "page": 3,
+            "text": "Participants will be randomly assigned to either Enhanced Care or Standard Care"
+          }
+        }
+      ]
+    },
+    {
+      "id": "NCT06173375",
+      "filename": "Prot_SAP_002.pdf",
+      "protocol_date": "2024-03-11",
+      "title": "Head to Head Pilot Trial of Mailed Cologuard to Mailed FIT",
+      "registry_sha256": "ceb315af661c6d0368c9ec102d438b4bdb5990394b8061bf116bb819c0765a61",
+      "pdf_sha256": "25ba7dd983c806651412d730590c2319b92e7181e4586092c4f0bddaf5c8b8f5",
+      "registry_posted": "2026-05-12",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            15,
+            44,
+            45
+          ],
+          "expected": "individual",
+          "anchor": {
+            "page": 15,
+            "text": "randomize individuals meeting inclusion/exclusion criteria"
+          }
+        }
+      ]
+    },
+    {
+      "id": "NCT07458607",
+      "filename": "Prot_SAP_000.pdf",
+      "protocol_date": "2026-04-13",
+      "title": "UNC Tobacco Convenience Store",
+      "registry_sha256": "ff2a69164cdd17bfb7602ef5b1c441a3b9f966cc8a2f24c4df420c6bcfc878f9",
+      "pdf_sha256": "3d5c83671eb937f2a103bdd095bf290a19b26b945a09e6e2f8af6588926837f1",
+      "registry_posted": "2026-04-27",
+      "checks": [
+        {
+          "field": "randomization_unit",
+          "pages": [
+            2,
+            3
+          ],
+          "expected": "individual",
+          "anchor": {
+            "page": 2,
+            "text": "participants will provide written informed consent and will be randomized to 1 of 3 trial arms"
+          }
+        }
+      ]
+    }
+  ]
+}
