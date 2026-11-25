@@ -25,3 +25,10 @@ The Haryana reproduction command passed both locked publication-rounding checks.
 - Thirty public trials and 35 document checks completed with the pinned local model. The prespecified release criteria for model assistance failed. See [AI evaluation](AI_EVALUATION.md).
 - Twelve browser tests passed across Chromium, Firefox and WebKit on Windows with one worker. The suite exercises all five views in four viewports and two themes, keyboard workflows, accessibility and source/claim presentation. An earlier unpinned run lacked browser executables, and an initial parallel run hit one Chromium screenshot capture failure. Pinned engines and serial execution recovered.
 - npm audit and OSV batch queries for the ten pinned Python research and PDF dependencies returned zero advisories at verification time. Static asset content and the five-file deployment allowlist passed.
+
+## v0.2.0-demo production verification
+
+- The release source passed the 108-path staged publication scan. GitHub ran its Python, Node, static build and Chromium gates successfully on the deployed commit. [CI run](https://github.com/AbhinavVarma02/Patient-Outreach-Optimization/actions/runs/45544473794)
+- All 12 public browser tests passed on Chromium, Firefox and WebKit. The four served assets matched the release ledger and carried the checked CSP, HSTS and nosniff headers. The site initiated no external requests across the tested views. [Production](https://patient-outreach-optimization.pages.dev/) · [Build digests](../research/reports/public_build_sha256.json)
+- Eleven captured views matched byte for byte locally and live. Five prior workflow screenshots remain byte-identical. Overview and Evidence & Methods reflect the new research and the narrow-screen table fix. The new build size is 78.56 kB JavaScript and 3.19 kB CSS gzip. [Screenshot references](UI_DESIGN.md#screenshot-references)
+- After promotion, the original deployment served all four original public assets with the original hashes. [Previous deployment](https://9112bbb3.patient-outreach-optimization.pages.dev/)

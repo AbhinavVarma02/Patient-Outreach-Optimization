@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.2.0-demo · Haryana evidence
+## 0.2.0-demo · 2026-11-24
 
 - Documented the approved production UI and added a nine-image, reproducible visual reference set.
 - Verified data reuse evidence and recorded a separately licensed village-level outreach fallback and replication check.

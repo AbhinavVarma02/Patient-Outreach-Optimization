@@ -29,7 +29,9 @@ When adding approved research, use the existing Evidence & Methods hierarchy for
 
 ## Screenshot references
 
-Full-page captures use the pinned Playwright Chromium on Windows, default workflow inputs, 1× device scale, and explicit theme selection. The viewport size is the browser viewport before the full page is captured. All nine PNGs matched the local production build and the public application byte for byte on 2026-11-24.
+Full-page captures use the pinned Playwright Chromium on Windows, default workflow inputs, 1× device scale, and explicit theme selection. The viewport size is the browser viewport before the full page is captured. All eleven v0.2.0-demo PNGs matched the local production build and the public application byte for byte on 2026-11-24.
+
+The Overview copy now points readers to the Haryana evidence. Evidence & Methods presents the independent community study above the existing Geisinger trial explorer. The new tables wrap row labels on narrow screens to keep numeric columns visible. The five prior screenshots for Targeting, Planner and Pilot match exactly. Navigation, typography, surfaces and workflow structure follow the approved release. The original captures remain in Git history and the prior deployment is available for comparison. [Prior deployment](https://9112bbb3.patient-outreach-optimization.pages.dev/)
 
 | View | Desktop (1440 × 900), light | Mobile (390 × 844), light | Mobile (390 × 844), dark |
 | --- | --- | --- | --- |
@@ -37,10 +39,10 @@ Full-page captures use the pinned Playwright Chromium on Windows, default workfl
 | Patient Targeting | [Reference](images/patient-targeting.png) | — | — |
 | Outreach Planner | [Reference](images/outreach-planner.png) | — | — |
 | Pilot Designer | [Reference](images/pilot-designer.png) | [Reference](images/pilot-designer-mobile-light.png) | [Reference](images/pilot-designer-mobile-dark.png) |
-| Evidence & Methods | [Reference](images/evidence-and-methods.png) | — | — |
+| Evidence & Methods | [Reference](images/evidence-and-methods.png) | [Reference](images/evidence-and-methods-mobile-light.png) | [Reference](images/evidence-and-methods-mobile-dark.png) |
 
 ## Reviewing changes
 
-1. Build and run `npm run test:browser` from `web`. The browser matrix covers all five views in both themes at 1440 × 900, 1280 × 800, 768 × 1024 and 390 × 844. Chromium writes the reference views to `web/qa-output`.
+1. Build and run `npm run test:browser -- --workers=1` from `web`. The browser matrix covers all five views in both themes at 1440 × 900, 1280 × 800, 768 × 1024 and 390 × 844. Chromium writes the reference views to `web/qa-output`.
 2. On Windows with the pinned Chromium, enable the exact comparison with `$env:OUTREACH_UI_REFERENCE = '1'` in PowerShell and run `npm run test:browser -- --project=chromium`. Set `OUTREACH_LIVE_URL` to run against production. The test reports which comparison failed and retains the new capture for inspection. On other rendering environments, compare the captures visually.
 3. Review any difference at the affected viewport and theme. Record the intended functionality, accessibility or usability change and its visual effect during review. Update the affected references from the verified production release when that change ships. Keep captures in `docs/images` and out of the deployable web directory. [Browser checks](../web/tests/workspace.spec.ts) · [Test evidence](TEST_EVIDENCE.md)

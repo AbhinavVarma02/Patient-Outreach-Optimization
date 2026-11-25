@@ -1,6 +1,6 @@
 # Project progress
 
-2026-11-24 · Limited research demonstration published
+2026-11-24 · Original v0.1.0-demo checkpoint
 
 - The authoritative v1.0 contract was copied byte for byte. Reviewed all four source inputs and archived their unchanged originals locally. The independent review identifies itself as v0.2.
 - Git main holds the bootstrap and the 16cc9ed pre-analysis protocol, tagged research-protocol-v1. The production build is from d988063bb75e2870ad8e26e2edf316919d81c6d6. Use git log for the latest handoff checkpoint.
@@ -18,14 +18,15 @@
 - Verified the openly licensed Haryana immunization package against the deposit checksum and inspected its CSV headers and counts. The prepared analysis file has 28,903 village-month records. The [feasibility review](research/DATASET_FEASIBILITY.md) records the separate cluster-level scope and locks the first independent check against published Figure 4.
 - The independent Haryana check passed both published rounding targets, 1.89 additional measles vaccinations per village-month for information-hub ambassador assignment and a pure-control mean of 7.32. The sample covers 7,370 village-months. Statsmodels agreed with the coefficient and CR0 standard error to `1e-10`. See the [experiment report](docs/EXPERIMENT_REPORT.md#haryana-figure-4-replication) and [run artifact](research/reports/haryana_figure4_replication.json). Design-based uncertainty remains open. The production app serves the limited demo.
 
-## Haryana evidence release candidate
+## Haryana evidence published in v0.2.0-demo
 
 - Protocol commit `f77bfd6` specifies the sensitivity and frozen PHC evaluation. In 902 villages, PHC clustering widened the Figure 4 interval to −0.07 to 3.86 at the same +1.89 estimate. Equal village-month weights gave +0.68. Statsmodels agreed.
 - Fitted preset ridge models on 14 PHCs and evaluated learned and simple rules in 42 villages across 19 separate PHCs. All nominal intervals span zero. The synthetic runs show uneven coverage and illustrative spillover bias. The conditional Fisher diagnostic addresses a distinct null.
 - Verified CC BY 4.0 companion Haryana and CC0 Sierra Leone original files. Sierra Leone provides matched village triplets and a household-randomized component. Its effects have not been estimated here.
 - Geisinger metadata still matches all 20 pins. The node license remains null. The Study 4 notebook confirms the primary subset and six arms. Permission correspondence is drafted and unsent. No participant payloads acquired.
 - Trial benchmark frozen at `571bc45`. Thirty protocols and 35 checks completed. The raw local model and registry matched 3 of 30 scorable fields each. The verifier matched zero and abstained on all five designated cases. Reviewed source summaries remain the release path.
-- Seventeen Python and three Node tests passed, plus Ruff, mypy, strict TypeScript, all 12 local browser tests, advisory queries, the public projection and the five-file allowlist. The prior Pages deployment still serves its four verified asset digests.
+- Seventeen Python tests, three Node tests and 12 local plus 12 live browser tests passed. Ruff, mypy, strict TypeScript, GitHub CI, the public projection and the five-file allowlist passed. npm and the scoped OSV queries reported zero advisories. Eleven local captures matched production. [Verification](docs/TEST_EVIDENCE.md)
+- Build commit `dad2575` serves as `v0.2.0-demo` on the existing Pages project. Deployment ID `75a71ff8-c3c6-414b-b01c-12780f6dca7e`. GitHub publication and stable production were verified. The original deployment still serves its original four asset digests. Additional external service cost was $0. [Deployment ledger](docs/DEPLOYMENT.md)
 
 ## Resume
 

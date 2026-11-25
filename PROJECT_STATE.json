@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "as_of": "2026-11-24",
-  "phase": "haryana_release_candidate",
+  "phase": "haryana_demo_published",
   "completed": [
     "M0",
     "M7",
@@ -55,24 +55,32 @@
     "python_tests_passed": 17,
     "node_tests_passed": 3,
     "local_browser_tests_passed": 12,
-    "production_browser_tests_passed": 9,
-    "production_reference_screenshots_matched": 9,
+    "production_browser_tests_passed": 12,
+    "production_reference_screenshots_matched": 11,
     "production_integrity": "verified",
+    "github_actions": "https://github.com/AbhinavVarma02/Patient-Outreach-Optimization/actions/runs/45544473794",
     "npm_reported_vulnerabilities": 0,
     "python_osv_reported_vulnerabilities": 0,
     "alternative_data": "Sierra Leone CC0 1.0 verified with original files, matched triplets and a household assignment field"
   },
   "release": {
     "status": "published_limited",
-    "version": "0.1.0-demo",
-    "release_commit": "d988063bb75e2870ad8e26e2edf316919d81c6d6",
+    "version": "0.2.0-demo",
+    "release_commit": "dad257536b358a5035f8f51f6da1719b4050fdd5",
     "github": "https://github.com/AbhinavVarma02/Patient-Outreach-Optimization",
     "cloudflare": "https://patient-outreach-optimization.pages.dev/",
-    "deployment_id": "9112bbb3-551f-4d76-b7a4-df4e99b1b976",
+    "deployment_id": "75a71ff8-c3c6-414b-b01c-12780f6dca7e",
+    "deployment": "https://75a71ff8.patient-outreach-optimization.pages.dev/",
     "additional_external_dollars": 0
   },
+  "previous_release": {
+    "version": "0.1.0-demo",
+    "release_commit": "d988063bb75e2870ad8e26e2edf316919d81c6d6",
+    "deployment_id": "9112bbb3-551f-4d76-b7a4-df4e99b1b976",
+    "deployment": "https://9112bbb3.patient-outreach-optimization.pages.dev/",
+    "integrity": "verified after v0.2.0-demo deployment"
+  },
   "next_actions": [
-    "Publish the verified Haryana demonstration and confirm assets, browser workflows and prior-release rollback path.",
     "Reproduce Sierra Leone village and household assignment contrasts before freezing policy evaluation.",
     "Obtain documented author permission or a verified applicable license for the planned reuse, linkage and reporting. The draft request is in docs/LICENSING.md and is unsent.",
     "After approval, verify pinned payloads, extract study schemas and randomization design, resolve Study 4 date and sample differences, and run RQ0 before touching heterogeneity outcomes.",
