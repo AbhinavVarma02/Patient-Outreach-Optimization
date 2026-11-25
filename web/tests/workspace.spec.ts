@@ -30,7 +30,7 @@ test('all views fit the viewport in both themes without page errors or external 
         const overflow = await page.evaluate(() => document.documentElement.scrollWidth > innerWidth);
         expect(overflow, route+' '+width+' '+theme).toBe(false);
         if (browserName === 'chromium' && ((width === 1440 && theme === 'light')
-          || (width === 390 && (route === 'overview' || route === 'pilot')))) {
+          || (width === 390 && (route === 'overview' || route === 'pilot' || route === 'evidence')))) {
           const path = 'qa-output/'+(process.env.OUTREACH_LIVE_URL ? 'live-' : '')+route+'-'+width+'-'+theme+'.png';
           const actual = await page.screenshot({path, fullPage:true});
           if (process.env.OUTREACH_UI_REFERENCE === '1') {
@@ -82,4 +82,20 @@ test('axe WCAG A/AA checks on all views and both themes', async ({page}) => {
         route+' '+theme).toEqual([]);
     }
   }
+});
+
+test('empirical evidence keeps village outcomes and equal-capacity results distinct from patient inputs', async ({page}) => {
+  await page.setViewportSize({width:390, height:844});
+  await page.goto('/#evidence');
+  const sensitivity = page.getByRole('table', {name:'Information-hub assignment sensitivity'});
+  await expect(sensitivity.getByRole('row', {name:/Primary health center clustering/})).toContainText('-0.07 to 3.86');
+  const policy = page.getByRole('table', {name:'Held-out village policy comparisons against uniform'});
+  await expect(policy.getByRole('row', {name:/Learned village benefit score/})).toContainText('-1.33 to 3.59');
+  for (const table of [sensitivity, policy]) {
+    const fits = await table.evaluate(element => element.parentElement!.scrollWidth <= element.parentElement!.clientWidth);
+    expect(fits).toBe(true);
+  }
+  await expect(page.getByRole('link', {name:/Banerjee et al. data/})).toHaveAttribute('href', 'https://zenodo.org/records/11392582');
+  await page.getByRole('navigation').getByRole('link', {name:'Patient Targeting'}).click();
+  await expect(page.getByText('Fictional inputs', {exact:true})).toBeVisible();
 });

@@ -1,0 +1,52 @@
+{
+  "controlMean": 7.32,
+  "villageMonths": 7370,
+  "villages": 902,
+  "subCenterInterval": {
+    "estimate": 1.89,
+    "ci": [
+      0.13,
+      3.66
+    ]
+  },
+  "phcInterval": {
+    "estimate": 1.89,
+    "ci": [
+      -0.07,
+      3.86
+    ]
+  },
+  "equalVillageMonthWeights": {
+    "estimate": 0.68,
+    "ci": [
+      -0.39,
+      1.75
+    ]
+  },
+  "holdoutVillages": 42,
+  "holdoutPhcs": 19,
+  "capacityPct": 50,
+  "comparisons": {
+    "low_baseline_measles": {
+      "estimate": 0.62,
+      "ci": [
+        -1.99,
+        3.22
+      ]
+    },
+    "low_predicted_control_count": {
+      "estimate": 1.61,
+      "ci": [
+        -0.83,
+        4.04
+      ]
+    },
+    "ridge_t_learner": {
+      "estimate": 1.13,
+      "ci": [
+        -1.33,
+        3.59
+      ]
+    }
+  }
+}

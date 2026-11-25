@@ -121,6 +121,7 @@
   th:first-child,td:first-child {padding-left:0}
   thead th {color:var(--muted);font-size:.77rem;line-height:1.35;}
   tbody th {white-space:nowrap}
+  .snapshot tbody th {white-space:normal}
   .callout {padding:12px 15px;background:var(--shade);border-left:3px solid var(--accent);margin-top:14px;font-size:.89rem;}
   .page-next {display:flex;gap:18px;flex-wrap:wrap;margin-top:22px;font-size:.88rem;}
   .text-link {display:inline-flex;gap:7px;align-items:center;font-weight:750;}

@@ -1,0 +1,1157 @@
+{
+  "manifest_version": 1,
+  "trials": 30,
+  "pypdf": "7.1.1",
+  "model": {
+    "tag": "qwen2.5:1.5b",
+    "digest_prefix": "65ec06548149"
+  },
+  "scores": {
+    "registry": {
+      "cases": 35,
+      "schema_valid": 35,
+      "scorable": 30,
+      "exact_on_scorable": 3,
+      "abstention_cases": 5,
+      "correct_abstentions": 5,
+      "value_on_abstention_case": 0,
+      "incorrect_populated": 1,
+      "missing_evidence": 0,
+      "median_seconds": 0.0,
+      "max_seconds": 0.0001
+    },
+    "deterministic": {
+      "cases": 35,
+      "schema_valid": 35,
+      "scorable": 30,
+      "exact_on_scorable": 0,
+      "abstention_cases": 5,
+      "correct_abstentions": 5,
+      "value_on_abstention_case": 0,
+      "incorrect_populated": 0,
+      "missing_evidence": 0,
+      "median_seconds": 0.0001,
+      "max_seconds": 0.0004
+    },
+    "local_model": {
+      "cases": 35,
+      "schema_valid": 30,
+      "scorable": 30,
+      "exact_on_scorable": 3,
+      "abstention_cases": 5,
+      "correct_abstentions": 1,
+      "value_on_abstention_case": 4,
+      "incorrect_populated": 26,
+      "missing_evidence": 5,
+      "median_seconds": 0.539,
+      "max_seconds": 5.4548
+    },
+    "verified_model": {
+      "cases": 35,
+      "schema_valid": 30,
+      "scorable": 30,
+      "exact_on_scorable": 0,
+      "abstention_cases": 5,
+      "correct_abstentions": 5,
+      "value_on_abstention_case": 0,
+      "incorrect_populated": 0,
+      "missing_evidence": 0,
+      "median_seconds": 0.539,
+      "max_seconds": 5.4548
+    }
+  },
+  "results": [
+    {
+      "id": "NCT01795833",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0002
+        },
+        "local_model": {
+          "value": null,
+          "evidence": false,
+          "schema": false,
+          "seconds": 5.4548
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": false,
+          "seconds": 5.4548
+        }
+      }
+    },
+    {
+      "id": "NCT02584998",
+      "field": "randomization_unit",
+      "expected": null,
+      "methods": {
+        "registry": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "local_model": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 2.422
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 2.422
+        }
+      }
+    },
+    {
+      "id": "NCT02870049",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0002
+        },
+        "local_model": {
+          "value": null,
+          "evidence": false,
+          "schema": false,
+          "seconds": 1.1802
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": false,
+          "seconds": 1.1802
+        }
+      }
+    },
+    {
+      "id": "NCT02870049",
+      "field": "primary_window",
+      "expected": "12 months",
+      "methods": {
+        "registry": {
+          "value": "23 months",
+          "evidence": true,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0004
+        },
+        "local_model": {
+          "value": "primary_window",
+          "evidence": true,
+          "schema": true,
+          "seconds": 0.5232
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.5232
+        }
+      }
+    },
+    {
+      "id": "NCT02986230",
+      "field": "randomization_unit",
+      "expected": "clinic",
+      "methods": {
+        "registry": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0001
+        },
+        "local_model": {
+          "value": "10",
+          "evidence": true,
+          "schema": true,
+          "seconds": 0.7076
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.7076
+        }
+      }
+    },
+    {
+      "id": "NCT03130699",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0001
+        },
+        "local_model": {
+          "value": "block randomization scheme",
+          "evidence": true,
+          "schema": true,
+          "seconds": 0.4465
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.4465
+        }
+      }
+    },
+    {
+      "id": "NCT03200366",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0001
+        },
+        "local_model": {
+          "value": "randomization_unit",
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.2928
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.2928
+        }
+      }
+    },
+    {
+      "id": "NCT03413605",
+      "field": "randomization_unit",
+      "expected": "community partner",
+      "methods": {
+        "registry": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0001
+        },
+        "local_model": {
+          "value": "community partner",
+          "evidence": true,
+          "schema": true,
+          "seconds": 0.4097
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.4097
+        }
+      }
+    },
+    {
+      "id": "NCT03501992",
+      "field": "randomization_unit",
+      "expected": "practice",
+      "methods": {
+        "registry": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0001
+        },
+        "local_model": {
+          "value": "12 months",
+          "evidence": true,
+          "schema": true,
+          "seconds": 0.508
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.508
+        }
+      }
+    },
+    {
+      "id": "NCT03843957",
+      "field": "randomization_unit",
+      "expected": "clinic",
+      "methods": {
+        "registry": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0001
+        },
+        "local_model": {
+          "value": "22",
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.4317
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.4317
+        }
+      }
+    },
+    {
+      "id": "NCT03900767",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0001
+        },
+        "local_model": {
+          "value": "randomization_unit",
+          "evidence": true,
+          "schema": true,
+          "seconds": 0.3165
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.3165
+        }
+      }
+    },
+    {
+      "id": "NCT03973931",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0001
+        },
+        "local_model": {
+          "value": "nudge",
+          "evidence": true,
+          "schema": true,
+          "seconds": 0.6545
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.6545
+        }
+      }
+    },
+    {
+      "id": "NCT04110314",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0001
+        },
+        "local_model": {
+          "value": "no reminder",
+          "evidence": true,
+          "schema": true,
+          "seconds": 0.3059
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.3059
+        }
+      }
+    },
+    {
+      "id": "NCT04336397",
+      "field": "randomization_unit",
+      "expected": null,
+      "methods": {
+        "registry": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0002
+        },
+        "local_model": {
+          "value": "community",
+          "evidence": true,
+          "schema": true,
+          "seconds": 0.6493
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.6493
+        }
+      }
+    },
+    {
+      "id": "NCT04406714",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0001
+        },
+        "local_model": {
+          "value": "randomization_unit",
+          "evidence": true,
+          "schema": true,
+          "seconds": 0.3909
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.3909
+        }
+      }
+    },
+    {
+      "id": "NCT04462289",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0001
+        },
+        "local_model": {
+          "value": "2:1",
+          "evidence": true,
+          "schema": true,
+          "seconds": 0.5784
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.5784
+        }
+      }
+    },
+    {
+      "id": "NCT04585919",
+      "field": "randomization_unit",
+      "expected": "site",
+      "methods": {
+        "registry": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0001
+        },
+        "local_model": {
+          "value": "8 weeks",
+          "evidence": true,
+          "schema": true,
+          "seconds": 0.436
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.436
+        }
+      }
+    },
+    {
+      "id": "NCT04683731",
+      "field": "randomization_unit",
+      "expected": "provider",
+      "methods": {
+        "registry": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0001
+        },
+        "local_model": {
+          "value": "randomization_unit",
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.4364
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.4364
+        }
+      }
+    },
+    {
+      "id": "NCT04890054",
+      "field": "randomization_unit",
+      "expected": "clinic",
+      "methods": {
+        "registry": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0001
+        },
+        "local_model": {
+          "value": "clinic",
+          "evidence": true,
+          "schema": true,
+          "seconds": 0.5913
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.5913
+        }
+      }
+    },
+    {
+      "id": "NCT04939532",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0001
+        },
+        "local_model": {
+          "value": null,
+          "evidence": false,
+          "schema": false,
+          "seconds": 0.9434
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": false,
+          "seconds": 0.9434
+        }
+      }
+    },
+    {
+      "id": "NCT05006833",
+      "field": "randomization_unit",
+      "expected": null,
+      "methods": {
+        "registry": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0001
+        },
+        "local_model": {
+          "value": "clinic",
+          "evidence": true,
+          "schema": true,
+          "seconds": 0.7163
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.7163
+        }
+      }
+    },
+    {
+      "id": "NCT05341622",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "local_model": {
+          "value": "randomization_unit",
+          "evidence": true,
+          "schema": true,
+          "seconds": 0.6027
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.6027
+        }
+      }
+    },
+    {
+      "id": "NCT05341622",
+      "field": "primary_window",
+      "expected": "4 months",
+      "methods": {
+        "registry": {
+          "value": "4 months",
+          "evidence": true,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0001
+        },
+        "local_model": {
+          "value": "primary_window",
+          "evidence": true,
+          "schema": true,
+          "seconds": 0.3639
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.3639
+        }
+      }
+    },
+    {
+      "id": "NCT05453630",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0001
+        },
+        "local_model": {
+          "value": "randomization_unit",
+          "evidence": true,
+          "schema": true,
+          "seconds": 0.6921
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.6921
+        }
+      }
+    },
+    {
+      "id": "NCT05453630",
+      "field": "primary_window",
+      "expected": "12 months",
+      "methods": {
+        "registry": {
+          "value": "12 months",
+          "evidence": true,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0001
+        },
+        "local_model": {
+          "value": null,
+          "evidence": false,
+          "schema": false,
+          "seconds": 0.9227
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": false,
+          "seconds": 0.9227
+        }
+      }
+    },
+    {
+      "id": "NCT05537441",
+      "field": "randomization_unit",
+      "expected": "household",
+      "methods": {
+        "registry": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0001
+        },
+        "local_model": {
+          "value": "randomization_unit",
+          "evidence": true,
+          "schema": true,
+          "seconds": 0.3951
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.3951
+        }
+      }
+    },
+    {
+      "id": "NCT05646355",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0001
+        },
+        "local_model": {
+          "value": "days",
+          "evidence": true,
+          "schema": true,
+          "seconds": 0.6989
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.6989
+        }
+      }
+    },
+    {
+      "id": "NCT05683821",
+      "field": "randomization_unit",
+      "expected": "clinic",
+      "methods": {
+        "registry": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0001
+        },
+        "local_model": {
+          "value": "clinic",
+          "evidence": true,
+          "schema": true,
+          "seconds": 0.3326
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.3326
+        }
+      }
+    },
+    {
+      "id": "NCT05787249",
+      "field": "randomization_unit",
+      "expected": null,
+      "methods": {
+        "registry": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0001
+        },
+        "local_model": {
+          "value": "29 days",
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.6666
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.6666
+        }
+      }
+    },
+    {
+      "id": "NCT05987709",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "local_model": {
+          "value": null,
+          "evidence": false,
+          "schema": false,
+          "seconds": 0.9747
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": false,
+          "seconds": 0.9747
+        }
+      }
+    },
+    {
+      "id": "NCT05987709",
+      "field": "primary_window",
+      "expected": "3 months",
+      "methods": {
+        "registry": {
+          "value": "3 months",
+          "evidence": true,
+          "schema": true,
+          "seconds": 0.0001
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "local_model": {
+          "value": "endpoint windows",
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.6847
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.6847
+        }
+      }
+    },
+    {
+      "id": "NCT06052202",
+      "field": "randomization_unit",
+      "expected": "individual",
+      "methods": {
+        "registry": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0001
+        },
+        "local_model": {
+          "value": "randomization_unit",
+          "evidence": true,
+          "schema": true,
+          "seconds": 0.539
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.539
+        }
+      }
+    },
+    {
+      "id": "NCT06626321",
+      "field": "randomization_unit",
+      "expected": "clinic",
+      "methods": {
+        "registry": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0001
+        },
+        "local_model": {
+          "value": "2:1",
+          "evidence": true,
+          "schema": true,
+          "seconds": 0.4324
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.4324
+        }
+      }
+    },
+    {
+      "id": "NCT06698640",
+      "field": "randomization_unit",
+      "expected": "household",
+      "methods": {
+        "registry": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0001
+        },
+        "local_model": {
+          "value": "randomization_unit",
+          "evidence": true,
+          "schema": true,
+          "seconds": 0.409
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.409
+        }
+      }
+    },
+    {
+      "id": "NCT06698640",
+      "field": "primary_window",
+      "expected": null,
+      "methods": {
+        "registry": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0
+        },
+        "deterministic": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.0001
+        },
+        "local_model": {
+          "value": "29 days",
+          "evidence": true,
+          "schema": true,
+          "seconds": 0.4506
+        },
+        "verified_model": {
+          "value": null,
+          "evidence": false,
+          "schema": true,
+          "seconds": 0.4506
+        }
+      }
+    }
+  ],
+  "manifest_sha256": "31727d68b937714d3d15058cebf3abdd4e7be7870c883bacac88e79e1c6d222a",
+  "median_seconds": {
+    "registry": 0.0,
+    "deterministic": 0.0001,
+    "local_model": 0.539,
+    "verified_model": 0.539
+  }
+}

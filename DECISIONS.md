@@ -19,3 +19,11 @@ The project owner approved the v0.1.0-demo production design. Carry its typograp
 ## D06 Randomized outreach fallback
 
 Keep the Geisinger protocol and rights gate in place. In parallel, use the CC BY 4.0 Haryana replication archive for an explicitly scoped, village-level study of immunization outreach. This is the closest inspected public candidate with verified randomization, usable aggregate baseline and outcome data, and a clear license. Its interventions and population differ from Geisinger. Begin with the published reference check and require design and disclosure review before wider use. [Feasibility evidence](research/DATASET_FEASIBILITY.md)
+
+## D07 Community analysis and release boundary
+
+Ship the independently verified Figure 4 replication, PHC-clustered sensitivity and transparent exploratory matched-block holdout. Restrict learned ranking to a fixed ridge T-learner and compare with uniform, baseline uptake and predicted control outcomes. The data support a narrow village decision. Sparse cross-randomized cells, small clustered evaluation support and interference rule out a full factorial optimizer and patient extrapolation. Label the nominal intervals and their calibration limits in the interface. Pursue the separately licensed Sierra Leone design for household-level outreach replication. [Haryana study card](docs/HARYANA_RESEARCH.md) · [Alternative dataset review](research/DATASET_FEASIBILITY.md#companion-and-alternative-datasets)
+
+## D08 Extraction delivery
+
+Keep reviewed study evidence as the release path. The 30-trial benchmark gave neither local generation nor its verifier a reliable coverage gain. Keep labels, sources and results frozen for reference. Test future changes on a new holdout after development, with second review for ambiguous unit and timing labels. [Benchmark](docs/AI_EVALUATION.md)

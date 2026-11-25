@@ -100,9 +100,9 @@ def analyze(archive_path: Path, check_reference: bool = False) -> dict:
         "information_hub_cr0_se_diagnostic": cluster_se,
     }
     if check_reference:
-        from statsmodels import __version__ as reference_version
-        from statsmodels.regression.linear_model import WLS
-        from statsmodels.stats.sandwich_covariance import cov_cluster
+        from statsmodels import __version__ as reference_version  # type: ignore[import-untyped]
+        from statsmodels.regression.linear_model import WLS  # type: ignore[import-untyped]
+        from statsmodels.stats.sandwich_covariance import cov_cluster  # type: ignore[import-untyped]
 
         reference_fit = WLS(outcome, design, weights=weight).fit()
         reference_vcov = cov_cluster(reference_fit, clusters, use_correction=False)

@@ -1,0 +1,27 @@
+{
+  "scope": "fictional matched village pairs with one lottery per PHC",
+  "replicates_per_scenario": 3000,
+  "phcs": 19,
+  "seed": 20261124,
+  "null": {
+    "contrast_under_no_spillover": 0.0,
+    "mean_estimate": -0.0008210526315789463,
+    "bias_vs_no_spillover_target": -0.0008210526315789463,
+    "coverage_of_no_spillover_target": 0.9223333333333333,
+    "coverage_monte_carlo_se": 0.004886530997055599
+  },
+  "heterogeneous": {
+    "contrast_under_no_spillover": 0.4892706415384639,
+    "mean_estimate": 0.4901536960077314,
+    "bias_vs_no_spillover_target": 0.000883054469267508,
+    "coverage_of_no_spillover_target": 0.9993333333333333,
+    "coverage_monte_carlo_se": 0.0004712473597529079
+  },
+  "between_village_spillover": {
+    "contrast_under_no_spillover": 0.4892706415384639,
+    "mean_estimate": 0.0025871615701139124,
+    "bias_vs_no_spillover_target": -0.48668347996835,
+    "coverage_of_no_spillover_target": 0.8373333333333334,
+    "coverage_monte_carlo_se": 0.006738106119235142
+  }
+}

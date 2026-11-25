@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { bands, comparePolicies, pilotDesign, plan } from './math';
 import { osf, paper, studies, supplement } from './evidence';
+import haryana from './haryana.json';
 import './style.css';
 
 const views = {overview: 'Overview', targeting: 'Patient Targeting', planner: 'Outreach Planner',
@@ -70,7 +71,7 @@ function Overview() {
     <section className="hero">
       <div className="hero-copy"><p className="eyebrow"><span className="dot"/> Preventive care research</p>
         <h1>Which outreach strategy is worth testing?</h1>
-        <p>Compare ways to prioritize outreach, estimate channel costs, and size a randomized pilot. Start with evidence from flu vaccination trials.</p>
+        <p>Compare ways to prioritize outreach, estimate channel costs, and size a randomized pilot. Start with evidence from immunization trials.</p>
         <div className="hero-actions"><a href="#targeting" className="button">Explore targeting <Icon name="arrow"/></a>
           <a href="#evidence" className="hero-link">Read the evidence <span aria-hidden="true">↗</span></a></div>
       </div>
@@ -88,7 +89,7 @@ function Overview() {
         <p>Assumed vaccination effect by clinical risk band (pp)</p>
       </figure>
     </section>
-    <aside className="evidence-strip"><span className="dot"/><p><strong>Limited research demonstration.</strong> Sources describe published trials. Interactive outputs use fictional assumptions while dataset reuse permission remains unresolved.</p><a href="#evidence">Evidence status <span aria-hidden="true">↗</span></a></aside>
+    <aside className="evidence-strip"><span className="dot"/><p><strong>Limited research demonstration.</strong> Review an independent village-level analysis from Haryana and published Geisinger trial evidence. Interactive outputs use fictional assumptions.</p><a href="#evidence">Evidence status <span aria-hidden="true">↗</span></a></aside>
     <section className="section"><div className="section-title"><h2>From evidence to a pilot</h2><p>Work through a fictional outreach decision.</p></div>
       <div className="workflow">
         <Workflow view="targeting" verb="Compare allocation rules" detail="See how risk and estimated benefit change who receives the same number of contacts."/>
@@ -271,7 +272,8 @@ function Pilot() {
 
 function Evidence() {
   return <Page title="Evidence & Methods" copy="Trace the trial design behind each workflow and see which analyses remain pending.">
-    <div className="evidence-strip"><span className="dot"/><p><strong>Current status.</strong> This workspace reports authors’ published evidence. Independent replication, clinical effect estimation and model validation against real outcomes are pending.</p></div>
+    <div className="evidence-strip"><span className="dot"/><p><strong>Current status.</strong> Haryana contributes independent community-level analysis. The Geisinger summaries report authors’ published findings while reuse permission remains open.</p></div>
+    <HaryanaEvidence/>
     <section className="section"><div className="section-title"><h2>Trial explorer</h2><a href={paper}>Published article <span aria-hidden="true">↗</span></a></div>
       <div className="study-grid">{studies.map(study => <article className="study" key={study.id}><p className="eyebrow">Study {study.number} · {study.season}</p>
         <h3>{study.scope}</h3><p><strong>{study.population}</strong></p><p>{study.contrast}</p><p className="small">{study.status}</p>
@@ -287,5 +289,40 @@ function Evidence() {
       <details><summary>Data provenance and rights</summary><p>The <a href={osf}>OSF catalog</a> is public and records no dataset license. The application does not load trial records, accept patient identifiers or store scenario inputs. Only theme preference is saved locally.</p></details>
     </section>
   </Page>;
+}
+
+function HaryanaEvidence() {
+  const decimals = (value: number) => value.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+  const bounds = (ci: number[]) => ci.map(decimals).join(' to ');
+  const figure = haryana.phcInterval;
+  const labels = {
+    low_baseline_measles: 'Low baseline measles vaccination',
+    low_predicted_control_count: 'Low predicted vaccination count without an ambassador',
+    ridge_t_learner: 'Learned village benefit score',
+  };
+  return <section className="section snapshot">
+    <div className="section-title"><h2>Haryana immunization trial</h2>
+      <a href="https://zenodo.org/records/11392582">Banerjee et al. data · CC BY 4.0 <span aria-hidden="true">↗</span></a></div>
+    <p>We reproduced Figure 4 across {number(haryana.villages)} villages and {number(haryana.villageMonths)} village-months.
+      The population-weighted estimate for assigning information-hub ambassadors was {decimals(figure.estimate)} additional
+      recorded measles vaccinations per village-month. The pure-control mean was {decimals(haryana.controlMean)}.</p>
+    <Table caption="Information-hub assignment sensitivity" headings={['Analysis', 'Effect per village-month', '95% interval']}
+      rows={[
+        ['Published sub-center clustering', decimals(haryana.subCenterInterval.estimate), bounds(haryana.subCenterInterval.ci)],
+        ['Primary health center clustering', decimals(figure.estimate), bounds(figure.ci)],
+        ['Equal village-month weights', decimals(haryana.equalVillageMonthWeights.estimate), bounds(haryana.equalVillageMonthWeights.ci)],
+      ]}/>
+    <p>Primary health center clustering widened the interval to include zero. The estimate averages over the trial’s other
+      assigned interventions. It describes a community outcome at immunization camps.</p>
+    <p>In an exploratory holdout of {haryana.holdoutVillages} villages across {haryana.holdoutPhcs} primary health centers,
+      targeted rules showed no clear improvement over uniform ambassador allocation at {haryana.capacityPct}% expected capacity.</p>
+    <Table caption="Held-out village policy comparisons against uniform"
+      headings={['Allocation rule', 'Difference per village-month', 'Nominal 95% simultaneous interval']}
+      rows={Object.entries(haryana.comparisons).map(([key, result]) =>
+        [labels[key as keyof typeof labels], decimals(result.estimate), bounds(result.ci)])}/>
+    <p>Simulation found uneven interval coverage at this sample size. Interpretation also depends on limited spillover
+      between villages and comparable outcome recording. The patient outreach calculators use separate fictional inputs.</p>
+    <a href="https://github.com/AbhinavVarma02/Patient-Outreach-Optimization/blob/main/docs/HARYANA_RESEARCH.md">Analysis, uncertainty and reproduction <span aria-hidden="true">↗</span></a>
+  </section>;
 }
 createRoot(document.getElementById('root')!).render(<App/>);

@@ -13,6 +13,8 @@ Recorded 2026-11-24 before any project access to row-level outcomes. Prior findi
 
 Only pre-treatment features with verified semantics enter training. Clinical risk, behavioral risk, benefit and contactability have different meanings. Keep race and ethnicity out of the primary policy. Require at least 11 observations in every released subgroup-arm cell plus complementary suppression and reconstruction review. Report unassessed groups. No inference or linkage begins until permission is documented.
 
+The separately licensed Haryana work has its own [retrospective analysis protocol](../research/HARYANA_PROTOCOL.md). Geisinger patient estimands and thresholds do not carry over to village-level outcomes.
+
 ## Limited software validation
 
 Fictional independent randomized replicates will test known-answer formulas and interval behavior at 1,000 or more repetitions per scenario. Use nominal 95% intervals, a Wilson Monte Carlo confidence interval and the review's 93–97% operating band for the coverage point estimate. For the size check, report the observed null rejection rate and whether its Wilson interval includes 5%. Record bias and policy regret. Missing, clustered or incompatible data fail closed unless a suitable estimator has been independently validated.

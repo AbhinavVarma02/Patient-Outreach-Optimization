@@ -31,3 +31,11 @@ If deidentified IDs recur across studies, could you clarify what they represent 
 Thank you for clarifying the permitted uses and preferred citation. If Geisinger handles these requests through a data steward or review process, a referral would be appreciated.
 
 Draft only. No correspondence has been sent.
+
+## Continuation verification
+
+The OSF API again returned a public project with `attributes.node_license` equal to null, and all 20 pinned metadata entries matched. The requested rights to new secondary analyses, derived aggregate publication, linkage and model export remain unresolved. The deposited participant files were left untouched. The study article's research-reproduction statement and the absence of a reuse license are separate pieces of evidence. [OSF node](https://api.osf.io/v2/nodes/mqbux/) · [Publisher data availability](https://www.nature.com/articles/s41562-026-02603-4#data-availability) · [OSF licensing guidance](https://help.osf.io/article/148-licensing)
+
+The public OSF storage catalog contained no filename matching a license, terms document or README. Read the authors' Study 4 notebook as text. Its primary Figure 5 code subsets the analysis payload to all-channel-eligible participants, contrasts six assigned modalities and uses the precomputed `vaccinated` flag. The notebook references author-local RDS files while the deposit pins CSVs. The 29-day window is documented by the supplement. Audit the correspondence between definitions and deposited bytes after authorization. [OSF manuscript catalog](https://api.osf.io/v2/nodes/mqbux/files/osfstorage/6a064485ed0692607d7831a1/)
+
+Haryana and its companion replication archive are CC BY 4.0. Published project results attribute the authors, identify the pinned data deposit and describe the transformations. The Sierra Leone feasibility deposit is CC0 1.0. Study materials and data are licensed separately from this repository's original software. [Haryana data card and attribution](HARYANA_RESEARCH.md) · [Feasibility sign-off](../research/DATASET_FEASIBILITY.md#companion-and-alternative-datasets)

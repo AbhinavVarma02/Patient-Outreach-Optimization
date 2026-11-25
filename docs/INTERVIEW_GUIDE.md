@@ -19,3 +19,10 @@ Built a decision workspace for comparing preventive outreach at matched capacity
 
 - Built a TypeScript workspace for matched-capacity targeting, channel costing and randomized pilot sizing, with a separate evidence trail to four published study designs.
 - Implemented known-propensity AIPW and a reproducible fictional holdout and assessed coverage in six known-truth scenarios with 1,500 replications each.
+
+## Continuation talking points
+
+- Reproduced a published community immunization contrast across 902 villages, checked variance independently, and compared frozen outreach policies on 19 held-out primary health centers. The sensitivity analysis explains why the apparent precision depends on analysis choices.
+- Built a frozen assessment on 30 public trial protocols with registry, deterministic, local model and verified extraction paths. Evidence verification avoided unsupported fills on designated abstention cases and its coverage did not justify deployment.
+
+In a demo, open Evidence & Methods and show how the Haryana interval changes when clustering is widened. Walk through the matched village comparison and its interference assumptions. Then select Patient Targeting and change the fictional effect pattern to show how capacity and ranking interact. Close by showing the prospective sample-size result and its assumed design.

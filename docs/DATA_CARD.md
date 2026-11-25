@@ -12,3 +12,7 @@ The pinned historical inventory reports expected archive records: 46,602 full / 
 No inferred household ID. The supplement reports repeated trial participation. Linkage needs explicit authorization and verified identifier semantics. Full-population sensitivities require outcome-availability and attrition analysis.
 
 Sources are documented in [research/SOURCES.md](../research/SOURCES.md).
+
+## Haryana and follow-up deposits
+
+The [Haryana data and estimand card](HARYANA_RESEARCH.md) records the separate village-level immunization experiment and its CC BY 4.0 source, eligibility, coverage and leakage boundaries. The separately licensed [Sierra Leone deposit](../research/DATASET_FEASIBILITY.md#companion-and-alternative-datasets) offers household-clustered follow-up with a different intervention and endpoint.

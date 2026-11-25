@@ -10,4 +10,10 @@ The project evaluates whether outreach decisions should rely on clinical risk, e
 
 Known-propensity AIPW uses independent nuisance models and paired scores to compare fixed policies on the same outcomes. A richer causal forest or network would require defensible feature sets, sufficient real data and model-selection safeguards. Fractional ties preserve expected matched capacity. The planner uses direct arithmetic to find feasible single-channel allocations because the objective and constraints are separable within each candidate. Treatment mixtures and eligibility-specific effects need additional design support.
 
+## Empirical pipeline
+
+The [Haryana track](HARYANA_RESEARCH.md) starts with a verifiable deposit and a pretreatment feature contract. It validates a one-hot assignment within each intervention domain, nests village assignments in health sub-centers and PHCs, and gates downstream analysis on two published reference numbers. The policy experiment fits ridge per treatment on 14 whole training PHCs, freezes the fit and ranks a disjoint roster. Paired augmented scores reuse the documented conditional block lottery. Cluster sensitivity, a fixed-roster calibration and a conditional sharp-null test expose limitations of the small test sample. A separate export script reduces the experiment to selected rounded aggregates. [Architecture](ARCHITECTURE.md) · [Protocol](../research/HARYANA_PROTOCOL.md)
+
+The [document benchmark](AI_EVALUATION.md) compares exact scorable labels and abstention across registry metadata, deterministic PDF text parsing, installed local inference and an evidence verifier on the same pinned inputs. Local generation only improves a feature when the returned data are demonstrably supported and useful. The benchmark did not meet this standard.
+
 The [experiment report](EXPERIMENT_REPORT.md) includes a fictional null comparison. [Limitations](LIMITATIONS.md) describe unresolved scientific gates. [Deployment](DEPLOYMENT.md) covers static hosting and rollback.

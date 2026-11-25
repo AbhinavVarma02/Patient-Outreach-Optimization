@@ -101,8 +101,8 @@ def evaluate(manifest: dict, cache: Path, fetch: bool, use_model: bool) -> dict:
                     "schema": candidate is not None, "seconds": elapsed,
                 }
             results.append({"id": identifier, "field": field, "expected": check["expected"], "methods": local})
-    scores = defaultdict(Counter)
-    timings = defaultdict(list)
+    scores: dict[str, Counter[str]] = defaultdict(Counter)
+    timings: dict[str, list[float]] = defaultdict(list)
     for case in results:
         expected = case["expected"]
         for method, output in case["methods"].items():
@@ -119,12 +119,14 @@ def evaluate(manifest: dict, cache: Path, fetch: bool, use_model: bool) -> dict:
             tally["missing_evidence"] += value is not None and not output["evidence"]
             timings[method].append(output["seconds"])
             output["seconds"] = round(output["seconds"], 4)
-    for method, summary in scores.items():
-        summary["median_seconds"] = round(median(timings[method]), 4)
-        summary["max_seconds"] = round(max(timings[method]), 4)
+    summaries = {
+        method: {**summary, "median_seconds": round(median(timings[method]), 4),
+                 "max_seconds": round(max(timings[method]), 4)}
+        for method, summary in scores.items()
+    }
     return {"manifest_version": manifest["version"], "trials": len(manifest["trials"]), "pypdf": pdf_version,
             "model": {"tag": LOCAL_MODEL, "digest_prefix": MODEL_ID} if use_model else None,
-            "scores": dict(scores), "results": results}
+            "scores": summaries, "results": results}
 
 
 def main() -> None:
@@ -136,8 +138,7 @@ def main() -> None:
     manifest = MANIFEST.read_bytes()
     report = evaluate(json.loads(manifest), args.cache, args.fetch, args.model)
     report["manifest_sha256"] = sha256(manifest).hexdigest()
-    runtime = {name: round(values["median_seconds"], 4) for name, values in report["scores"].items()}
-    print(json.dumps({**report, "median_seconds": runtime}, indent=2))
+    print(json.dumps(report, indent=2))
 
 
 if __name__ == "__main__":

@@ -1,0 +1,643 @@
+{
+  "archive_sha256": "052d7705d50d87ffa22992532e76776ea2c48fa4988635b08a4abece5fc2fe7e",
+  "baseline_sha256": "b4ec3c94f8800e9b1434ff298597c805566fe8adafa9e1f6eead315c325e6c32",
+  "code_sha256": "1dd403c86b1e219e7b72c708d735917a5677b34ae9e3d12def7512207efe8f51",
+  "figure_4": {
+    "april_october_phc_cr1": {
+      "estimates": {
+        "gossip": {
+          "ci": [
+            -0.03703840924551871,
+            4.207576164246165
+          ],
+          "clusters": 140,
+          "estimate": 2.085268877500323,
+          "holm_p_value": 0.5407734512137364,
+          "p_value": 0.05407734512137364,
+          "standard_error": 1.0734023858643862
+        },
+        "highflat": {
+          "ci": [
+            -2.7211662035205344,
+            1.888347302739279
+          ],
+          "clusters": 140,
+          "estimate": -0.4164094503906277,
+          "holm_p_value": 1.0,
+          "p_value": 0.7214655502955587,
+          "standard_error": 1.1656801129114556
+        },
+        "highslope": {
+          "ci": [
+            -0.04184506377759689,
+            4.140098021015515
+          ],
+          "clusters": 140,
+          "estimate": 2.049126478618959,
+          "holm_p_value": 0.5407734512137364,
+          "p_value": 0.0546984897508365,
+          "standard_error": 1.0575536617152388
+        },
+        "lowflat": {
+          "ci": [
+            -1.1994063352882371,
+            2.536795982143878
+          ],
+          "clusters": 140,
+          "estimate": 0.6686948234278205,
+          "holm_p_value": 1.0,
+          "p_value": 0.4802922073690794,
+          "standard_error": 0.9448321896290871
+        },
+        "lowslope": {
+          "ci": [
+            -1.0556714779174963,
+            1.9407466825783468
+          ],
+          "clusters": 140,
+          "estimate": 0.4425376023304253,
+          "holm_p_value": 1.0,
+          "p_value": 0.5601572740131365,
+          "standard_error": 0.7577513451068857
+        },
+        "random": {
+          "ci": [
+            -2.743887386486658,
+            1.3346963434218568
+          ],
+          "clusters": 140,
+          "estimate": -0.7045955215324007,
+          "holm_p_value": 1.0,
+          "p_value": 0.4956589358435191,
+          "standard_error": 1.0314155574860806
+        },
+        "trfrac33_first": {
+          "ci": [
+            -1.591061522459573,
+            1.5211095841693114
+          ],
+          "clusters": 140,
+          "estimate": -0.034975969145130875,
+          "holm_p_value": 1.0,
+          "p_value": 0.9646168091147996,
+          "standard_error": 0.7870236115044043
+        },
+        "trfrac66_first": {
+          "ci": [
+            -1.9948411257847225,
+            0.2265541028739675
+          ],
+          "clusters": 140,
+          "estimate": -0.8841435114553775,
+          "holm_p_value": 0.9423019121914458,
+          "p_value": 0.11778773902393072,
+          "standard_error": 0.5617591178434174
+        },
+        "trusted": {
+          "ci": [
+            -0.9460714146078046,
+            1.7254908724352862
+          ],
+          "clusters": 140,
+          "estimate": 0.3897097289137408,
+          "holm_p_value": 1.0,
+          "p_value": 0.5649838911900704,
+          "standard_error": 0.675599935694135
+        },
+        "trustgossip": {
+          "ci": [
+            -1.612929964508161,
+            1.692314179756009
+          ],
+          "clusters": 140,
+          "estimate": 0.039692107623924056,
+          "holm_p_value": 1.0,
+          "p_value": 0.9621931137895363,
+          "standard_error": 0.8358490244260107
+        }
+      },
+      "village_months": 6038
+    },
+    "equal_weights_phc_cr1": {
+      "estimates": {
+        "gossip": {
+          "ci": [
+            -0.3926123734035458,
+            1.7530362784304268
+          ],
+          "clusters": 140,
+          "estimate": 0.6802119525134405,
+          "holm_p_value": 1.0,
+          "p_value": 0.2120893392453554,
+          "standard_error": 0.5426038907015975
+        },
+        "highflat": {
+          "ci": [
+            -1.6317902419053703,
+            0.45384465179806566
+          ],
+          "clusters": 140,
+          "estimate": -0.5889727950536523,
+          "holm_p_value": 1.0,
+          "p_value": 0.2660534498894558,
+          "standard_error": 0.5274272686440112
+        },
+        "highslope": {
+          "ci": [
+            -0.12058901347403106,
+            2.083336211701187
+          ],
+          "clusters": 140,
+          "estimate": 0.9813735991135779,
+          "holm_p_value": 0.8046921428199384,
+          "p_value": 0.08046921428199384,
+          "standard_error": 0.5573412035438884
+        },
+        "lowflat": {
+          "ci": [
+            -0.6800118577150651,
+            1.760455376225273
+          ],
+          "clusters": 140,
+          "estimate": 0.540221759255104,
+          "holm_p_value": 1.0,
+          "p_value": 0.38290116104635513,
+          "standard_error": 0.6171592982541387
+        },
+        "lowslope": {
+          "ci": [
+            -0.5222414632809352,
+            1.0811876678230896
+          ],
+          "clusters": 140,
+          "estimate": 0.27947310227107725,
+          "holm_p_value": 1.0,
+          "p_value": 0.49182569488879563,
+          "standard_error": 0.40548432021136305
+        },
+        "random": {
+          "ci": [
+            -1.1909296690423217,
+            0.3054786422248049
+          ],
+          "clusters": 140,
+          "estimate": -0.44272551340875843,
+          "holm_p_value": 1.0,
+          "p_value": 0.2440309457387399,
+          "standard_error": 0.3784202838044979
+        },
+        "trfrac33_first": {
+          "ci": [
+            -0.5274052635232925,
+            0.9458018183461346
+          ],
+          "clusters": 140,
+          "estimate": 0.20919827741142108,
+          "holm_p_value": 1.0,
+          "p_value": 0.5753431178044645,
+          "standard_error": 0.3725530243491851
+        },
+        "trfrac66_first": {
+          "ci": [
+            -0.8410038868227181,
+            0.3500954073234821
+          ],
+          "clusters": 140,
+          "estimate": -0.245454239749618,
+          "holm_p_value": 1.0,
+          "p_value": 0.41653004607026384,
+          "standard_error": 0.30121199510611407
+        },
+        "trusted": {
+          "ci": [
+            -0.5785413939328369,
+            0.8877172867155555
+          ],
+          "clusters": 140,
+          "estimate": 0.1545879463913593,
+          "holm_p_value": 1.0,
+          "p_value": 0.6773884888414784,
+          "standard_error": 0.3707958729472225
+        },
+        "trustgossip": {
+          "ci": [
+            -0.6824457040346906,
+            0.9769702977528861
+          ],
+          "clusters": 140,
+          "estimate": 0.14726229685909775,
+          "holm_p_value": 1.0,
+          "p_value": 0.7261773131181397,
+          "standard_error": 0.41964259996286685
+        }
+      },
+      "village_months": 7370
+    },
+    "phc_cr1": {
+      "estimates": {
+        "gossip": {
+          "ci": [
+            -0.07117685085268621,
+            3.855839925436798
+          ],
+          "clusters": 140,
+          "estimate": 1.8923315372920557,
+          "holm_p_value": 0.5290144475849909,
+          "p_value": 0.05877938306499899,
+          "standard_error": 0.9930864402444575
+        },
+        "highflat": {
+          "ci": [
+            -2.5864029361482195,
+            1.7273398923914516
+          ],
+          "clusters": 140,
+          "estimate": -0.42953152187838395,
+          "holm_p_value": 1.0,
+          "p_value": 0.6943716925122072,
+          "standard_error": 1.090883933980099
+        },
+        "highslope": {
+          "ci": [
+            0.09118151640689609,
+            3.8531814734055367
+          ],
+          "clusters": 140,
+          "estimate": 1.9721814949062164,
+          "holm_p_value": 0.40016917005669683,
+          "p_value": 0.040016917005669686,
+          "standard_error": 0.9513560441230414
+        },
+        "lowflat": {
+          "ci": [
+            -0.9898635356330054,
+            2.805703323212973
+          ],
+          "clusters": 140,
+          "estimate": 0.907919893789984,
+          "holm_p_value": 1.0,
+          "p_value": 0.3458394914637368,
+          "standard_error": 0.9598446340539215
+        },
+        "lowslope": {
+          "ci": [
+            -0.9237123021762728,
+            1.7463902470064625
+          ],
+          "clusters": 140,
+          "estimate": 0.4113389724150949,
+          "holm_p_value": 1.0,
+          "p_value": 0.5433976830298333,
+          "standard_error": 0.6752307888434815
+        },
+        "random": {
+          "ci": [
+            -2.5348395041986858,
+            1.106971169417608
+          ],
+          "clusters": 140,
+          "estimate": -0.7139341673905388,
+          "holm_p_value": 1.0,
+          "p_value": 0.4395353998122058,
+          "standard_error": 0.9209618914139498
+        },
+        "trfrac33_first": {
+          "ci": [
+            -1.4493297060265908,
+            1.4621737593224535
+          ],
+          "clusters": 140,
+          "estimate": 0.006422026647931318,
+          "holm_p_value": 1.0,
+          "p_value": 0.9930532141136558,
+          "standard_error": 0.7362776318197588
+        },
+        "trfrac66_first": {
+          "ci": [
+            -1.9349867217788588,
+            0.12779018913542783
+          ],
+          "clusters": 140,
+          "estimate": -0.9035982663217155,
+          "holm_p_value": 0.6836451939649693,
+          "p_value": 0.08545564924562116,
+          "standard_error": 0.5216468113522821
+        },
+        "trusted": {
+          "ci": [
+            -0.9005102201118236,
+            1.5377385832848374
+          ],
+          "clusters": 140,
+          "estimate": 0.3186141815865069,
+          "holm_p_value": 1.0,
+          "p_value": 0.6061665602934874,
+          "standard_error": 0.6165982888627728
+        },
+        "trustgossip": {
+          "ci": [
+            -1.4765022263875773,
+            1.620433115553584
+          ],
+          "clusters": 140,
+          "estimate": 0.07196544458300336,
+          "holm_p_value": 1.0,
+          "p_value": 0.9269178481198124,
+          "standard_error": 0.7831707042773489
+        }
+      },
+      "village_months": 7370
+    },
+    "pure_control_mean": 7.3197685795541885,
+    "statsmodels_cross_check": true,
+    "sub_center_cr0": {
+      "estimates": {
+        "gossip": {
+          "ci": [
+            0.1255770235557112,
+            3.6590860510284005
+          ],
+          "clusters": 617,
+          "estimate": 1.8923315372920557,
+          "holm_p_value": 0.32251633821926595,
+          "p_value": 0.03583514869102955,
+          "standard_error": 0.8996508048284505
+        },
+        "highflat": {
+          "ci": [
+            -2.4940724875614038,
+            1.6350094438046359
+          ],
+          "clusters": 617,
+          "estimate": -0.42953152187838395,
+          "holm_p_value": 1.0,
+          "p_value": 0.6829922045333149,
+          "standard_error": 1.0512869371138978
+        },
+        "highslope": {
+          "ci": [
+            0.42394149071651244,
+            3.5204214990959204
+          ],
+          "clusters": 617,
+          "estimate": 1.9721814949062164,
+          "holm_p_value": 0.1262309409945295,
+          "p_value": 0.012623094099452949,
+          "standard_error": 0.7883808163541682
+        },
+        "lowflat": {
+          "ci": [
+            -0.9964434682094356,
+            2.8122832557894037
+          ],
+          "clusters": 617,
+          "estimate": 0.907919893789984,
+          "holm_p_value": 1.0,
+          "p_value": 0.34950237672704143,
+          "standard_error": 0.969722741890934
+        },
+        "lowslope": {
+          "ci": [
+            -0.8435606124637756,
+            1.6662385572939653
+          ],
+          "clusters": 617,
+          "estimate": 0.4113389724150949,
+          "holm_p_value": 1.0,
+          "p_value": 0.5200003306397434,
+          "standard_error": 0.6390086527231267
+        },
+        "random": {
+          "ci": [
+            -2.460985930348391,
+            1.0331175955673133
+          ],
+          "clusters": 617,
+          "estimate": -0.7139341673905388,
+          "holm_p_value": 1.0,
+          "p_value": 0.42256304580338266,
+          "standard_error": 0.889617947712541
+        },
+        "trfrac33_first": {
+          "ci": [
+            -1.34265584587914,
+            1.3554998991750027
+          ],
+          "clusters": 617,
+          "estimate": 0.006422026647931318,
+          "holm_p_value": 1.0,
+          "p_value": 0.9925441907111863,
+          "standard_error": 0.6869652712693484
+        },
+        "trfrac66_first": {
+          "ci": [
+            -2.0850677235899946,
+            0.27787119094656365
+          ],
+          "clusters": 617,
+          "estimate": -0.9035982663217155,
+          "holm_p_value": 1.0,
+          "p_value": 0.13362275521145298,
+          "standard_error": 0.6016172251705704
+        },
+        "trusted": {
+          "ci": [
+            -0.9796058611550238,
+            1.6168342243280376
+          ],
+          "clusters": 617,
+          "estimate": 0.3186141815865069,
+          "holm_p_value": 1.0,
+          "p_value": 0.6299992202001244,
+          "standard_error": 0.6610679057085673
+        },
+        "trustgossip": {
+          "ci": [
+            -1.2904206029265275,
+            1.4343514920925342
+          ],
+          "clusters": 617,
+          "estimate": 0.07196544458300336,
+          "holm_p_value": 1.0,
+          "p_value": 0.9174132717242205,
+          "standard_error": 0.6937419401504413
+        }
+      },
+      "village_months": 7370
+    }
+  },
+  "holdout_seed": 20261124,
+  "license": "CC-BY-4.0",
+  "policy_experiment": {
+    "comparisons": {
+      "low_baseline_measles": {
+        "common_calendar_sensitivity": {
+          "ci": [
+            -1.5816904087635852,
+            2.813639074153788
+          ],
+          "clusters": 19,
+          "estimate": 0.6159743326951012,
+          "p_value": 0.5632736769409118,
+          "standard_error": 1.0460477349300163
+        },
+        "delta_vs_uniform": {
+          "ci": [
+            -1.4599129932143164,
+            2.6921025883097345
+          ],
+          "clusters": 19,
+          "estimate": 0.6160947975477089,
+          "p_value": 0.5407844634306997,
+          "standard_error": 0.9881412784473647
+        },
+        "expected_capacity": 0.5,
+        "ipw_sensitivity": {
+          "ci": [
+            -1.978420557418627,
+            3.1614279270331394
+          ],
+          "clusters": 19,
+          "estimate": 0.5915036848072561,
+          "p_value": 0.6345308029564684,
+          "standard_error": 1.223236366224725
+        },
+        "sharp_null_bonferroni_p": 1.0,
+        "sharp_null_p": 0.4902,
+        "simultaneous_ci": [
+          -1.99175313831775,
+          3.2239427334131676
+        ]
+      },
+      "low_predicted_control_count": {
+        "common_calendar_sensitivity": {
+          "ci": [
+            -0.37629702078256333,
+            3.7422495038578383
+          ],
+          "clusters": 19,
+          "estimate": 1.6829762415376375,
+          "p_value": 0.1031336884182176,
+          "standard_error": 0.9801759526897728
+        },
+        "delta_vs_uniform": {
+          "ci": [
+            -0.33163004641891236,
+            3.546084986032358
+          ],
+          "clusters": 19,
+          "estimate": 1.6072274698067228,
+          "p_value": 0.09864628949638755,
+          "standard_error": 0.9228602866211973
+        },
+        "expected_capacity": 0.5,
+        "ipw_sensitivity": {
+          "ci": [
+            -0.6096894478961778,
+            4.321230453187182
+          ],
+          "clusters": 19,
+          "estimate": 1.8557705026455023,
+          "p_value": 0.1312030373565935,
+          "standard_error": 1.1735132971706168
+        },
+        "sharp_null_bonferroni_p": 0.043500000000000004,
+        "sharp_null_p": 0.0145,
+        "simultaneous_ci": [
+          -0.8283344746743686,
+          4.042789414287814
+        ]
+      },
+      "ridge_t_learner": {
+        "common_calendar_sensitivity": {
+          "ci": [
+            -0.8919496095484918,
+            3.249984883841896
+          ],
+          "clusters": 19,
+          "estimate": 1.1790176371467023,
+          "p_value": 0.2471873979759132,
+          "standard_error": 0.9857420727794319
+        },
+        "delta_vs_uniform": {
+          "ci": [
+            -0.8243229984793912,
+            3.086983178290559
+          ],
+          "clusters": 19,
+          "estimate": 1.1313300899055838,
+          "p_value": 0.23992741215553337,
+          "standard_error": 0.9308546680583176
+        },
+        "expected_capacity": 0.5,
+        "ipw_sensitivity": {
+          "ci": [
+            -1.6683678044381067,
+            3.2727659525862545
+          ],
+          "clusters": 19,
+          "estimate": 0.8021990740740739,
+          "p_value": 0.5038132672378314,
+          "standard_error": 1.1759441003478326
+        },
+        "sharp_null_bonferroni_p": 0.3207,
+        "sharp_null_p": 0.1069,
+        "simultaneous_ci": [
+          -1.325330184929719,
+          3.587990364740887
+        ]
+      }
+    },
+    "heldout_arm_villages": {
+      "control": 22,
+      "hub": 20
+    },
+    "heldout_phcs": 19,
+    "heldout_propensity_range": [
+      0.3333333333333333,
+      0.5
+    ],
+    "heldout_villages": 42,
+    "limits": "Exploratory matched-block analysis conditional on exchangeability, roster observation and no between-village interference.",
+    "sharp_null_draws": 19999,
+    "sub_centers": 33,
+    "train_phcs": 14,
+    "train_villages": 31,
+    "uniform_gain_vs_no_ambassador": {
+      "ci": [
+        -1.1917140623044684,
+        2.3208373926765673
+      ],
+      "clusters": 19,
+      "estimate": 0.5645616651860493,
+      "p_value": 0.5080373895967839,
+      "standard_error": 0.8359547350405353
+    },
+    "unit": "recorded measles-1 vaccinations per eligible village per observed month",
+    "village_capacity": 0.5,
+    "villages": 73
+  },
+  "prepared_member_sha256": "6a09609b0a4cfd3c6ba8c4141a08c154d27f6b02d0c2252b1fa37274d85968d6",
+  "protocol_sha256": "ac5963e043eb08b2b6edffb5e1406080d13f75b6d78c72d51c16d9c48f520d78",
+  "ridge_model_sha256": "d1ead52d8957c722ee8bc11c7e995ed364a828cc601947aa4d334d68127d3c78",
+  "runtime": {
+    "numpy": "2.4.2",
+    "python": "3.13.2"
+  },
+  "schema_audit": {
+    "bundles_below_11_villages": 47,
+    "districts": 7,
+    "months_per_village": [
+      1,
+      11
+    ],
+    "observed_bundles": 75,
+    "phcs": 140,
+    "sub_centers": 617,
+    "village_months": 7370,
+    "villages": 902
+  },
+  "source": "https://zenodo.org/records/11392582",
+  "study": "Haryana immunization experiment",
+  "version": 1
+}

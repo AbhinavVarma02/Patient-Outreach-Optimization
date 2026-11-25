@@ -10,6 +10,10 @@ const knownRemote = new Set([
   'www.w3.org', 'www.w3.org.', 'react.dev', 'pubmed.ncbi.nlm.nih.gov',
   'media.springernature.com', 'clinicaltrials.gov', 'osf.io',
 ]);
+const reviewedLinks = new Set([
+  'https://zenodo.org/records/11392582',
+  'https://github.com/AbhinavVarma02/Patient-Outreach-Optimization/blob/main/docs/HARYANA_RESEARCH.md',
+]);
 const denied = /(?:patient_id|patientid|study_\d_(?:analysis_data|fulldata)|(?:ghp_|github_pat_|sk-proj-)[\w-]{15,}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----)/i;
 const hashes = {};
 async function scan(dir) {
@@ -20,8 +24,8 @@ async function scan(dir) {
     if (!entry.isFile() || !(fixed.has(name) || assets.test(name))) throw new Error('Unexpected build file ' + name);
     const body = await readFile(path, 'utf8');
     if (denied.test(body) || /sourceMappingURL/i.test(body)) throw new Error('Forbidden build content in ' + name);
-    for (const [, host] of body.matchAll(/https?:\/\/([a-z\d.-]+)/gi)) {
-      if (!knownRemote.has(host)) throw new Error('Unexpected endpoint ' + host + ' in ' + name);
+    for (const [url, host] of body.matchAll(/https?:\/\/([a-z\d.-]+)[^\s"'<>),`}]*/gi)) {
+      if (!knownRemote.has(host) && !reviewedLinks.has(url)) throw new Error('Unexpected endpoint ' + host + ' in ' + name);
     }
     if (name === '_headers' && !body.includes("connect-src 'none'")) throw new Error('CSP is missing its network boundary.');
     hashes[name] = createHash('sha256').update(body).digest('hex');
